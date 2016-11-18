@@ -184,7 +184,7 @@ brazil				% o último idioma é o principal do documento
 % arquivo USPSC-Siglas estabelecidas para os Programas de Pós-Graduação por Unidade.xlsx 
 % ou nos APÊNDICES A-E
 \siglaunidade{IFSC}
-\programa{DFAFC}
+\programa{DFAFCe}
 % Os demais dados deverão ser fornecidos no arquivo USPSC-pre-textual-UUUU, onde UUUU é a sigla da Unidade. 
 % Exemplo:USPSC-pre-textual-IFSC.tex
 % ---
@@ -346,7 +346,8 @@ brazil				% o último idioma é o principal do documento
    \vspace*{\fill}
    \centering
    \noindent
-   \textit{ Este trabalho é dedicado à Deus e à minha família.} \vspace*{\fill}
+%   \textit{ Este trabalho é dedicado à Deus e à minha família.} \vspace*{\fill}
+   \textit{ This work is dedicated to God and my family, whose constant support made it possible.} \vspace*{\fill}
 \end{dedicatoria}
 % ---
 
@@ -403,36 +404,12 @@ which made possible the developments presented in this document.
 \end{epigrafe}
 % ---
 
-% ---
-% Resumo
-% ---
-% Se o idioma do texto for em inglês, o abstract deve preceder o resumo
-% resumo em português
-\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo		
-\begin{resumo}
-	\begin{flushleft} 
-			\setlength{\absparsep}{0pt} % ajusta o espaçamento da referência	
-			\SingleSpacing 
-			\imprimirautorabr~ ~\textbf{\imprimirtitulo}.	\imprimirdata. \pageref{LastPage}p. 
-			%Substitua p. por f. quando utilizar oneside em \documentclass
-			%\pageref{LastPage}f.
-			\imprimirtipotrabalho~-~\imprimirinstituicao, \imprimirlocal, \imprimirdata. 
- 	\end{flushleft}
-\OnehalfSpacing 			
- O resumo deve ressaltar o  objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão  destes itens dependem do tipo de resumo (informativo ou indicativo) e do  tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots)  Salientamos que os Programas de Pós-Graduação de algumas Unidades exigem o titulo da dissertação ou tese em inglês, tornando necessário a inclusão das referências nos resumos e abstracts, o que foi adotado no presente modelo. As palavras-chave devem figurar logo abaixo do  resumo, antecedidas da expressão Palavras-chave:, separadas entre si por  ponto e finalizadas também por ponto.  \cite{nbr6028}.
- 
-
- \textbf{Palavras-chave}: LaTeX. abnTeX. Classe USPSC. Editoração de texto. Normalização da documentação. Tese. Dissertação. Documentos (elaboração). Documentos eletrônicos. 
-\end{resumo}
 
 % ---
 % Abstract
 % ---
-\autor{Silva, M. J.}
+\autor{Fabbri, R.}
 \begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
 	\begin{flushleft} 
 		\setlength{\absparsep}{0pt} % ajusta o espaçamento dos parágrafos do resumo		
  		\SingleSpacing 
@@ -442,14 +419,74 @@ which made possible the developments presented in this document.
 		\imprimirtipotrabalho~-~\imprimirinstituicao, \imprimirlocal, 	\imprimirdata. 
  	\end{flushleft}
 	\OnehalfSpacing 
-   This is the english abstract.
-
+	 This work reports on stable (or invariant) properties and textual differentiation in human interaction networks,
+	 with benchmarks derived from public email lists.
+	 Activity along time and topology were observed in snapshots in a timeline, and at
+	 different scales. Our analysis shows that activity is practically the same for all networks across timescales
+	 ranging from seconds to months. The principal components of the participants in the topological metrics
+	 space remain practically unchanged as different sets of messages are considered.
+	 The activity of participants
+	 follows the expected scale-free outline, thus yielding the hub, intermediary and peripheral classes of vertices by
+	 comparison against the Erdös-Rényi model.
+	 The relative sizes of these three sectors are essentially the same
+	 for all email lists and the same along time.
+	 Typically, 3-12\% of the vertices are hubs, 15-45\% are intermediary
+	 and 44-81\% are peripheral vertices.
+	 Texts from each of such sectors are shown to be very different through Kolmogorov-Smirnov tests.
+	 These properties are consistent with the literature and may be general for human
+	 interaction networks, which has important implications for establishing a typology of participants based on
+	 quantitative criteria.
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Keywords}: LaTeX. abnTeX. USPSC class. Text editoration. Standardization of documentation. Thesis. Dissertation. Documents (development). Electronic documents.
+   \textbf{Keywords}: Complex networks. Text mining. Pattern recognition. Statistics. Social network analysis. Typology.
+\end{resumo}
+
+% ---
+% Resumo
+% ---
+% Se o idioma do texto for em inglês, o abstract deve preceder o resumo
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo		
+\titulo{Estabilidade topológica e diferenciação textual em redes de interação humana: dados ligados e análise estatística}
+     	\tipotrabalho{Tese (Doutorado em Ci\^encias)}
+        \area{F\'isica Aplicada}
+        \opcao{F\'isica Computacional}
+\begin{resumo}[Resumo]
+ \begin{otherlanguage*}{portuguese}
+	\begin{flushleft} 
+			\setlength{\absparsep}{0pt} % ajusta o espaçamento da referência	
+			\SingleSpacing 
+			\imprimirautorabr~ ~\textbf{\imprimirtitulo}.	\imprimirdata. \pageref{LastPage}p. 
+			%Substitua p. por f. quando utilizar oneside em \documentclass
+			%\pageref{LastPage}f.
+			\imprimirtipotrabalho~-~\imprimirinstituicao, \imprimirlocal, \imprimirdata. 
+ 	\end{flushleft}
+\OnehalfSpacing 			
+	 Este trabalho relata propriedades estáveis (ou invariantes) e diferenciação textual em redes de interação humana,
+	 com referências derivadas de listas públicas de e-mail.
+	 A atividade ao longo do tempo e a topologia foram observadas em instantâneos ao longo de uma linha do tempo e em
+	 diferentes escalas.
+	 A análise mostra que a atividade é praticamente a mesma para todas as redes em escalas temporais
+	 de segundos a meses.
+	 As componentes principais dos participantes no espaço das métricas topológicas
+	 mantêm-se praticamente inalteradas quando diferentes conjuntos de mensagens são considerados.
+	 A atividade dos participantes
+	 segue o esperado perfil livre de escala, produzindo, assim, as classes de vértices dos hubs, dos intermediários e dos periféricos em
+	 comparação com o modelo Erdös-Rényi.
+	 Os tamanhos relativos destes três sectores são essencialmente os mesmos
+	 para todas as listas de e-mail e ao longo do tempo.
+	 Normalmente, 3-12\% dos vértices são hubs, 15-45\% são intermediário
+	 e 44-81\% são vértices periféricos.
+	 Os textos de cada um destes setores são considerados muito diferentes através de testes de Kolmogorov-Smirnov.
+	 Estas propriedades são consistentes com a literatura e podem ser gerais para
+	 redes de interação humana, o que tem implicações importantes para o estabelecimento de uma tipologia dos participantes com base em
+	 critérios quantitativos.
+
+ \textbf{Palavras-chave}: Redes complexas. Mineração de texto. Reconhecimento de padrões. Estatística. Análise de redes sociais. Tipologia.
  \end{otherlanguage*}
 \end{resumo}
+
 
 % ---
 % inserir lista de ilustrações
@@ -524,21 +561,21 @@ which made possible the developments presented in this document.
 % ---
 % Capítulo 2
 % ---
-\include{USPSC-Cap2-Desenvolvimento}
+\include{USPSC-Cap2-MateriaisMetodos}
 % ---
-% Capítulo 3 - Citações
+% Capítulo 3
 % ---
-\include{USPSC-Cap3-Citacoes}
+\include{USPSC-Cap3-Resultados}
 
 % ---
-% Capítulo 4 - Referencias
+% Capítulo 4
 % ---
-\include{USPSC-Cap4-Referencias}
+\include{USPSC-Cap4-Conclusao}
 % ---
 
 % Capítulo 5 - Conclusão
 % ---
-\include{USPSC-Cap5-Conclusao}
+% \include{USPSC-Cap5-Conclusao}
 % ---
 
 % ----------------------------------------------------------

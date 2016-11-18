@@ -90,6 +90,17 @@
 		\preambulo{Tese apresentada ao Programa de P\'os-Gradua\c{c}\~ao em F\'isica do Instituto de F\'isica de S\~ao Carlos da Universidade de S\~ao Paulo, para obten\c{c}\~ao do t\'itulo de Doutor em Ci\^encias.}
 		\notaficha{Tese (Doutorado - Programa de P\'os-Gradua\c{c}\~ao em F\'isica Aplicada)}
     }{
+% DFAFCe
+        \ifthenelse{\equal{#1}{DFAFCe}}{
+		\tipotrabalho{Thesis (Doctor in Science)}
+	        \area{Applied Physics}
+			%\opcao{Nome da Opção}
+        \opcao{Computational Physics}
+	        % O preambulo deve conter o tipo do trabalho, o objetivo, 
+			% o nome da instituição, a área de concentração e opção quando houver
+			\preambulo{Thesis presented to the Graduate Program in Physics at the Instituto de F\'isica de S\~ao Carlos, Universidade de S\~ao Paulo, to obtain the degree of Doctor in Science.}
+			\notaficha{Thesis (Doctorate - Graduate Program in Applied Physics)}
+        }{
 % MFAFC ===========================================================================
         \ifthenelse{\equal{#1}{MFAFC}}{
 			\tipotrabalho{Disserta\c{c}\~ao (Mestrado em Ci\^encias)}
@@ -161,7 +172,7 @@
 				% o nome da instituição, a área de concentração e opção quando houver
 				\preambulo{Disserta\c{c}\~ao/Tese apresentada ao Programa de P\’{\o}s-Gradua\c{c}\~ao em F\’{\i}sica do Instituto de F\’{\i}sica de S\~ao Carlos da Universidade de S\~ao Paulo, para obtenç\c{c}\~ao do t\’{\i}tulo de Mestre/Doutor em Ci\^encias.}
 				\notaficha{Disserta\c{c}\~ao/Tese (Mestrado/Doutorado - Programa de P\'os-Gradua\c{c}\~ao em Nome da \'Area)}
-        }}}}}}}}}}
+	}}}}}}}}}}}
 				
 				
 
