@@ -198,7 +198,7 @@
   \renewcommand{\folhadeaprovacaoname}{Approval}
   \renewcommand{\resumoname}{Abstract} 
   \renewcommand{\listadesiglasname}{List of abbreviations and acronyms}
-  \renewcommand{\listadesimbolosname}{List of symbols}
+  \renewcommand{\listadesimbolosname}{List of Symbols}
   \renewcommand{\fontename}{Source}
   \renewcommand{\notaname}{Note}
    %% adjusts names used by \autoref

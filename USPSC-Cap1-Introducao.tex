@@ -6,7 +6,25 @@
 % \chapter[Introdução]{Introdução}
 \chapter{Introduction and Related Work}\label{ch:int}
 
+The first studies dealing explicitly with human interaction networks
+date from the nineteenth century while the foundation of
+social network analysis is generally attributed to the psychiatrist Jacob Moreno in mid twentieth century~\cite{moreno,newmanBook}.
+With the increasing availability of data related to human interactions, research about these networks has grown continuously.
+Contributions can now be found in a variety of fields, from social sciences and humanities~\cite{latour2013} to computer science~\cite{bird} and physics~\cite{barabasiHumanDyn,newmanFriendship}, given the multidisciplinary nature of the topic.
+One of the approaches from an exact science perspective is to represent interaction networks as complex networks~\cite{barabasiHumanDyn,newmanFriendship}, with which 
+several features of human interaction have been revealed.
+For example, the topology of human interaction networks exhibits a scale-free outline,
+which points to the existence of a small number of highly connected hubs and a large number of poorly connected nodes.
+The dynamics of complex networks representing human interaction has also been addressed~\cite{barabasiEvo,newmanEvolving}, but only to a limited extent, since research is normally focused on a particular metric or task, such as accessibility or community detection~\cite{access,newmanModularity}. 
 
-\section{Related work}
 There are numerous articles, books, websites and software about complex and social networks and about text mining in social media.
-There are fewer endeavours that is proposed to characterize such networks beyond general features such as the scale free aoutline or that deal with text produced by social networks from the complex networks background.
+There are fewer endeavours that are proposed to characterize such networks beyond general features such as the scale-free 
+aspect or that deal with text produced by social networks from the complex networks background.
+Research on network evolution is often restricted to network growth, in which there is a monotonic increase in the number of events~\cite{barabasiEvo}.
+Network types have been discussed with regard to the number of participants, intermittence of their activity and network longevity~\cite{barabasiEvo}. Two topologically different networks emerged from human interaction networks, depending on whether the frequency of interactions follows a generalized power law or an exponential connectivity distribution~\cite{barabasiTopologicalEv}. In email list networks, scale-free properties were reported with $\alpha \approx 1.8$~\cite{bird} (as in web browsing and library loans~\cite{barabasiHumanDyn}), and different linguistic traces were related to weak and strong ties~\cite{Gmane2}.
+
+The fact that unreciprocated edges often exceed 50\% in human interaction networks~\cite{newmanEvolving} motivated the inclusion of symmetry metrics in our analysis.
+No correlation of topological characteristics and geographical coordinates was found~\cite{barabasiGeo},
+therefore geographical positions were not considered in our study.
+Gender related behavior in mobile phone datasets was indeed reported~\cite{barabasiSex}
+but it is not relevant for the present work because email messages and addresses have no gender related metadata~\cite{gmanePack}.
