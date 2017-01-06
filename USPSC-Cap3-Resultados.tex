@@ -321,3 +321,283 @@ components of the social system. The peripheral participants have very limited i
  
 With regard to the limitations of our study, one should emphasize that not all types of human interaction networks were analyzed. Therefore, the plausible generalization of properties has to be treated with caution, as a natural tendency of such systems and not as a rule. Also, the stable properties in the networks were not explored to the limit, which leaves many open questions. For example, what are the maximum and minimum sizes of the networks for which they hold? What is the outcome of PCA analysis when more metrics are considered? What is the granularity in which the activity along the timescales is preserved? Do the findings reported also apply to other systems, beyond human networks?
  
+ % TTM find
+\section{Text results and discussion}\label{sec:tresults}
+
+The most important result in this article is the
+extreme differentiation of each Erd\"os sector with respect to the texts produced.
+For example: hubs use more contractions, more adjectives,
+more common words, and less punctuation if compared to the rest of the network,
+specially the peripheral sector.
+In general, the rise or fall of a metric is monotonic along connectivity,
+but some of them reached extreme values in the intermediary sector.
+
+Next sections summarize results of immediate interest
+and further insights can be obtained by skipping through
+the tables and figures in the Supporting Information document.
+
+\subsection{General characteristics of activity distribution among participants}\label{sec:gen}
+\input{tables/geralInline_}
+Hubs and periphery swap fractions of participants and activity:
+while peripheral sector has $\approx 75\%$ of participants, it produces $\approx 10\%$ of all messages.
+Conversely, hubs sector present $\approx 10\%$ of participants and produces $\approx 75\%$ of all messages.
+% verificar TTM
+Fewer threads are created by the hubs in proportion to total messages sent,
+while threads created by the periphery are twice as frequent as general messages.
+% medir
+This suggests a complementarity between peripheral diversity and hub specialization
+which, on its turn, deepens the understanding of the interaction network as a meaningful system, 
+notably if yield by online activity.
+These assertions are condensed in Table~\ref{geralListas}.
+
+%Also, comparing lists with a fixed number of messages,
+%the number of threads created seem to increase as the number of participants decrease.
+
+\subsection{Characters}\label{sec:cha}
+\input{tables/charsInline_}
+Texts from peripheral vertices use more punctuation characters, digits and uppercase letters.
+Hubs use more letters and vowels among letters.
+The use of white spaces does not seem to have any relation to connectivity,
+with the exception that the intermediary often presented a slightly higher or lower
+incidence of spaces than both peripheral and hub sectors. 
+% The total number of characters in ELE list,
+% in the 20 thousand messages,
+% is more than three times what other lists exhibited.
+% This suggests peculiarities related to communication conventions and style (see Appendix~\ref{sec:materials}) and were found not related to topological features.
+Further information is given in Table~\ref{tab:cha}.
+
+\subsection{Tokens and words}\label{subsec:tw}
+%\input{tables/tokensInline_}
+\input{tables/tokensMergedInline}
+
+%The largest average size of tokens is from the most wordy list (ELE).
+%This implies that is has more characters, tokens, and characters per token in comparison to the other lists. 
+The longer words used by hubs might be related to the use of a specialized vocabulary.
+% VERITICCAR TTM
+% palavras mais longas podem vir dos perifericos pois nao usam jargao
+Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in peripheral sector is far greater, this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity.
+% medir para tamanhos equivalentes de texto TTM
+This can be noticed by the token diversity of the whole network, which is lower than in any of the sectors.
+This same results apply to the lexical diversity ($\frac{|kw\neq|}{kw}$).
+
+Punctuations among tokens are less abundant in hubs, and discrepancies here are larger than with character comparisons (subsection~\ref{sec:cha}). Known words are used more frequently by hubs.
+
+ELE and CPP both exhibit intermediaries 
+with the more frequent production of punctuation,
+less frequent production of known words, and
+the highest incidence of words with wordnet synsets among known words.
+This suggests some peculiarity in network structure,
+such as authorities in the intermediary sector of such networks,
+using smaller sentences and a more intensive use of jargons,
+as made explicit in the following sections.
+% verificar isso e ver o que fazer
+
+Words with synsets,
+among known English words, are less frequent in hubs sector,
+further evidencing the jargon and specialization hubs develop.
+% verificar, desenvolvar
+
+Further information is given in Table~\ref{tab:tokens}.
+
+\subsection{Sizes of tokens and words}\label{subsec:tw2}
+%\input{tables/tokenSizesInline_}
+Sizes of known words are smaller for hubs, which suggests its use of more common words, although some of the previous results suggests that hubs have a very differentiated and specialized vocabulary. 
+Larger words seems to be related to intermediary sector,
+which might be related to the use of elaborated vocabulary.
+Further details are given in Table~\ref{tab:sizesTokens}.
+
+\subsection{Sizes of sentences}\label{subsec:ss}
+\input{tables/sentencesInline_}
+Hubs present the lowest average sentence size,
+both in characters and in tokens.
+We hypothesize that this smaller sentence use
+is related to the efficiency of hub specialization.
+Also, the incidence of usual known words seems to decay with connectivity, as does the number of known words with wordnet synsets.
+This reflects our view that connectivity is inversely proportional
+to diversity.
+
+Further information is given in Table~\ref{tab:sizesSents}.
+
+\subsection{Messages}\label{subsec:mm}
+\input{tables/messagesInline_}
+Connectivity was related to smaller messages in terms of characters and tokens.
+% tirar medidas de correlacao: perason e spearmanA TTM
+ELE list displayed an inverse situation:
+the more connected the sector,
+the longer the messages are.
+This was considered a peculiarity of the culture bonded
+with the political subject of ELE list, to be further verified.
+% make some sort of verification TTM
+% process the lists just for this feature
+Regarding sentences,
+the size of messages seem to hold steady throughout connectivity.
+% ver a correlação das medidas de grau e força com TTM
+% texto
+% ver em especial se algo eh mais para in ou out
+% e se indifere greu e força como no particionamento de erdos
+Further information is given in Table~\ref{tab:sizesMsgs}.
+
+\subsection{POS tags}\label{subsec:pos}
+\input{tables/posInline_}
+% rever taggeamento e tentar melhor accuracy com o Bril Tagger TTM
+Lower connectivity yields more nouns and less adjectives,
+adverbs and verbs.
+This suggests that the networks collect issues important
+to the world by the peripheral sector. 
+These issues are qualified, elaborated about,
+by the more connected participants.
+This is a further indicative that peripheral sectors
+are related to diversity while hubs relate to specialization.
+Further information is given in Table~\ref{tab:pos}.
+
+\subsection{Wordnet synsets}\label{subsec:pos}
+\input{tables/wnPOSInline_} % uma soh
+%\input{tables/wnInline_} % uma soh
+\input{tables/wnPOSInline2} % uma soh
+
+%\input{tables/wnInline2-n_} % uma para cada nivel do synset
+%\input{tables/wnInline2a-n_}
+%\input{tables/wnInline2b-n_}
+%\input{tables/wnInline2c-n_}
+%\input{tables/wnInline2d-n_}
+%
+%\input{tables/wnInline2-as_} % uma para cada nivel do synset
+%\input{tables/wnInline2a-as_}
+%%\input{tables/wnInline2b-as_}
+%%\input{tables/wnInline2c-as_}
+%%\input{tables/wnInline2d-as_}
+%
+%\input{tables/wnInline2-v_} % uma para cada nivel do synset
+%\input{tables/wnInline2a-v_}
+%\input{tables/wnInline2b-v_}
+%\input{tables/wnInline2c-v_}
+%\input{tables/wnInline2d-v_}
+%
+%\input{tables/wnInline2-r_} % uma para cada nivel do synset
+%\input{tables/wnInline2a-r_}
+%%\input{tables/wnInline2b-r_}
+%%\input{tables/wnInline2c-r_}
+%%\input{tables/wnInline2d-r_}
+
+
+
+
+
+\subsection{Differentiation of the texts from Erd\"os sectors}\label{subsec:di}
+\input{tables/ksTokens_}
+\input{tables/ksWords_}
+\input{tables/ksSents_}
+
+\input{tables/ksAdjs_}
+\input{tables/ksSubs_}
+\input{tables/ksPuns_}
+
+Results from our adaptation of the Kolmogorov-Smirnov test
+suggest that the texts produced by each sector are extremely different.
+Intermediary sectors sometimes exhibit greater differences 
+from periphery and hubs than these extreme sectors themselves 
+(Tables~\ref{tab:kolSub} and~\ref{tab:kolSw}).
+This differentiation of the three sectors is a
+strong indicative that the Erd\"os Sectioning
+described in~\cite{evoSN} reveals meaningful
+sectors of the networks.
+
+Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter}
+illustrate two strong results:
+\begin{itemize}
+    \item Differences of textual production of the Erd\"os sectors are extreme.
+	    This can be noticed from the high values on these tables,
+	    beyond reference values used for the acceptance of the 
+	    null hypothesis (see Section~\ref{sec:ks}).
+    \item Differences between sectors on the same network 
+	    (Tables~\ref{tab:kolSub},~\ref{tab:kolAdj},~\ref{tab:kolSw} and~\ref{tab:kolPct}) are greater than differences between same sector from distinct lists (Tables~\ref{tab:kolSubInter},~\ref{tab:kolAdjInter},~\ref{tab:kolSwInter} and~\ref{tab:kolPctInter}).
+\end{itemize}
+
+We can summarize these results stating that the extreme difference
+found between the texts produced the Erd\"os sectors
+are greater that that found between that of texts from different
+networks or from the same sector of different networks.
+
+\subsection{Correlation of topological and textual metrics}\label{subsec:cor}
+
+\input{tables/correlationInline_}
+Correlation of degree 
+and strength metrics is
+substantially smaller for intermediary sector.
+% verificar e quantificar TTM
+Also noteworthy is the negative correlation of degree and message size (number of characters, tokens or sentences) that intermediaries presented.
+This and other insights can be drawn from Tables~\ref{tab:corTop},~\ref{tab:corTex} and~\ref{tab:corTexTop}.
+Overall, negligible correlation is found between textual and topological metrics.
+% verificar e fazer tabelas corretamente:
+% focadas para texto, extensivas para SI
+
+\subsection{Formation of principal components}\label{subsec:pc}
+\input{tables/pcaInline_}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{figs/plot_pca}
+	\caption{First two principal components.}
+	\label{fig:formation}
+\end{figure}
+
+
+
+Principal components formation seem to be the less stable of all results reported in this study.
+First component, with $\approx 25\%$ of dispersion, relies heavily on POS tags,
+and slightly on sizes of tokens, sentences and messages.
+Second component, with almost $12\%$ of dispersion, blends topology, POS tags and size of textual units.
+Third component, with about $8.5\%$ of dispersion is mostly nouns frequency and size of textual units.
+Fourth and fifth components present less than $5\%$ of total dispersion,
+but are included in the Supporting Information document for completeness of exposition.
+
+Tables~\ref{tab:pca1}-\ref{tab:pca5} yield these results and further insights.
+
+\subsection{Results still to be interpreted}\label{subsec:sii}
+%These networks yield diverse characteristics,
+%some of which were not of core importance for this step of the research.
+%Even so, at least one of these characteristics was found interesting enough to be considered a result and an example of interesting artifacts found.
+Histogram differences of incident word sizes with and without repetition of words are constant.
+That is, in each email list, when a histogram of word sizes were made with all words written,
+and another histogram made with sizes of all \emph{different} words,
+the cumulative absolute difference of the two histograms throughout the bins were found constant for all lists analysed.
+When all known English words were considered, 
+the difference sums up to $\approx 1.0$.
+When stopwords are discarded,
+the difference found was different, but still constant, slightly above $0.5$.
+When only stopwords were considered, the difference is $\approx 0.6$.
+When only known English words that does not have wordnet synsets are used,
+this difference is $\approx 1.2$.
+Appendix ~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated to this histogram differences.
+
+\section{Results from visualization}
+Results from versinus are divided in two groups:
+observations on features that made it useful for the task,
+and the network structure properties it made possible to grasp.
+
+\subsection{Understanding of useful visualization features for dynamic networks}
+
+On the numerous insights related to versinus, a few of them seem more fundamental, or plain useful. This is an attempt to present them in an importance-first order:
+\begin{enumerate}
+		    \item Vertexes need to remain static. Even if they move smoothly, one notices solely transient artifacts if nodes are moving around.
+			        \item Very connected sectors (hubs and intermediary) need to be laid in a curve, otherwise the edges enclose each other and reasoning about the network becomes harsh.
+					    \item Height and width of a vertex are very informative, specially if measures mapped to them have a strong relation, such as out-degree (mapped to height in versinus) and in-degree (mapped to width).
+						        \item Coloring nodes was also informative, although less than height and weight, as these are related to measure differences more directly.
+								    \item An ordering of nodes, related to their fixed position, is very useful. Among all tests, ordering of vertexes by degree was considered the most informative order, which led to the hub, intermediary and peripheral sectioning. As node position in layout is fixed, its ordering is done with respect to the overall structure, i.e. considering all $M$ messages.
+									        \item  Numbering these positions with respect to the order of the vertexes in the larger structure (all $M$ messages) is useful in understanding how much a vertex holds his position in his scale and on a larger window size.
+\end{enumerate}
+
+Many other insights were given by versinus, such as possible visualization tools, other kind of convenient layouts and glyph elaborations. These received dedicated attention in Section~\ref{sec:ref}.
+Even so, those insights, numbered above, were incorporated to versinus as the result of tests which presented clear benefits within the best settings achieved.
+
+\subsection{Understanding of network properties through versinus}
+A number of hypothesis were drawn about networks, for which versinus
+was designed. Another number of hypothesis were driven from versinus use itself.
+
+\subsubsection{Hypothesis evidenced by versinus}
+As suggested by Palla, Barab\'asi and Vicsek~\cite{barabasiEvo}, stability of participant activity in social networks is more incident in smaller networks. In accordance with this result, all hubs have intermittent activity in the settings analyzed, except for the email list with the smallest number of participants (the Metareciclagem email list). The intermitence of hubs itself was one of the top hypothesis which motivated versinus development. The stability of the structure~\cite{evoSN} required further verification of the instability of each participant activity.
+
+\subsubsection{Hypothesis drawn from versinus use}
+There seem to be modes of operation of the network. As an example, the intermediary is observed to communicate mostly to hubs or to communicate substantially with the peripheral vertex. Another hypothesis is that in and out degree discrepancies in each vertex are important for network characterization. This was confirmed by a recent work by the present author~\cite{evoSN}. Other hypothesis, such as discrepancies in authority and connectivity of vertex, are numerous but need further research to be valuable.
+ 
+
+

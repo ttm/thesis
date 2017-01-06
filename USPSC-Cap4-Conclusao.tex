@@ -41,4 +41,57 @@ Also, we plan to further explore and publish the audiovisualizations
 used for this research~\cite{versinus,animacoes} and
 the linguistic differences found in each of the Erd\"os sectors~\cite{rcText}.
 
+\section{Text final remarks}\label{sec:remarks}
+%Human interaction networks yield diverse linguistic peculiarities reported by its members.
+This is a first systematic exploration of the relation between topological and textual
+metrics in human interaction networks, as far the author knows.
+Different textual features were scrutinized and were found to present
+evident patterns, specially in relation to topological measures and the Erd\"os sectors.
+Furthermore, results suggest that less connected participants bring external content and concepts,
+while hubs qualify the content.
+For example, periphery sectors present more nouns while hubs use more adjectives and usual words.
+Such findings have potential applications in the collection and diffusion and information,
+resources recommendation in linked data contexts, and open processes of document elaboration and refinement~\cite{ensaio,OPS,pnud5,evoSN,pbr}.
+
+\subsection{Further work}\label{subsec:fw}
+
+Similarity measures of texts in message-response threads has been thought about by the author, and some results are being organized.
+These are two hypothesis obtained from recent experiments:
+\begin{itemize}
+    \item existence of information ``ducts'', observable through similarity measures. These might coincide with asymmetries of edges between vertexes pairs, with homophily or with message-response threads, to point just a few possibilities.
+    \item Valuable insights can be derived from the self-similarity of messages by same author,
+	    of messages sent at the same period of the day, etc.
+	    This includes incidences of word sizes, incidences of tags and morphosintactic classes,
+	    incidences of particular wordnet synset characteristics and wordnet word distances.
+\end{itemize}
+
+Current results suggests that diversity and self-similarity should vary with respect to connectivity. 
+Literature usually assumes that periphery holds greater diversity~\cite{easley},
+which can be further verified, for example through the diversity of entries.
+
+Other potential next steps are:
+\begin{itemize}
+    \item The observation of most incident words and word types,
+	    such as words related to cursing or to food.
+    \item Interpretation of the results
+	    exposed in Section~\ref{subsec:sii}.
+    \item Extend word class observations, e.g. to include plurals, gender, common prefixes and suffixes.
+    \item The observation of date and time in relation to textual production of interaction networks and
+	    to activity characteristics (e.g. dispersion of sent time along the day or the week).
+	    This was tackled by the author for the topological characterization of interaction networks~\cite{evoSN}, but left aside in this article.
+    \item A careful analysis of each textual features distribution which is likely to reveal multimodal outlines and other non-trivial characteristics.
+    \item Extend analysis to the windowed approach along the timelines used in the article where hub, peripheral and intermediary sectors where topologically characterized~\cite{evoSN}.
+    \item For ELE list, the more connected the sector, the longer the messages are.
+	    This is the inverse of what was found in the other lists,
+	    and was considered a peculiarity of the culture bonded with the political subject of ELE list.
+	    This hypothesis should be further verified.
+    \item Tackle the same analysis on networks with languages other than English.
+	    This is especially important for easing applications~\cite{ensaio}
+	    and should rely on dedicated implementation of 
+	    tokenization, lemmatization and attribution of POS tags.
+    \item Observe a broader set of human interaction networks and the resulting types
+	    of networks and participants with respect to topological and textual features.
+    \item Analyse interaction networks from other platforms such as from LinkedIn and Facebook, etc.
+    \item Sentiment analysis.
+\end{itemize}
  
