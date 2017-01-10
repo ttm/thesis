@@ -104,6 +104,11 @@ brazil				% o último idioma é o principal do documento
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{pdfpages}
 \usepackage{makeidx}            % para gerar índice remissimo
+
+\usepackage{pdfpages} % TTM
+\usepackage{incgraph,tikz}
+% \usepackage[titles]{tocloft}
+
 % ---
 
 % ---
@@ -249,6 +254,9 @@ brazil				% o último idioma é o principal do documento
 \renewcommand{\ABNTEXsubsectionfontsize}{\fontsize{12}{12}\normalfont}
 \renewcommand{\ABNTEXsubsubsectionfontsize}{\fontsize{12}{12}\normalfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\fontsize{12}{12}\normalfont}
+
+\newcommand{\textttt}[1] {\texttt{\footnotesize#1}} % TTM
+\newcommand{\h} {\hphantom ~ }
 
 
 % ----------------------------------------------------------

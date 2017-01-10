@@ -4,281 +4,294 @@
 % ---
 
 \begin{apendicesenv}
-% Imprime uma página indicando o início dos apêndices
-\partapendices
-\chapter{Apendice(s)}
-Elemento opcional, que consiste em texto ou documento elaborado pelo autor, a fim de complementar sua argumentação, conforme a ABNT NBR 14724 \cite{nbr14724}.
+	% Imprime uma página indicando o início dos apêndices
+	\partapendices
+	\chapter{Linked Open Social Data for Scientific Benchmarking (diagrams)}
 
-Os apêndices devem ser identificados por letras maiúsculas consecutivas, seguidas de hífen e pelos respectivos títulos. Excepcionalmente, utilizam-se letras maiúsculas dobradas na identificação dos apêndices, quando esgotadas as 26 letras do alfabeto. A paginação deve ser contínua, dando seguimento ao texto principal. \cite{sibi2009}.
+	In this document we provide diagrams
+	for the social protocols in the Linked Open Social Database:
+	Facebook, Twitter, IRC, Email, ParticipaBR, Cidade Democrática and AA.
+	Each social protocol diagram was broken in two, one presents the relations
+	among main classes (blue nodes) and data types (orange nodes),
+	the other presents metadata for the
+	snapshots.
+	Every class instance is related to the snapshot instance
+	by the triple \textttt{class\_uri po:snapshot snapshot\_uri}.
+	Such triples are omitted for simplicity.
+	Due to the large number of relations, the rendering of diagrams are
+	automatized and displays some overlaps.
+	Even so, the images are useful for grasping what is in the current
+	database and for conducting explorations.
+	Edges in the diagrams have:
+	\begin{itemize}
+		\item green color if representing an OWL existential
+			class restriction (all individuals from the class present at least one triple with
+				    the property as predicate);
+			    \item inverted nip if representing an OWL universal class
+				    restriction (all individuals presenting triples with the
+								property as predicate are from the class);
+							\item full edges (non-dashed) if representing a functional property
+								axiom (there is at most one triple with the property as the
+											    predicate for each individual).
+	\end{itemize}
 
-\chapter{Siglas dos Programas de Pós-Graduação da EESC}
-\index{quadros}O \autoref{quadro-eesc} relaciona as siglas estabelecidas para os programas de pós-graduação da EESC.
-
-\begin{quadro}[htb]
-\ABNTEXfontereduzida
-%\caption[Siglas dos Programas de Pós-Graduação da EESC]{Siglas dos Programas de Pós-Graduação da EESC]{Siglas dos Programas de Pós-Graduação da EESC}
-\caption[Siglas dos Programas de Pós-Graduação da EESC]{Siglas dos Programas de Pós-Graduação da EESC} 
-\label{quadro-eesc}
-\begin{tabular}{|p{6.0cm}|p{4.5cm}|p{2.0cm}|p{1.75cm}|}
-%\multicolumn{4}{c}%
-%{{\tablename\ \thetable{} -- Siglas dos Programas de Pós-Graduação da EESC}} \\
-\multicolumn{4}{r}{{(continua)}} \\ 
-  \hline
-   \textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\
-    \hline
-Programa de Pós-Graduação em Ciências da Engenharia Ambiental & Ciências da Engenharia Ambiental & Doutor & DCEA \\
-Programa de Pós-Graduação em Ciências da Engenharia Ambiental & Ciências da Engenharia Ambiental & Mestre & MCEA \\
-Programa de Pós-Graduação em Ciência e Engenharia de Materiais & Desenvolvimento, Caracterização e Aplicação de Materiais  & Doutor & DCEM \\
-Programa de Pós-Graduação em Ciência e Engenharia de Materiais & Desenvolvimento, Caracterização e Aplicação de Materiais & Mestre & MCEM \\
-Programa de Pós-Graduação em Engenharia Civil (Engenharia de Estruturas) & Estruturas & Doutor & DEE \\
-Programa de Pós-Graduação em Engenharia Civil (Engenharia de Estruturas) & Estruturas & Mestre & MEE \\
-Programa de Pós-Graduação em Engenharia de Produção & Economia, Organizações e Gestão do Conhecimento & Doutor & DEPE \\
-Programa de Pós-Graduação em Engenharia de Produção & Economia, Organizações e Gestão do Conhecimento & Mestre & MEPE \\
-Programa de Pós-Graduação em Engenharia de Produção & Processos e Gestão de Operações & Doutor & DEPP \\
-Programa de Pós-Graduação em Engenharia de Produção & Processos e Gestão de Operações & Mestre & MEPP \\
-Programa de Pós-Graduação em Engenharia de Transportes & Infraestrutura de Transportes & Doutor & DETI \\
-Programa de Pós-Graduação em Engenharia de Transportes & Infraestrutura de Transportes & Mestre & METI \\
-Programa de Pós-Graduação em Engenharia de Transportes & Planejamento e Operação de Sistemas de Transporte & Doutor & DETP \\
-Programa de Pós-Graduação em Engenharia de Transportes & Planejamento e Operação de Sistemas de Transporte & Mestre & METP \\
-Programa de Pós-Graduação em Engenharia de Transportes & Transportes & Doutor & DETT \\
-Programa de Pós-Graduação em Engenharia de Transportes & Transportes & Mestre & METT \\
-Programa de Pós-Graduação em Engenharia Elétrica & Processamento de Sinais e Intrumentação & Doutor & DEEP \\
-
-\end{tabular}
-\end{quadro} 
-
-% o comando \clearpage é necessário para deixar o final da tabela o topo da página, sem ele o final da tabela é centralizado verticalmente na página 
-\clearpage
-\begin{quadro}[htb]
-	\ABNTEXfontereduzida
-\begin{tabular}{|p{6.0cm}|p{4.5cm}|p{2.0cm}|p{1.75cm}|}	
- \multicolumn{4}{c}%
-	{{\quadroname\ \thequadro{} -- Siglas dos Programas de Pós-Graduação da EESC}} \\
-	\multicolumn{4}{r}{{(continuação)}} \\
-	 \hline
-   \textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\
-		 \hline
-Programa de Pós-Graduação em Engenharia Elétrica & Processamento de Sinais e Intrumentação & Mestre & MEEP \\
-Programa de Pós-Graduação em Engenharia Elétrica & Sistemas Dinâmicos & Doutor & DEED \\
-Programa de Pós-Graduação em Engenharia Elétrica & Sistemas Dinâmicos & Mestre & MEED \\
-Programa de Pós-Graduação em Engenharia Elétrica & Sistemas Elétricos de Potência & Doutor & DEEE \\
-Programa de Pós-Graduação em Engenharia Elétrica & Sistemas Elétricos de Potência & Mestre & MEEE \\
-Programa de Pós-Graduação em Engenharia Elétrica & Telecomunicações & Doutor & DEET \\
-Programa de Pós-Graduação em Engenharia Elétrica & Telecomunicações & Mestre & MEET \\
-Programa de Pós-Graduação em Engenharia Hidráulica e Saneamento & Hidráulica e Saneamento & Doutor & DEHS \\
-Programa de Pós-Graduação em Engenharia Hidráulica e Saneamento & Hidráulica e Saneamento & Mestre & MEHS \\
-Programa de Pós-Graduação em Engenharia Mecânica & Aeronaves & Doutor & DEMA \\
-Programa de Pós-Graduação em Engenharia Mecânica & Aeronaves & Mestre & MEMA \\
-Programa de Pós-Graduação em Engenharia Mecânica & Dinâmica das Máquinas e Sistemas & Doutor & DEMD \\
-Programa de Pós-Graduação em Engenharia Mecânica & Dinâmica das Máquinas e Sistemas & Mestre & MEMD \\
-Programa de Pós-Graduação em Engenharia Mecânica & Manufatura & Doutor & DEMF \\
-Programa de Pós-Graduação em Engenharia Mecânica & Manufatura & Mestre & MEMF \\
-Programa de Pós-Graduação em Engenharia Mecânica & Materiais & Doutor & DEMT \\
-Programa de Pós-Graduação em Engenharia Mecânica & Materiais & Mestre & MEMT \\
-Programa de Pós-Graduação em Engenharia Mecânica & Projeto Mecânico & Doutor & DEMP \\
-Programa de Pós-Graduação em Engenharia Mecânica & Projeto Mecânico & Mestre & MEMP \\
-Programa de Pós-Graduação em Engenharia Mecânica & Térmica e Fluídos & Doutor & DEML \\
-Programa de Pós-Graduação em Engenharia Mecânica & Térmica e Fluídos & Mestre & MEML \\
-Programa de Pós-Graduação em Geotecnia & Geotecnia & Doutor & DGEO \\
-Programa de Pós-Graduação em Geotecnia & Geotecnia & Mestre & MGEO \\
-    
-\end{tabular}
-\end{quadro}
-
-% o comando \clearpage é necessário para deixar o final da tabela o topo da página, sem ele o final da tabela é centralizado verticalmente na página 
-\clearpage
-\begin{quadro}[htb]
-	\ABNTEXfontereduzida
-\begin{tabular}{|p{6.0cm}|p{4.5cm}|p{2.0cm}|p{1.75cm}|}
-\multicolumn{4}{c}%
-	{{\quadroname\ \thequadro{} -- Siglas dos Programas de Pós-Graduação da EESC}} \\
-	\multicolumn{4}{r}{{(conclusão)}} \\
-\hline
-\textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\
-\hline    
-Programa de Pós-Graduação Interunidades em Bioengenharia & Bioengenharia & Doutor & DIUB \\
-Programa de Pós-Graduação Interunidades em Bioengenharia & Bioengenharia & Mestre & MIUB \\
-Programa de Pós-Graduação em Rede Nacional para Ensino das Ciências Ambientais & Ensino de Ciências Ambientais & Mestre & MRNECA \\    
-    
-    \hline
-\end{tabular}
-\begin{flushleft}
-		Fonte: Elaborado pelos autores.\
-\end{flushleft}
-\end{quadro}
-
-% ----------------------------------------------------------
-\chapter{Siglas dos Programas de Pós-Graduação do IAU}
-\index{quadros}O \autoref{quadro-iau} relaciona as siglas estabelecidas para os programas de pós-graduação do IAU.
-\begin{quadro}[htb]
-\ABNTEXfontereduzida
-\caption[Siglas dos Programas de Pós-Graduação do IAU]{Siglas dos Programas de Pós-Graduação do IAU}
-\label{quadro-iau}
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{1.5cm}|p{2.25cm}|}
-  \hline
-   \textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{OPÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\
-    \hline
-Programa de Pós-Graduação em Arquitetura e Urbanismo & Arquitetura, Urbanismo e Tecnologia &  & Doutor & DAUT\\
-Programa de Pós-Graduação em Arquitetura e Urbanismo & Arquitetura, Urbanismo e Tecnologia &  & Mestre & MAUT\\
-Programa de Pós-Graduação em Arquitetura e Urbanismo & Teoria e História da Arquitetura e do Urbanismo &  & Doutor & DAUH\\
-Programa de Pós-Graduação em Arquitetura e Urbanismo & Teoria e História da Arquitetura e do Urbanismo &  & Mestre & MAUH\\
-    \hline
-
-\end{tabular}
-\begin{flushleft}
-		Fonte: Elaborado pelos autores.\
-\end{flushleft}
-\end{quadro}
-
-% ----------------------------------------------------------
-\chapter{Siglas dos Programas de Pós-Graduação do ICMC}
-\index{quadros}O \autoref{quadro-icmc} relaciona as siglas estabelecidas para os programas de pós-graduação do ICMC.
-\begin{quadro}[htb]
-\ABNTEXfontereduzida
-\caption[Siglas dos Programas de Pós-Graduação do ICMC]{Siglas dos Programas de Pós-Graduação do ICMC}
-\label{quadro-icmc}
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{1.5cm}|p{2.25cm}|}
-  \multicolumn{5}{r}{{(continua)}} \\ 
-  \hline
-   \textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{OPÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\
-    \hline
-		Ciências de Computação e Matemática Computacional	& Ciências de Computação e Matemática Computacional	&   &	Doutor	 & DCCp\\
-    Ciências de Computação e Matemática Computacional	& Ciências de Computação e Matemática Computacional	&   &	Mestre	& MCCp\\
-		Computer Science and Computational Mathematics & Computer Science and Computational Mathematics	&   &	Doctorate & DCCe\\
-		Doctorate Program in Mathematics & Mathematics &   &	Doctorate & DMAe\\
-		Interinstitucional de Pós-Graduação em Estatística & Estatística &  & Doutor	 & DESp\\
-		Interinstitucional de Pós-Graduação em Estatística & Estatística &  & Mestre & MESp\\
-		Join Graduate Program in Statistics & Computer Science and Computational Mathematics &  & Master & MCCe\\
-		Join Graduate Program in Statistics & Statistics &  & Doctorate & 	DESe\\
-    Join Graduate Program in Statistics & Statistics &  & Master & MESe\\
-		Master Program in Mathematics &	Mathematics &  & Master &	MMAe\\
-		Mathematics Professional Master\'{}s Program &	Mathematics &	 & Master &	MPMe\\
-		Programa de Mestrado Profissional em Matemática & Matemática &  & Mestre & MPMp\\
-		\end{tabular}
-\end{quadro}
-
-% o comando \clearpage é necessário para deixar o final da tabela o topo da página, sem ele o final da tabela é centralizado verticalmente na página 
-\clearpage
-\begin{quadro}[htb]
-\ABNTEXfontereduzida
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{1.5cm}|p{2.25cm}|}
-	\multicolumn{5}{c}%
-	{{\quadroname\ \thequadro{} -- Siglas dos Programas de Pós-Graduação do ICMC}} \\
-	\multicolumn{5}{r}{{(conclusão)}} \\
-	\hline
-   \textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{OPÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\	
-	 \hline
-  	Programa de Pós-Graduação em Matemática & Matemática &  & Doutor & DMAp\\
-		Programa de Pós-Graduação em Matemática & Matemática &  & Mestre & MMAp\\
-    \hline
-
-\end{tabular}
-\begin{flushleft}
-		Fonte: Elaborado pelos autores.\
-\end{flushleft}
-\end{quadro}
-
-% ----------------------------------------------------------
-\chapter{Siglas dos Programas de Pós-Graduação do IFSC}
-\index{quadros}O \autoref{quadro-ifsc} relaciona as siglas estabelecidas para os programas de pós-graduação do IFSC.
-\begin{quadro}[htb]
-\ABNTEXfontereduzida
-\caption[Siglas dos Programas de Pós-Graduação do IFSC]{Siglas dos Programas de Pós-Graduação do IFSC}
-\label{quadro-ifsc}
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{1.5cm}|p{2.25cm}|}
-  \hline
-   \textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{OPÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\
-    \hline
-Graduate Program in Physics & Applied Physics & Biomolecular Physics & Doutor & DFAFBe\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Aplicada &  & Doutor & DFA\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Aplicada & Física Computacional & Doutor & DFAFC\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Aplicada & Física Biomolecular & Doutor & DFAFBp\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Aplicada &  & Mestre & MFA\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Aplicada & Física Computacional & Mestre & MFAFC\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Aplicada & Física Biomolecular & Mestre & MFAFB\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Básica &  & Doutor & DFB\\
-Programa de Pós-Graduação do Instituto de Física de São Carlos & Física Básica &  & Mestre & MFB\\
-		\hline
-
-\end{tabular}
-\begin{flushleft}
-		Fonte: Elaborado pelos autores.\
-\end{flushleft}
-\end{quadro}
-
-% ----------------------------------------------------------
-\chapter{Siglas dos Programas de Pós-Graduação do IQSC}
-\index{quadros}O \autoref{quadro-iqsc} relaciona as siglas estabelecidas para os programas de pós-graduação do IQSC.
-\begin{quadro}[htb]
-\ABNTEXfontereduzida
-\caption[Siglas dos Programas de Pós-Graduação do IQSC]{Siglas dos Programas de Pós-Graduação do IQSC}
-\label{quadro-iqsc}
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{1.5cm}|p{2.25cm}|}
-  \hline
-   \textbf{PROGRAMA} & \textbf{ÁREA DE CONCENTRAÇÃO} & \textbf{OPÇÃO} & \textbf{TÍTULO} & \textbf{SIGLA}  \\
-    \hline
-Programa de Pós-Graduação do Instituto de Química de São Carlos & Físico-química &  & Doutor & DFQ\\
-Programa de Pós-Graduação do Instituto de Química de São Carlos & Físico-química &  & Mestre & MFQ\\
-Programa de Pós-Graduação do Instituto de Química de São Carlos & Química Analítica e Inirgânica &  & Doutor & DQAI\\
-Programa de Pós-Graduação do Instituto de Química de São Carlos & Química Analítica e Inirgânica &  & Mestre & MQAI\\
-Programa de Pós-Graduação do Instituto de Química de São Carlos & Química Orgânica e Biológica &  & Doutor & DQOB\\
-Programa de Pós-Graduação do Instituto de Química de São Carlos & Química Orgânica e Biológica &  & Mestre & MQOB\\
-\hline
-
-\end{tabular}
-\begin{flushleft}
-		Fonte: Elaborado pelos autores.\
-\end{flushleft}
-\end{quadro}
-
-% ----------------------------------------------------------
-\chapter{Exemplo de tabela centralizada verticalmente e horizontalmente}
-\index{tabelas}A \autoref{tab-centralizada} exemplifica como proceder para obter uma tabela centralizada verticalmente e horizontalmente.
-% utilize \usepackage{array} no PREAMBULO (ver em USPSC-modelo.tex) obter uma tabela centralizada verticalmente e horizontalmente
-\begin{table}[htb]
-\ABNTEXfontereduzida
-\caption[Exemplo de tabela centralizada verticalmente e horizontalmente]{Exemplo de tabela centralizada verticalmente e horizontalmente}
-\label{tab-centralizada}
-
-\begin{tabular}{ >{\centering\arraybackslash}m{6cm}  >{\centering\arraybackslash}m{6cm} }
-\hline
- \centering \textbf{Coluna A} & \textbf{Coluna B}\\
-\hline
-  Coluna A, Linha 1 & Este é um texto bem maior para exemplificar como é centralizado verticalmente e horizontalmente na tabela. Segundo parágrafo para verificar como fica na tabela\\
-  Quando o texto da coluna A, linha 2 é bem maior do que o das demais colunas  & Coluna B, linha 2\\
-\hline
-\end{tabular}
-\begin{flushleft}
-		Fonte: Elaborada pelos autores.\
-\end{flushleft}
-\end{table}
-
-% ----------------------------------------------------------
-\chapter{Exemplo de tabela com grade}
-\index{tabelas}A \autoref{tab-grade} exemplifica a inclusão de traços estruturadores de conteúdo para melhor compreensão do conteúdo da tabela, em conformidade com as normas de apresentação tabular do IBGE.
-% utilize \usepackage{array} no PREAMBULO (ver em USPSC-modelo.tex) obter uma tabela centralizada verticalmente e horizontalmente
-\begin{table}[htb]
-\ABNTEXfontereduzida
-\caption[Exemplo de tabelas com grade]{Exemplo de tabelas com grade}
-\label{tab-grade}
-\begin{tabular}{ >{\centering\arraybackslash}m{8cm} | >{\centering\arraybackslash}m{6cm} }
-\hline
- \centering \textbf{Coluna A} & \textbf{Coluna B}\\
-\hline
-  A1 & B1\\
-\hline
-  A2 & B2\\
-\hline
-  A3 & B3\\
-\hline
-  A4 & B4\\
-\hline
-\end{tabular}
-\begin{flushleft}
-		Fonte: Elaborada pelos autores.\
-\end{flushleft}
-\end{table}
+	% \textheight = 100pt
+	% \pdfpageheight 300pt
+	Furthermore, this document ends with two sets of tables, one with
+	references for snapshot groups, such as wikipedia or
+	contact links, 
+	the other with 
+	counts of
+	triples, participants, edges/interactions/relations and characters.
 
 
-\end{apendicesenv}
-% ---
+	\section{Facebook data}
+	Each Facebook snapshot is yield by either an user, from which the
+	friends constitute a friendship network, or a group, which participants
+	can yield friendship and interaction networks and posts information with
+	text and some metadata.
+	Further information is found on the following diagrams, the tables on
+	the end of this document or in the main document of this
+	article~\cite{losd}.
+
+	% \includepdf{ontologies/aairc.ttl/draw.pdf}
+	\incgraph[
+		overlay={\node[red,below right] at (page.north west) {\Huge Facebook};}
+		      paper=graphics
+		      ][scale=.6]{ontologies/facebook-legacy-Auricultura10042013Friendship.ttl/draw.png}
+
+		      \textheight = 2in
+		      \pdfpageheight 5in
+		      \incgraph[
+			      overlay={\node[red,below right] at (page.north west) {\Huge Facebook};}
+				    paper=graphics
+				    ][scale=.5]{ontologies/facebook-legacy-Auricultura10042013Meta.ttl/draw.png}
+
+				    \section{Twitter data}
+				    Each Twitter snapshot is yield by a hashtag.
+				    Retweets (\textttt{po:retweetOf} are usually considered the interactions between users.
+				    The database present also \textttt{po:replyTo} and \textttt{po:userMention}
+				    which might be useful in understanding the networking.
+				    Further information is found on the following diagrams, the tables on
+				    the end of this document or in the main document of this
+				    article~\cite{losd}.
+
+				    \incgraph[
+					    overlay={\node[red,below right] at (page.north west) {\Huge
+						Twitter };}
+						    paper=graphics
+						    ][scale=.5]{ontologies/twitter-legacy-arenaNETmundialTweet00000.ttl/draw.png}
+
+						    \incgraph[
+							    overlay={\node[red,below right] at (page.north west) {\Huge Twitter};}
+								  paper=graphics
+								  ][scale=.7]{ontologies/twitter-legacy-arenaNETmundialMeta.ttl/draw.png}
+
+								  \section{IRC data}
+								  Each IRC snapshot is yield by an IRC channel.
+								  IRC messages are either server messages (e.g. join and exit)
+								  marked with \textttt{po:systemMessage true} and having an \textttt{po:impliedUser user\_uri},
+								  or user messages, which yield interactions through \textttt{po:directedTo} and \textttt{po:mentions} properties.
+								  Text messages without the user names are delivered through the \textttt{po:cleanText} property.
+								  Further information is found on the following diagrams, the tables on
+								  the end of this document or in the main document of this
+								  article~\cite{losd}.
+								  \incgraph[
+									  overlay={\node[red,below right] at (page.north west) {\Huge IRC};}
+										paper=graphics
+										][scale=.7]{ontologies/irc-legacy-hackerspace-cpsLog00000.ttl/draw.png}
+										\incgraph[
+											overlay={\node[red,below right] at (page.north west) {\Huge IRC};}
+											      paper=graphics
+											      ][scale=.6]{ontologies/irc-legacy-hackerspace-cpsMeta.ttl/draw.png}
+
+											      \section{Email data}
+											      Each email snapshot is yield by an Email list.
+											      Interactions are yield through \textttt{po:replyTo} relations
+											      although \textttt{po:to} and \textttt{po:cc} might also be considered.
+											      The email body is given by \textttt{po:text} relations while
+											      \textttt{po:cleanText} links to text with lines removed where they are
+											      trivially from previous messages or computer code.
+											      Further information is found on the following diagrams, the tables on
+											      the end of this document or in the main document of this
+											      article~\cite{losd}.
+											      \incgraph[
+												      overlay={\node[red,below right] at (page.north west) {\Huge Email};}
+													    paper=graphics
+													    ][scale=.4]{ontologies/email-legacy-linux.audio.devel1-20000Email00000.ttl/draw.png}
+													    \textheight = 3in
+													    \pdfpageheight 6in
+													    \incgraph[
+														    overlay={\node[red,below right] at (page.north west) {\Huge Email};}
+															  paper=graphics
+															  ][scale=.5]{ontologies/email-legacy-linux.audio.devel1-20000Meta.ttl/draw.png}
+
+															  \section{ParticipaBR data}
+															  The ParticipaBR snapshot is yield by a data dump donated by the system
+															  administrators of the federal portal of social participation ParticipaBR.
+															  Articles can have parent articles (\textttt{po:parent}), be step of a
+															  collection of articles (\textttt{po:stepOf}) and be a mediation of other
+															  articles (\textttt{po:mediationOf}).
+															  Interactions are yield by comments which are \textttt{po:replyTo} other
+															  comments or which are made directly to an article.
+															  This snapshot holds also friendship structures.
+															  The language used is mainly Brazilian Portuguese, but English and
+															  Spanish are also incident.
+															  Due to the higher complexity of the diagram, an additional figure is
+															  given rendered with another layout algorithm.
+															  Further information is found on the following diagrams, the tables on
+															  the end of this document or in the main document of this
+															  article~\cite{losd}.
+															  \incgraph[
+																  overlay={\node[red,below right] at (page.north west) {\Huge
+																      ParticipaBR};}
+																	  paper=graphics
+																	  ][scale=.5]{ontologies/participabr.ttl/draw.png}
+																	  \incgraph[
+																		  overlay={\node[red,below right] at (page.north west) {\Huge
+																		      ParticipaBR};}
+																			  paper=graphics
+																			  ][scale=.7]{ontologies/participabr.ttl/draw_circo.png}
+																			  \incgraph[
+																				  overlay={\node[red,below right] at (page.north west) {\Huge
+																				      ParticipaBR};}
+																					  paper=graphics
+																					  ][scale=.7]{ontologies/participabrMeta.ttl/draw.png}
+
+																					  \section{Cidade Democrática data}
+																					  The Cidade Democrática snapshot is yield by a data dump donated by the system
+																					  administrators of the civil society social participation portal Cidade
+																					  Democrática.
+																					  This snapshot holds a complex structure of both
+																					  Topics/Inspirati-ons/Observatories/Supports/Competitions/Prizes
+																					  and of State/City/Neighbor-hood/Place.
+																					  The language used is mainly Brazilian Portuguese.
+																					  Due to the higher complexity of the diagram, an additional figure is
+																					  given rendered with another layout algorithm.
+																					  Further information is found on the following diagrams, the tables on
+																					  the end of this document or in the main document of this
+																					  article~\cite{losd}.
+																					  \incgraph[
+																						  overlay={\node[red,below right] at (page.north west) {\Huge Cidade
+																						      Democrática};}
+																							  paper=graphics
+																							  ][scale=.4]{ontologies/cidadedemocratica00000.ttl/draw.png}
+																							  \textheight = 2in
+																							  \pdfpageheight 5in
+																							  \incgraph[
+																								  overlay={\node[red,below right] at (page.north west) {\Huge Cidade
+																								      Democrática};}
+																									  paper=graphics
+																									  ][scale=.4]{ontologies/cidadedemocratica00000.ttl/draw_circo.png}
+
+																									  \incgraph[
+																										  overlay={\node[red,below right] at (page.north west) {\Huge Cidade
+																										      Democrática};}
+																											  paper=graphics
+																											  ][scale=.7]{ontologies/cidadedemocraticaMeta.ttl/draw.png}
+
+																											  \section{AA data}
+																											  The AA (Algorithmic Autoregulation) snapshots are yield by a data dump donated by the system
+																											  administrators and by a mined IRC log.
+																											  The system pursue simplicity and most of data consists of detached
+																											  shouts with \textttt{po:text} and \textttt{po:author}.
+																											  Further information is found on the following diagrams, the tables on
+																											  the end of this document or in the main document of this
+																											  article~\cite{losd}.
+																											  \incgraph[
+																												  overlay={\node[red,below right] at (page.north west) {\Huge AA};}
+																													paper=graphics
+																													][scale=.6]{ontologies/aairc.ttl/draw.png}
+																													\textheight = 7in
+%																													\pdfpageheight \foobar
+																													\incgraph[
+																														overlay={\node[red,below right] at (page.north west) {\Huge AA};}
+																														      paper=graphics
+																														      ][scale=.7]{ontologies/aaircMeta.ttl/draw.png}
+
+																														      \section{Snapshot references}
+																														      \label{sreferences}
+																														      \pdfpageheight 10in
+																														      \input{tables/facebookReferences}
+
+
+
+																														      \begin{table*}[h!]\scriptsize
+																															      \begin{center}
+																																      \caption{Different Twitter snapshots are yield by different hashtags. In this
+																																      table we present each snapshot with the respective hashtag and a
+																																      reference to the subject.}\label{tab:provenance}
+																																      \begin{tabular}{| l || p{4cm} | p{4cm} | }\hline
+																																	      \textbf{snapshot hashtag} & \textbf{observation} & \textbf{reference} \\\hline\hline
+																																		      \#arenaNETmundial & a Brazilian discussion hub about free culture, democracy and the internet & \url{http://www.participa.br/netmundial} \\\hline
+																																			  \#art & tweets with the generic hashtag \#art & \url{https://en.wikipedia.org/wiki/Art} \\\hline
+																																			      \#ChennaiFloods & heavy rainfall generated by the annual northeast monsoon in November–December 2015 & \url{https://en.wikipedia.org/wiki/2015_South_Indian_floods} \\\hline
+																																				  \#dilma & the 36th President of Brazil & \url{https://en.wikipedia.org/wiki/Dilma_Rousseff} \\\hline
+																																				      \#ForaDilma & 2015-16 anti-government protests in Brazil & \url{https://en.wikipedia.org/wiki/2015-16_protests_in_Brazil} \\\hline
+																																					  \#ForaCunha & 2015-16 anti-corruption protests in Brazil & \url{https://en.wikipedia.org/wiki/2015-16_protests_in_Brazil} \\\hline
+																																					      \#fuck & tweets with the generic hashtag \#fuck & \url{https://en.wikipedia.org/wiki/Fuck} \\\hline
+																																						  \#game & tweets with the generic hashtag \#game & \url{https://en.wikipedia.org/wiki/Game} \\\hline
+																																						      \#god & tweets with the generic hashtag \#god & \url{https://en.wikipedia.org/wiki/God} \\\hline
+																																							  \#MAMA2015 & the grand 2015 Mnet Asian Music Awards & \url{https://en.wikipedia.org/wiki/2015_Mnet_Asian_Music_Awards} \\\hline
+																																							      \#music & tweets with the generic hashtag \#music & \url{https://en.wikipedia.org/wiki/Music} \\\hline
+																																								  \#obama & the 44th President of the United States & \url{https://en.wikipedia.org/wiki/Barack_Obama} \\\hline
+																																								      \#python & the Python programming language & \url{https://en.wikipedia.org/wiki/Python_(programming_language)} \\\hline
+																																									  \#QuartaSemRacismoClubeSDV & an anti-racism netweaving & \url{https://twitter.com/hashtag/quartasemracismoclubesdv} \\\hline
+																																									      \#science & tweets with the generic hashtag \#science & \url{https://en.wikipedia.org/wiki/Science} \\\hline
+																																										  \#SnapDetremura & reference for Snapchat about a celebrated person & \url{https://twitter.com/detremura} \\\hline
+																																      \end{tabular}\end{center}
+																															      \end{table*}                    
+
+
+																															      \begin{table*}[h!]\scriptsize
+																																      \begin{center}
+																																	      \caption{Different IRC snapshots are yield by different channels. In this
+																																	      table we present each snapshot with the respective channel and a
+																																	      reference to the subject.}\label{tab:provenance}
+																																	      \begin{tabular}{| l || p{4cm} | p{4cm} | }\hline
+																																		      \textbf{snapshot channel} & \textbf{observation} & \textbf{reference} \\\hline\hline
+																																			      \#foradoeixo & a Brazilian network of culture related collectives & \url{https://pt.wikipedia.org/wiki/Fora_do_Eixo} \\\hline
+																																				  \#hackerspace-cps & a hackerspace in Campinas, Brazil & \url{https://lhc.net.br/wiki/P%C3%A1gina_principal} \\\hline
+																																				      \#hackerspaces-br & Brazilian hackerspaces channel & \url{https://garoa.net.br/wiki/Hackerspaces_Brasileiros} \\\hline
+																																					  \#labmacambira & Brazilian channel for the labMacambira collective & \url{http://labmacambira.sourceforge.net/} \\\hline
+																																	      \end{tabular}\end{center}
+																																      \end{table*}                    
+
+																																      \begin{table*}[h!]\scriptsize
+																																	      \begin{center}
+																																		      \caption{Different Email snapshots are yield by different email lists. In this
+																																		      table we present each snapshot with the respective list and a
+																																		      reference to the subject.}\label{tab:provenance}
+																																		      \begin{tabular}{| p{4cm} || p{4cm} | p{4cm} | }\hline
+																																			      \textbf{Gmane ID} & \textbf{observation} & \textbf{reference} \\\hline\hline
+																																				      gmane.linux.audio.users & the Linux Audio Users & \url{http://linuxaudio.org} \\\hline
+																																					  gmane.politics.organizations.me-tareciclagem & a network about technology and social transformation  & \url{https://metareciclagem.github.io} \\\hline
+																																					      gmane.linux.audio.devel & the Linux Audio Developers & \url{http://lists.linuxaudio.org/listinfo/linux-audio-dev} \\\hline
+																																						  gmane.comp.gcc.libstdc++.devel & the C++ standard library & \url{https://gcc.gnu.org/libstdc++/} \\\hline
+																																		      \end{tabular}\end{center}
+																																	      \end{table*}                    
+
+																																	       \begin{table*}[h!]\scriptsize
+																																		       \begin{center}
+																																			       \caption{References for the snapshots of the detached instances
+																																			       ParticipaBR, Cidade Democrática and AA.}\label{tab:provenance}
+																																			       \begin{tabular}{| l || p{4cm} | p{3cm} | }\hline
+																																				       \textbf{social protocol} & \textbf{observations} & \textbf{reference} \\\hline\hline
+																																					       ParticipaBR & a Brazilian federal portal of social participation & \url{http://www.participa.br/} \\\hline
+																																						   Cidade Demorática & a Brazilian civil society portal of social participation & \url{http://www.cidadedemocratica.org.br/} \\\hline
+																																						       AA & the Algorithmic Autoregulation software development methodology & \cite{aarticle} \\\hline
+																																			       \end{tabular}\end{center}
+																																		       \end{table*}                    
+
+
+																																		       \clearpage
+																																		       \section{Trivial counts in each snapshot}
+																																		       \input{tables/basicOverall}
+
+
+
+
+
+
+																																	       \end{apendicesenv}
+																																	       % ---
