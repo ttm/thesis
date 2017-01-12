@@ -23,6 +23,7 @@ from which general properties can be inferred. These lists are as follows:
 
 \item Developer's list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in Gmane.}, with computer programmers from different countries. English is the prevailing language. Abbreviated as CPP from now on.
 \item List of the MetaReciclagem project\footnote{gmane.politics.organizations.metareciclagem is list ID in Gmane.}, a Brazilian email list for digital culture. 	Portuguese is the prevailing language, although some messages are written in Spanish and English. Abbreviated as MET from now on.
+\item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE.}. English is the prevailing language. Abbreviated ELE from now on.
 \end{itemize} 
 
 The first 20,000 messages of each list were considered, with basic attributes of total timespan, authors, threads and missing messages indicated in Table~\ref{tab:genLists}. We considered 140 additional email lists to report on the interdependence between the number of participants and the number of discussion threads. Furthermore, 12 networks from Facebook (8), Twitter (2) and Participabr (2) were scrutinized, and their analysis is given in the Supporting Information document for the purpose of testing the generality of the results.
@@ -30,8 +31,8 @@ The first 20,000 messages of each list were considered, with basic attributes of
 \subsection{Availability}
 The data and scripts used to derive the results, figures and tables, and this article itself are publicly available. Email messages are downloadable from the Gmane public database~\cite{Gmanewikipedia}.
 Data annotated from Facebook and Twitter are in a public repository~\cite{fbtwData}.
-Data from Participabr were used from the linked data/semantic web RDF triples~\cite{opa}, available in~\cite{datahub}.
-Computer scripts are delivered through a public domain Python PyPI package and an open Git repository~\cite{gmanePack}.
+Data from Participabr was used from the linked data/semantic web RDF triples~\cite{opa}, available in~\cite{datahub}.
+Computer scripts are delivered through public domain Python PyPI packages and open Git repositories~\cite{gmanePack}.
 This open approach to both data and scripts reinforces the scientific aspect of the contribution~\cite{openSci} and mitigates ethical and moral issues involved in researching systems constituted of human individuals~\cite{anPhy,ccs15}.
  
 
@@ -92,7 +93,7 @@ Edges in both directions are allowed. Each time an interaction occurs, the value
 %Edges can be created from all antecedent message authors on the message-response thread to each message author.
 %We only linked the immediate antecedent to the new message author, both for simplicity and because in adding two edges, $x\rightarrow y$ and $y\rightarrow z$, there is also a weaker connection between $x$ and $z$. Potential interpretations for this weaker connection are: double length, half weight or with one more ``obstacles''. This suggests the adequacy of centrality measurements to account for the connectivity of a node with all other nodes, such as betweenness centrality, eigenvector centrality and accessibility~\cite{luMeasures,access}.
 
-\subsubsection{Topological metrics}\label{measures}
+\subsection{Topological metrics}\label{measures}
 
 The topology of the networks was characterized 
 from a small selection of the most basic 
@@ -124,7 +125,7 @@ Both standard and non-standard metrics are used for the Erd\"os sectioning (desc
 
 
 \subsection{Erd\"os sectioning}\label{sectioning}
-It is often useful to think of vertices as hubs, peripheral and intermediary. We have therefore derived the peripheral, intermediary and hub sectors of the empirical networks from a comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
+It is often useful to think of vertices as hubs, peripheral and intermediary. We have therefore derived the peripheral, intermediary and hub sectors of an empirical network from a comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
 as depicted in Figure~\ref{fig:setores}. We refer to this procedure as \emph{Erd\"os sectioning}, with the resulting sectors being named as \emph{Erd\"os sectors}. The Erd\"os sectioning was recognized as a theoretical possibility by M. O. Jackson in his video lectures~\cite{3setores}, but to our knowledge it has not as yet been applied to empirical data.
 
 The degree distribution $\widetilde{P}(k)$ of a real network with a scale-free profile $\mathcal{N}_f(N,z)$ with $N$ vertices and $z$ edges has less
@@ -264,10 +265,10 @@ The simplification of all possible compound possibilities to the small set liste
 
 %\subsubsection{Sectioning of networks in peripheral, intermediary and hubs sectors}\label{sectioning}
 \subsection{Principal Component Analysis of topological metrics}\label{sec:pca}
-Principal Component Analysis (PCA) is a well documented technique~\cite{pca}, used here to address the following questions:	1) which metrics contribute to each principal component and in what proportion;	2) how much of the dispersion is concentrated in each component;	3) which are the expected values and dispersions for these quantities over various networks.	This enables one to characterize human interaction networks in terms of the relative importance of network metrics and the way they combine.
+Principal Component Analysis (PCA) is a well documented technique~\cite{pca} and is used here to address the following questions:	1) which metrics contribute to each principal component and in what proportion;	2) how much of the dispersion is concentrated in each component;	3) which are the expected values and dispersions for these quantities over various networks.	This enables one to characterize human interaction networks in terms of the relative importance of network metrics and the way they combine.
 
 Let $\mathbf{X}=\{X[i,j]\}$ be a matrix where each element is the value
-of the metric $j$ at vertex $i$ .
+of the metric $j$ at vertex $i$.
 Let
 $\mu_X [j]=\frac{\sum_i X[i,j]}{I}$ be the mean of metric $j$ over all $I$ vertices, 
 $\sigma_X [j]=\sqrt{\frac{\sum_i (X[i,j]-\mu_X [j])^2}{I}}$ the standard deviation of metric $j$,
@@ -337,46 +338,63 @@ $ws=\{50, 100, 200, 400, 500, 800, 1000, 2000, 2500, 5000, 10000\}$ messages. Va
 and other network characteristics, within the same window size $ws$,
 are given in Section~\ref*{si:frac} of the Supporting Information document. 
 
-\subsubsection{The Versinus method}
+\subsection{The Versinus method}
 Network structures were mapped to video animations, sound and musical structures developed for this research~\cite{animacoes}.% ,galGmane,appGmane}.
 Such \emph{audiovisualizations} were crucial in the initial steps and
 to guide the research into the most important features of network evolution.
-
 Versinus is a visualization method for dynamic graphs based on experimental observations.
-This method receives this dedicated article by recurrence of the suggestion, by fellow researchers,
-to write it.
-
+This method receives dedicated attention by recurrence of the suggestion, by fellow researchers,
+to write about it.  
 In visualizing a network, the method consists of creating an animation,
-of a fixed-size message sliding window (e.g. 400 messages), and 
+of a fixed-size message sliding window (e.g. 400 messages) and 
 partitioning the network in two fixed-layout segments:
-a sinusoid for the most connected vertexes
-and a straight line for the less connected.
+a sinusoid for the most connected vertexes (hubs and intermediary)
+and a straight line for the less connected (peripheral).
 A vertex holds the same position throughout the animation. Also,
-visual indication of properties - such as color, height and width,
+visual cues of properties - such as color, height and width,
 and rank of vertex with degree criteria - plays a central role.
-This work differs from the few works on the visualization of dynamic
-graphs because it is a simple report on a method that has been useful,
-was developed by practical needs, is the result of experimentations,
-and has a number of criteria that guided its development~\cite{Viz1,Viz2,Viz3}.
+Numbers with individual measures for each vertex blink periodically.
+Versinus differs from the few works on the visualization of dynamic
+graphs because it is a simple method that has been useful,
+was developed by practical needs and is the result of experimentations,
+although a number of criteria has guided its development~\cite{Viz1,Viz2,Viz3}.
 
-Consider $\Delta$ a fixed number of consecutive messages (e.g. $\Delta=400$). Consider sets $s_{i}^{i+\Delta}$ of $\Delta$ consecutive email messages, as they are registered along time. A Sequence $S^{\Delta,M}$ of such sets, with the first message positioned in each the $M$ considered messages (e.g. $M=20000$), can be written as: 
+Let $\Delta$ be a fixed number of messages (e.g. $\Delta=400$).
+Let also $s_{i}^{i+\Delta}$ be sets of $\Delta$ consecutive email messages along time.
+A sequence $S^{\Delta,M}$ of such sets,
+with the first message positioned in each the $M$ messages (e.g. $M=20000$),
+can be written as: 
 
 \begin{equation}
 	S^{\Delta,M}=\{s_i^{i+\Delta}\}_{i=0}^{M-\Delta}
 \end{equation}
 
-Each set $s_i$ yields an interaction network, as described in Section~\ref{intNet}. Each of these sets exhibits stable properties, while each participant exhibits a wide variation of characteristics along $S$. To understand the mechanisms of this compatibility (unstable vertexes, stable network) led to experimenting a series of layouts and visualization techniques, from which versinus emerged.
+Each set $s_i$ yields an interaction network, as described in Section~\ref{intNet}.
+Each of such sequence $S^{\Delta,M}$ of sets present stable properties,
+while each participant exhibits a wide variation of characteristics.
+Understanding the mechanisms of this compatibility (unstable vertices and stable network)
+led to experimenting with a series of layouts and visualization techniques, from which Versinus emerged.
 
-Versinus is a simple visualization method. Network vertexes are roughly split to usual $80\%$ periphery, $15\%$ intermediary and $5\%$ of hubs. Hubs are laid on the first half of a sinusoid. Intermediary on the second. Peripheral sector is laid on a straight line. This configuration can be improved in various forms, to which Section~\ref{sec:ref} is dedicated. Figure~\ref{fig:versinus} has an image of such a layout. The position of vertex, fixed, is defined by the overall structure, i.e. with respect to all $M$ messages (see Section~\ref{sec:sliding}). Numbers with individual measures for each vertex blink periodically.
+Taking advantage of the fact that vertices are roughly split into usual $80\%$ of peripheral, $15\%$ of intermediary and $5\%$ of hubs,
+hubs are laid on the first half of a sinusoid,
+intermediary on the second half,
+and peripheral on the straight line.
+This configuration can be improved in various forms, to which Section~\ref{sec:verref} is dedicated.
+Figure~\ref{fig:versinus} has an image of such a layout.
+The fixed position of each vertex is defined by the overall structure,
+i.e. with respect to all $M$ messages.
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=.25]{figs/versinus_}
-				    \caption{The versinus visualization method in use. 5\% of The most connected vertexes (hubs) are on the left period of the sinusoid. 15\% of the most connected remaining vertexes are on the right period. 80\% of the least connected vertexes are on the straight line, above the sinusoidal shape. White dots with numbers keep track of node position in the overall degree ordering. Measures blink periodically on the vertex it is related to.}
+				    \caption{The versinus visualization method in use. 5\% of The most connected vertexes (hubs) are on the left half-period of the sinusoid.
+				    15\% of the most connected remaining vertexes are on the right half-period.
+				    80\% of the least connected vertices are on the straight line, above the sinusoidal shape.
+				    White dots with numbers keep track of node position in the overall degree ordering.
+				    Measures blink periodically near the vertex it is related to.}
 					    \label{fig:versinus}
 	\end{center}
 \end{figure}
-
 
 
 \subsection{Text measures}
