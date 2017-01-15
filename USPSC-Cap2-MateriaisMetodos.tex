@@ -28,6 +28,22 @@ from which general properties can be inferred. These lists are as follows:
 
 The first 20,000 messages of each list were considered, with basic attributes of total timespan, authors, threads and missing messages indicated in Table~\ref{tab:genLists}. We considered 140 additional email lists to report on the interdependence between the number of participants and the number of discussion threads. Furthermore, 12 networks from Facebook (8), Twitter (2) and Participabr (2) were scrutinized, and their analysis is given in the Supporting Information document for the purpose of testing the generality of the results.
 
+ 
+\begin{table}
+\centering
+\caption{Columns $date_1$ and $date_M$ have dates of first and last messages from the 20,000 messages considered in each email list.
+$N$ is the number of participants (number of different email addresses),
+$\Gamma$ is the number of discussion threads (count of messages without antecedent),
+$\overline{M}$ is the number of messages missing in the 20,000 collection
+($100\frac{23}{20000}=0.115$ percent in the worst case).
+}
+\label{tab:genLists}
+\begin{tabular}{|l|c|c|c|c|c|}\hline
+list & $date_1$ & $date_{M}$    & $N$  & $\Gamma$ & $\overline{M}$ \\\hline
+\input{tables/tab1Overview}
+\end{tabular}
+\end{table} 
+
 \subsection{Availability}
 The data and scripts used to derive the results, figures and tables, and this article itself are publicly available. Email messages are downloadable from the Gmane public database~\cite{Gmanewikipedia}.
 Data annotated from Facebook and Twitter are in a public repository~\cite{fbtwData}.
@@ -552,7 +568,7 @@ the global data space, which is usually
 conceived as centered around the DBPedia, a linked data representation
 of data from Wikipedia~\cite{dbpedia0,dbpedia}.
 
-\subsection{RDF}
+\subsubsection{RDF}
 The Resource Description Framework (RDF), a W3C
 recommendation, is a model for data
 interchange.
