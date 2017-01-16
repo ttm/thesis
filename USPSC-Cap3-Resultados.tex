@@ -576,50 +576,63 @@ Appendix ~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated
 \section{Results from visualization}
 Results from versinus are divided in two groups:
 observations on features that made it useful for the task,
-and the network structure properties it made possible to grasp.
+and the network properties it made possible to grasp.
 
-\subsection{Understanding of useful visualization features for dynamic networks}
+\subsection{Useful visualization features for dynamic networks}
 
-On the numerous insights related to versinus, a few of them seem more fundamental, or plain useful. This is an attempt to present them in an importance-first order:
+Among the numerous insights related to versinus, a few of them seem more fundamental, or plain useful.
+Such insights were incorporated to Versinus as the result of tests which presented clear benefits within the context of our research.
+The folowing list is an attempt to present them in an importance-first order:
 \begin{enumerate}
-		    \item Vertexes need to remain static. Even if they move smoothly, one notices solely transient artifacts if nodes are moving around.
-			        \item Very connected sectors (hubs and intermediary) need to be laid in a curve, otherwise the edges enclose each other and reasoning about the network becomes harsh.
-					    \item Height and width of a vertex are very informative, specially if measures mapped to them have a strong relation, such as out-degree (mapped to height in versinus) and in-degree (mapped to width).
-						        \item Coloring nodes was also informative, although less than height and weight, as these are related to measure differences more directly.
-								    \item An ordering of nodes, related to their fixed position, is very useful. Among all tests, ordering of vertexes by degree was considered the most informative order, which led to the hub, intermediary and peripheral sectioning. As node position in layout is fixed, its ordering is done with respect to the overall structure, i.e. considering all $M$ messages.
-									        \item  Numbering these positions with respect to the order of the vertexes in the larger structure (all $M$ messages) is useful in understanding how much a vertex holds his position in his scale and on a larger window size.
+	\item Vertices need to remain static.
+		Even if they move smoothly, one notices solely transient artifacts.
+	\item Very connected sectors (hubs and intermediary) need to be in a curve, otherwise the edges enclose each other and reasoning about the network becomes harsh.
+	\item Height and width of a vertex are very informative, specially if measures mapped to them have a strong relation, such as out-degree (mapped to height in versinus) and in-degree (mapped to width).
+	\item The color of nodes is also informative although less than height and weight, as differences is the latter are more noticeable.
+	\item An ordering of nodes, related to their fixed position, is very useful. Among all tests, ordering of vertices by degree was considered the most informative, which led to the hub, intermediary and peripheral sectioning of the network delineated in Section~\ref{sectioning}.
+		As node position in the layout is fixed throughout an animation which comprises consecutive but distinct network activity, such ordering is done with respect to the resulting network of all the activity.
+	Numbering these positions with respect to the order of the vertices in the larger structure (e.g. all $M$ messages) is useful for understanding how much a vertex preserves the position in different scales of activity.
 \end{enumerate}
 
-Many other insights were given by versinus, such as possible visualization tools, other kind of convenient layouts and glyph elaborations. These received dedicated attention in Section~\ref{sec:ref}.
-Even so, those insights, numbered above, were incorporated to versinus as the result of tests which presented clear benefits within the best settings achieved.
+Many other insights were given by Versinus, such as possible visualization tools, other kind of convenient layouts and glyph elaborations.
+These receives dedicated attention in Section~\ref{sec:ref}.
 
-\subsection{Understanding of network properties through versinus}
-A number of hypothesis were drawn about networks, for which versinus
-was designed. Another number of hypothesis were driven from versinus use itself.
+\subsection{Understanding of network properties through Versinus}
+A number of hypotheses were drawn about the networks for which Versinus was designed.
+Another number of hypothesis were driven from versinus use itself.
 
-\subsubsection{Hypothesis evidenced by versinus}
-As suggested by Palla, Barab\'asi and Vicsek~\cite{barabasiEvo}, stability of participant activity in social networks is more incident in smaller networks. In accordance with this result, all hubs have intermittent activity in the settings analyzed, except for the email list with the smallest number of participants (the Metareciclagem email list). The intermitence of hubs itself was one of the top hypothesis which motivated versinus development. The stability of the structure~\cite{evoSN} required further verification of the instability of each participant activity.
-
-\subsubsection{Hypothesis drawn from versinus use}
-There seem to be modes of operation of the network. As an example, the intermediary is observed to communicate mostly to hubs or to communicate substantially with the peripheral vertex. Another hypothesis is that in and out degree discrepancies in each vertex are important for network characterization. This was confirmed by a recent work by the present author~\cite{evoSN}. Other hypothesis, such as discrepancies in authority and connectivity of vertex, are numerous but need further research to be valuable.
+As suggested by Palla, Barab\'asi and Vicsek~\cite{barabasiEvo}, stability of participant activity in social networks is more incident in smaller networks.
+In accordance with this result, all hubs have intermittent activity in the settings analyzed, except for the email list with the smallest number of participants (the Metareciclagem email list).
+The intermitence of hubs itself was one of the top hypotheses which motivated Versinus development.
+The stability of the network structure, concomitant with the instability of the activity of each participant,
+motivated a deeper analysis~\cite{evoSN}.
+In doing so, we also found evidence for another hypothesis drawn from Versinus:
+that in- and out-degree differences in each vertex are important for network characterization.
+Furthermore, the visualization suggests that there are modes of operation of the network.
+As an example, the intermediary sector often communicates mostly with the hubs or with the peripheral vertex.
+Other hypotheses,
+such as discrepancies in the authority and the degree of a vertex,
+are numerous but need further research to be valuable.
  
-\subsection{Refinements on versinus}\label{sec:verref}
-By far, the most proficuous facet of versinus is its ability
-to bring insights about how to enhance its layout and use.
-Besides the technological proposal of making a tool for using versinus
-in real-time, there are some ideas about the layout and visual guides itself. 
-
+\subsection{Refinement of Versinus}\label{sec:verref}
+Versinus was convenient for obtaining insights about how to enhance its layout and use.
+It was immediate to think of a tool for using Versinus
+in real-time, but less obvious are some ideas about the layout and visual guides. 
 To further enable visualization of hubs and intermediary vertex,
 the sinusoid can have many periods 
 with a decaying frequency.
-The upper straight line can also have an oscillating trace.
-The two halves of the sinusoidal period can be moved independently.
+The upper straight line can also have an oscillating outline.
+The two halves of the sinusoidal period could be moved independently.
 The waveform need not to be a sinusoid.
-One can think of many ways to make more informative glyphs. Also, visual and auditory signals for specific occurrences can be interesting (e.g. when a new vertex appears, when one vanishes, when an ordering of vertexes changes).
-Measures of each vertex can be exposed with a vertical displacement, to enable multiple measures, to avoid the necessity to blink the numbers and to keep network visualization free from occlusion.
-
-\subsection{Other strategies envisioned}\label{sec:other}
-Working with versinus has suggested other kinds of layout for vertexes, specially other geometric figures and iterative force-based methods for positioning vertex in a fixed layout. Matrix visualization of graphs and recent approaches~\cite{Viz1} has been foreseen as support to versinus.
+One can think of many ways to make more informative glyphs.
+Also, visual and auditory signals for specific occurrences can be interesting
+(e.g. when a new vertex appears, when one vanishes, when an ordering of vertices changes).
+Measures of each vertex can be exposed with a vertical displacement,
+to enable multiple measures, to avoid the need to blink the numbers and to keep network visualization free from occlusion.
+Working with Versinus has also suggested other kinds of layout for vertices, 
+specially geometric figures and iterative force-based methods for positioning vertex in a fixed layout.
+The traditional matrix representation of the graphs has been gazed upon as support to Versinus 
+as has been some recent approaches to network visualization~\cite{Viz1}.
 
 
 \section{Linked data results}
