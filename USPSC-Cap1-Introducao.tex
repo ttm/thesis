@@ -65,14 +65,14 @@ The estimated number of atoms in the universe is often used as a reference of la
 and is $10^80$.
 Let us find the number of vertices needed to reach such number of possible networks.
 Let also us consider the simplest case of the unweighted and undirected networks.
-Each edge can exist or not (a Bernoulli variable) and with $n$ vertices there are
-at most ${N \choose 2}$ edges.
+Each edge can exist or not (i.e. it is a Bernoulli variable) and with $n$ vertices there are
+at most ${n \choose 2}$ edges.
 Therefore:
 \begin{align}
-	2^{N \choose 2} > 10^{80} \Rightarrow 
-	log_2[2^{N \choose 2}] > log_2(10^{80}) \Rightarrow
-	{N \choose 2} > \frac{log_{10}(10^{80})}{log_{10}2} \Rightarrow \nonumber\\
-	\Rightarrow \frac{N.(N-1)}{2} > \frac{80}{log_{10}2} \Rightarrow
+	2^{n \choose 2} > 10^{80} \Rightarrow 
+	log_2[2^{n \choose 2}] > log_2(10^{80}) \Rightarrow
+	{n \choose 2} > \frac{log_{10}(10^{80})}{log_{10}2} \Rightarrow \nonumber\\
+	\Rightarrow \frac{n.(n-1)}{2} > \frac{80}{log_{10}2} \Rightarrow
 		N > 23,5988 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
 			\nonumber
 \end{align}
@@ -83,7 +83,7 @@ very fast with the number of vertices.
 This is a good reason for characterizing such systems by means
 of paradigmatic networks and generic measures for nodes and the network (and less often for the edges).
 
-\subsubsection{Most basic measures}
+\subsubsection{Basic measures}
 Section~\ref{measures} gives a mathematical account of the following measures,
 which are here for pointing the characteristics of basic types
 of networks presented in the next section.
@@ -100,7 +100,7 @@ Such measures are:
 \end{itemize}
 % distance between vertices
 
-\subsubsection{Most basic types of networks}
+\subsubsection{Basic types of networks}
 Complex networks are often characterized in terms of paradigmatic models.
 There are diverse models, but we can glimpse the background theory
 with the following ones:
@@ -117,6 +117,7 @@ with the following ones:
 	\item Scale-free networks: in which the degree distribution $p(k)$ follows a power law ($p(k)=C.k^{-\gamma}$ where C and k are constants).
 		These networks are qualitatively characterized by the presence of a large number of poorly connected and of few highly connected vertices.
 		Important is the absence of a characteristic degree, thus the name 'scale-free network'.
+	\item Other networks: among important models of networks are exponential networks, networks with community structure and hybrid models.
 \end{itemize}
 Real networks most often exhibit scale-free and small-world properties.
 This is the case of most of e.g. social, gene and food networks.
@@ -125,13 +126,30 @@ the networks derived from the real systems depend heavily
 in what is considered a vertex and an edge,
 i.e. on how the system is modeled as a graph.
 Another noteworthy remark is that
-the Erdos-Renyi networks, i.e. graphs of the Erdös-Rényi model, are frequently pin-pointed as the networks with trivial
+the Erdös-Rényi networks, i.e. graphs of the Erdös-Rényi model, are frequently pin-pointed as the networks with trivial
 topological properties.
 Even though, it is posed as a paradigmatic ``complex network'', concept often defined as graphs with non-trivial topological properties,
 which is a contradiction and exposes that complex networks is not a very well defined notion,
 as is the case with the complexity field in general.
 
 \subsection{Text mining of social data}
+Text mining is an extension of data mining to - often unstructured - textual data
+to discover structure and meaning.
+A general outline of a text mining endeavor involves structuring input text,
+deriving patterns and the evaluation of the output.
+Text mining tasks include document summarization, sentiment analysis
+and natural language processing techniques such as part of speech tagging.
+Among application are social media monitoring, automated ad placement,
+publishing and making tools for semantics, sentiment and general natural language.
+It is believed that applying text mining to social media
+can yield interesting findings in human behavior.
+Although there is no clear cut, text mining is sometimes divided into linguistic and non-linguistic.
+In the first case, linguistic techniques are present, such as
+the analysis of discourse and part of speech tagging,
+and it is often mingled with the natural language processing or computational linguistic fields.
+In the non-linguistic text mining, text is analyzed by means of statistical features
+such as the size of tokens and sentences, and might be more easily related to the intuitive concept of data mining of text.
+On this thesis we use both perspectives.
 
 \subsection{Visualization of graphs}
 \subsection{Linked data}
