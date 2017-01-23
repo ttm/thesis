@@ -4,7 +4,7 @@
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
 % \chapter[Introdução]{Introdução}
-\chapter{Introduction and Related Work}\label{ch:int}
+\chapter{Introduction}\label{ch:int}
 
 The first studies dealing explicitly with human interaction networks
 date from the nineteenth century while the foundation of
@@ -36,6 +36,15 @@ a ``graph with non-trivial topological features''.
 We might add to this definition that a complex network is also a large graph (even while there
 seems not to be a consensus to what \emph{large} means in such context)
 and that it is a graph representation of a system found in nature or in real or empirical systems.
+Another way to approach the definition of ``complex networks'' is to define it as
+complex systems modeled as networks.
+This second definition is also useful but is even more problematic as
+there is no consensus of what a \emph{complex system} is.
+Even so, one should keep in mind that authors often define a complex system
+to be a system composed with many parts in which ``the whole is more than
+the sum of its parts''.
+Authors also often consider complex systems to have capabilities
+to ``process information'', to adapt, to reproduce. 
 
 A graph is a structure that consists of a set of objects (called vertices)
 and a set of binary/dual relations of the objects (called edges).
@@ -51,7 +60,28 @@ The matrix representation is essential for algebraic reasoning and for deriving 
 while the node-edge representation is important for illustration and intuitive guidance
 of the characterization of the systems.
 
-\subsubsection{A good reason for representing complex systems as complex networks}
+\subsubsection{A good justification for the complex networks theory}
+The estimated number of atoms in the universe is often used as a reference of largeness
+and is $10^80$.
+Let us find the number of vertices needed to reach such number of possible networks.
+Let also us consider the simplest case of the unweighted and undirected networks.
+Each edge can exist or not (a Bernoulli variable) and with $n$ vertices there are
+at most ${N \choose 2}$ edges.
+Therefore:
+\begin{align}
+	2^{N \choose 2} > 10^{80} \Rightarrow 
+	log_2[2^{N \choose 2}] > log_2(10^{80}) \Rightarrow
+	{N \choose 2} > \frac{log_{10}(10^{80})}{log_{10}2} \Rightarrow \nonumber\\
+	\Rightarrow \frac{N.(N-1)}{2} > \frac{80}{log_{10}2} \Rightarrow
+		N > 23,5988 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+			\nonumber
+\end{align}
+That is, with only 24 vertices we have more possible networks than
+the estimated number of atoms in the universe.
+We should also add that the number of possible networks grows
+very fast with the number of vertices.
+This is a good reason for characterizing such systems by means
+of paradigmatic networks and generic measures for nodes and the network (and less often for the edges).
 
 \subsubsection{Most basic measures}
 Section~\ref{measures} gives a mathematical account of the following measures,
