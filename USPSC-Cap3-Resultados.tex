@@ -1,17 +1,11 @@
-% ---
-%% USPSC-Cap3-Citacoes.tex
-% --
-% Este capítulo traz os exemplos de citações das "Diretrizes para apresentação de dissertações e teses da USP: documento eletrônico e impresso - Parte I (ABNT)" disponílvel em: http://biblioteca.puspsc.usp.br/pdfFiles_Caderno_Estudos_9_PT_1.pdf
-
-
-% --- 
 \chapter{Results and Discussion}
 \label{ch:disc}
-% --- 
+% Será necessária Introdução
+% ao Capítulo e talvez divisão em tópicos?
 \subsection{Activity along time}\label{constDisc}
 Regular patterns of activity were observed along time
 in the scales of seconds, minutes, hours, days and months.
-Histograms in each of the time scales were computed as were circular average and dispersion values, and the results are given in Tables~\ref{tab:circ}-\ref{tab:min2}. For example, uniform activity is found with respect to seconds, minutes and days of the months. Weekend days exhibit about half the activity of regular weekdays, and there is a peak of activity between 11am and noon.
+Histograms in each of the time scales were computed as were circular average and dispersion values, and the results are given in Tables~\ref{tab:circ}-\ref{tab:min22}. For example, uniform activity is found with respect to seconds, minutes and days of the months. Weekend days exhibit about half the activity of regular weekdays, and there is a peak of activity between 11am and noon.
 
 
 \begin{table}
@@ -60,7 +54,7 @@ Therefore, the incidence of messages at each second of a minute and at each minu
 In these cases, the circular dispersion is maximized and the mean has little meaning as indicated in Table~\ref{tab:circ}.
 As for the hours of the day, an abrupt peak is found between 11am and 12pm with the most active period being the afternoon, with one third of total daily activity, and two thirds of activity are allocated in the second 12h of each day. Days of the week revealed a decrease between one third and two thirds of activity on weekends.
 Days of the month were regarded as homogeneous with an inconclusive slight tendency of the first week to be more active.
-Months of the year revealed patterns matching usual work and academic calendars. The time period examined here was not sufficient for the analysis of activity along the years. These patterns are exemplified in Tables~\ref{tab:hin}-\ref{tab:min2}.
+Months of the year revealed patterns matching usual work and academic calendars. The time period examined here was not sufficient for the analysis of activity along the years. These patterns are exemplified in Tables~\ref{tab:hin}-\ref{tab:min22}.
 
 
 \FloatBarrier
@@ -79,7 +73,7 @@ This specific example and empirical table correspond to the activity of the MET 
 \caption{Activity percentages on months along the year. 	Activity is usually concentrated in Jun-Aug and/or in Dec-Mar, potentially due to academic calendars, vacations and end-of-year holidays. This table corresponds to activity in LAU. Similar results are shown for other lists in Section~\ref*{si:months} of the Supporting Information document.}
 \footnotesize
 \input{tables/tabMonthsLAU}
-\label{tab:min2}
+\label{tab:min22}
 \end{table}
 
 
@@ -140,7 +134,7 @@ list & hub & $ Q_1 $ & $ Q_3 $ & $D_{-1}$ \\ \hline
 
 The principal components of the participants are very stable in the topological space,
 i.e. in the space of network measures.
-Table~\ref{tab:pcain} exemplifies the formation of principal components by providing the averages over non-overlapped activity snapshots of a network. The most important result of this application of PCA, the stability of principal components, is underpinned by the very small dispersion of the contribution of each metric to each principal component.
+Table~\ref{tab:pcainin} exemplifies the formation of principal components by providing the averages over non-overlapped activity snapshots of a network. The most important result of this application of PCA, the stability of principal components, is underpinned by the very small dispersion of the contribution of each metric to each principal component.
 %The contribution of each metric to the
 %principal components presents
 %very small standard deviation.
@@ -150,7 +144,7 @@ Table~\ref{tab:pcain} exemplifies the formation of principal components by provi
 The low standard deviation $\sigma$ implies that the principal components are considerably stable.}
 \footnotesize
 \input{tables/tabPCA3CPP}
-\label{tab:pcain}
+\label{tab:pcainin}
 \end{table}
 
 The first principal component is an average of centrality metrics:
@@ -183,7 +177,7 @@ This figure reflects a snapshot of the LAU list with 1000 contiguous messages.}
 \label{fig:sym}
 \end{figure}
 
-According to Table~\ref{tab:pcain} and Figure~\ref{fig:sym},
+According to Table~\ref{tab:pcainin} and Figure~\ref{fig:sym},
 dispersion is larger in symmetry-related metrics than in clustering coefficient.
 % As expected from basic complex network theory, peripheral vertices have low values of centrality metrics and larger dispersion with regard to the clustering coefficient.
 % %The scatter plot in the third system of Figure~\ref{fig:sym},
@@ -309,7 +303,7 @@ present smaller networks.}
 % contextualization in the academic knowledge
 
 \subsection{Implications of the main findings}\label{sec:impl}
-The findings reported in this article arose from an exploratory procedure to visually inspect the networks and to analyze considerable amounts of interaction networks data.
+The findings reported in this thesis arose from an exploratory procedure to visually inspect the networks and to analyze considerable amounts of interaction networks data.
 % deriving from email lists and also from other networks.
 While this procedure has certainly an ad hoc nature, the statistics in the data are sufficiently robust for important features from these interaction networks to be extracted.
 Temporal stability, in the sense that interaction networks could be considered as stationary time series, is the most important feature. Also relevant is the significant stability found on the principal components, on the fraction of participants in each Erd\"os Sector and on the activity along different timescales. In fact, these findings confirm our initial hypothesis - based on the literature~\cite{newmanBook} - that interaction networks should exhibit some stability traces. The potential generality of these findings is suggested by the analysis of networks derived from diverse systems, with interaction networks from public email lists serving as proper benchmarks. Indeed, with such benchmarks one can compare any social network system. Furthermore, this analysis enables us to establish an outline of human interaction networks. It takes the hub, intermediary and periphery sectors out of the scientific folklore and into classes drawn from quantitative criteria. It enables the conception of non-static human types derived from natural properties.
@@ -327,18 +321,19 @@ With regard to the limitations of our study, one should emphasize that not all t
  
  % TTM find
 \section{Text results and discussion}\label{sec:tresults}
+% Aqui será necessária uma Introdução a este novo tipo de resultado.
 
 The most important result of including textual metrics in our analysis is the
 extreme differentiation of each Erd\"os sector with respect to the texts produced.
 For example: hubs use more contractions, more adjectives,
 more common words, and less punctuation if compared to the rest of the network,
-specially the peripheral sector.
+especially the peripheral sector.
 In general, the rise or fall of a metric is monotonic along connectivity,
 but some of them reached extreme values in the intermediary sector.
 
-Next sections summarize results of immediate interest
-and further insights can be obtained by skipping through
-the tables and figures os the Appendix~\ref{ap:texttop}.
+The next sections summarize results of immediate interest
+and further insights can be obtained by browsing through
+the tables and figures of the Appendix~\ref{ap:texttop}.
 
 \subsection{General characteristics of activity distribution among participants}\label{sec:gen}
 \input{tables/geralInline_}
@@ -734,7 +729,7 @@ The database exploration can be assisted through diagrams which expose
 the structure from each provenance.
 Such diagrams are exemplified in the Appendix~\ref{losd} and 
 fully available in a dedicated article~\cite{losd}
-with some tables to ease understanding of the provided data.
+with some tables to make it easier to understand the data provided.
 A simplified example is given in Figure~\ref{dia} where the friendship
 structure of the Facebook snapshots are exposed.
 
@@ -802,7 +797,7 @@ structure of the Facebook snapshots are exposed.
 
 	\subsection{License issues}
 	% Facebook, Twitter, IRC, Gmane, Participa, CD, AA.
-	The database presented in this article is released under public domain.
+	The database presented in this thesis is released under public domain.
 	Computer scripts are in git repositories and PyPI Python packages, also under public domain.
 	Although most data is already in open licenses (Twitter, Email, Participabr, Cidade Democrática, and AA data), IRC and Facebook data was collected
 	and donated by the individuals which yield the data.
