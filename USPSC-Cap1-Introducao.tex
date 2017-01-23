@@ -31,6 +31,76 @@ but it is not relevant for the present work because email messages and addresses
 
 \section{Related knowledge}
 \subsection{Complex networks}
+Although not universally accepted, it is commonplace to define a complex network to be
+a ``graph with non-trivial topological features''.
+We might add to this definition that a complex network is also a large graph (even while there
+seems not to be a consensus to what \emph{large} means in such context)
+and that it is a graph representation of a system found in nature or in real or empirical systems.
+
+A graph is a structure that consists of a set of objects (called vertices)
+and a set of binary/dual relations of the objects (called edges).
+Such graph might be unweighted and undirected (the simplest possibility),
+weighted and undirected, unweighted and directed, or weighted and directed.
+
+The most usual representations of graphs (and networks) are the matrix and node-edge representations.
+In the matrix representation, each entry $a_{ij})$ is non-zero if $i$ is linked to $j$;
+entries might be other than 0 and 1 in weighted graphs; undirected graphs yield symmetric matrices.
+In the node-edge representation, each node i represented as a point while each edge is represented
+by a line between correspondent nodes.
+The matrix representation is essential for algebraic reasoning and for deriving measures
+while the node-edge representation is important for illustration and intuitive guidance
+of the characterization of the systems.
+
+\subsubsection{A good reason for representing complex systems as complex networks}
+
+\subsubsection{Most basic measures}
+Section~\ref{measures} gives a mathematical account of the following measures,
+which are here for pointing the characteristics of basic types
+of networks presented in the next section.
+Such measures are:
+\begin{itemize}
+	\item Degree     $k_i$: number of edges linked to vertex $i$.
+	\item In-degree  $k_i^{in}$: number of edges ending at vertex $i$.
+	\item Out-degree $k_i^{out}$: number of edges departing from vertex $i$.
+	\item Strength $s_i$: sum of weights of all edges linked to vertex $i$.
+	\item In-strength $s_i^{in}$: sum of weights of all edges ending at vertex $i$.
+	\item Out-strength $s_i^{out}$: sum of weights of all edges departing from vertex $i$.
+	\item Betweenness centrality $bt_i$: fraction of geodesics that contain vertex $i$.
+	\item Clustering coefficient $cc_i$: fraction of pairs of neighbors of $i$ that are linked, i.e. the standard clustering coefficient metric for undirected graphs.
+\end{itemize}
+% distance between vertices
+
+\subsubsection{Most basic types of networks}
+Complex networks are often characterized in terms of paradigmatic models.
+There are diverse models, but we can glimpse the background theory
+with the following ones:
+\begin{itemize}
+	\item The Erdös-Rényi model\footnote{This name is also used for the model in which, for a fixed number of vertices and a fixed number of edges, all graphs are equally likely. This is the model originally introduces by Paul Erdös and Alfréd Rényi~\cite{erdosOrig}.
+		We choose the definition given inline, which is closely related to the one given in this footnote, because it is more commonly used nowadays.}: each pair of nodes is connected with a fixed random probability $p$.
+		This model presents a characteristic degree ($n.p$ where $n$ is the number of vertices), low clustering and low average distance between nodes.
+	\item Spatial network, also called geographic network or geometric graph: nodes are located in a metric space and edges are the probability that two vertices are connected is greater as the distance between them gets smaller. These networks present characteristic degrees, high clustering and large average distance between nodes.
+	\item Small-word network: defined as a network where the typical distance between vertices grows with the logarithm of the number of nodes while the average clustering coefficient is not small (larger than e.g. in the Erdös-Rényi model).
+		To construct a small-world network, start with a regular lattice in which each vertex is connected to $k$ nearest neighbors.
+		Each edge is then rewired with probability $p$.
+		With intermediate values of $p$ such as $0.01<p<0.1$, we obtain a network with both short average distance between vertices (as in the Erdös-Rényi model) and a high average clustering coefficient (as in the spatial network).
+		This model presents also a characteristic degree.
+	\item Scale-free networks: in which the degree distribution $p(k)$ follows a power law ($p(k)=C.k^{-\gamma}$ where C and k are constants).
+		These networks are qualitatively characterized by the presence of a large number of poorly connected and of few highly connected vertices.
+		Important is the absence of a characteristic degree, thus the name 'scale-free network'.
+\end{itemize}
+Real networks most often exhibit scale-free and small-world properties.
+This is the case of most of e.g. social, gene and food networks.
+However, one should be cautious about such statement because
+the networks derived from the real systems depend heavily
+in what is considered a vertex and an edge,
+i.e. on how the system is modeled as a graph.
+Another noteworthy remark is that
+the Erdos-Renyi networks, i.e. graphs of the Erdös-Rényi model, are frequently pin-pointed as the networks with trivial
+topological properties.
+Even though, it is posed as a paradigmatic ``complex network'', concept often defined as graphs with non-trivial topological properties,
+which is a contradiction and exposes that complex networks is not a very well defined notion,
+as is the case with the complexity field in general.
+
 \subsection{Text mining of social data}
 
 \subsection{Visualization of graphs}
@@ -54,10 +124,19 @@ representation, as explained in Section~\ref{queries}.
 % statistics, circular statistics, PCA, programming, free culture, anthropological physics
 % tipologies of human persolanity (myer-briggs and adorno and ours)
 
-\section{Polisemy and synonymes}
+\section{Polisemy and synonyms}
+In the context of complex networks, the words \emph{network} and \emph{graph}
+are often used interchangeably, although the word graph might refer to the
+mathematical structure of vertices and edges and the network might refer to the
+real system being represented.
+The nomenclature of vertices and edges vary widely among interested fields (mathematics, physics, biology, sociology, etc).
+A vertex might be called e.g. a node, a point, an agent, a actor, a participant.
+An edge might be called e.g. a link, a bond, a relation, a tie, a connection.
+
 % graphs and networks
 % nodes, vertices, agents, participants
 % links, edges, connections
+% clustering, degree of a vertex and of a network, which is usually the average of the measure in all nodes.
 % NLP, text mining and computational linguistics
 % linked data and semantic web
 
