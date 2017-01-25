@@ -195,19 +195,60 @@ representation, as explained in Section~\ref{queries}.
 \section{Polisemy and synonyms}
 In the context of complex networks, the words \emph{network} and \emph{graph}
 are often used interchangeably, although the word graph might refer to the
-mathematical structure of vertices and edges and the network might refer to the
+mathematical structure of vertices and edges and the word network might refer to the
 real system being represented as a graph or to the graph obtained by means of representing a real system.
+Furthermore, the word graph can be used to refer to a \emph{graph of a function} (mathematics) or to an abstract datatype (computer science).
+This parallelism between network and graphs also apply to network visualization and graph visualization.
+One might add here the term \emph{graph drawing} another synonym for the visualization of graphs, although the term
+seem to be more traditional in relation to the achievement of node-edge network diagrams.
 The nomenclature of vertices and edges vary widely among interested fields (mathematics, physics, biology, sociology, etc).
 A vertex might be called e.g. a node, a point, an agent, a actor, a participant.
 An edge might be called e.g. a link, a bond, a relation, a tie, a connection.
 
-% graphs and networks
-% mathematical graphs and datatype
-% nodes, vertices, agents, participants
-% links, edges, connections
-% clustering, degree of a vertex and of a network, which is usually the average of the measure in all nodes.
-% NLP, text mining and computational linguistics
-% linked data and semantic web
+% There is also some ambiguity related to measures that can be take with respect to each vertex (or, less often, to each edge),
+% such as degree and clustering.
+% Such terms might be also used for the average of the measure for the whole network.
+
+The terms \emph{text mining}, \emph{natural language processing} and \emph{computational linguistics}
+are often used for similar endeavors.
+A distinction might be made in that text mining refers to data mining of text,
+natural language processing is concerned with the interactions between computer and human natural languages,
+and computational linguistics aims for statistical or rule-based modeling of natural language from a computational perspective.
+Such fields are multidisciplinary and there is no sharp distinction between them.
+
+Examined as fields of knowledge, the \emph{linked data} and the \emph{semantic web}
+terms are often used without distinction.
+Tim Berners-Lee coined both terms: 
+the semantic web was conceived as a web of data that can be processed by machines~\cite{lee0},
+the expression linked data appeared in a 2006 design note about the Semantic Web project~\cite{lee1}
+and refers to structured data that can emphasizes interlinking and usefulness through semantic queries.
+
+\emph{Social participation}, \emph{social envolvement} and \emph{social engagement} are synonyms that
+refer to the participation of an individual or group in a community or society.
+In Brazilian Portuguese, \emph{controle social} can refer to the antagonist concepts of social participation
+or of a social control (played by the State or companies in the civil society).
+
+\subsection{More specific terminology problems in the complex networks field}
+Given that this thesis involves multidisciplinary and new knowledge,
+it might be of no surprise that the nomenclature is not very well defined.
+Here we pin-point some more specific conflicts that arise in the literature of complex networks
+to both exemplify this issue and to avoid some problems in interpreting the
+methods and results in this thesis:
+\begin{itemize}
+	\item The \emph{hubs} are, by the usual definition, the more connected vertices.
+		In the context of the HITS (Hyperlink-Induced Topic Search) algorithm,
+		for attributing centrality to vertices, most traditionally to web pages,
+		the hubs are the vertices with greater out-degree
+		(greater in-degree yield \emph{authorities}).
+	\item In some contexts, the center of network is the collection of vertices whose the
+		maximum distance to other vertices is the radius (i.e. the minimum maximum difference between vertices). 
+		In the same framework, the periphery of a network is the collection of vertices whose
+		the maximum distance to other vertices is the diameter (i.e. the maximum distance between vertices).
+		By extension, the intermediary might be regarded as the set of vertices that are not in the center or the periphery.
+		These definitions yield fractions of members that do not agree with the literature with respect to hubs, intermediary and periphery.
+		We present a suitable method for deriving such memberships, in that it fits the literature prediction, in Section~\label{sectioning}.
+	\item Lace, loop, selfloop and autoloop are terms used to designate an edge from a vertex to itself.
+\end{itemize}
 
 \section{A historical note}
 % fields are recent, point starting works and/or dates for the fields.
