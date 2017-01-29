@@ -159,14 +159,28 @@ and might be more easily related to the intuitive concept of data mining of text
 On this thesis we use both perspectives.
 
 \subsection{Visualization of static and dynamic graphs}
-Static graph visualization is often divided in node-link and matrix representations.
-Representing graphs as node-link diagrams has a long tradition.
-As an independent field, graph drawing arose in the 1990s~\cite{dynGraph}.
+Static graph visualization is achieved in many ways,
+most usually through the node-link (often called network diagram)
+and matrix representations as illustrated in Figure~\ref{nlmatrix}.
+As an independent field, graph drawing arose in the 1990s~\cite{dynGraph} while
+representing graphs as node-link diagrams has a long tradition which remotes
+at least to the works of Ramon Llull in the 13th century~\cite{llull}.
+To glimpse at the theory involved in visualizing networks, we mention three aspects:
+\begin{itemize}
+	\item criteria for the quality of layouts include the number of crossing edges, the area of the drawing relative to closest distance between two vertices.
+	\item Layout methods are derived e.g. by placing vertices in a circular fashion, by using the eigen vectors from a worked out variant of the adjacency matrix as coordinates, or by force-based methods. For large graphs, including a number of social networks, the force-based networks are reported as useful. Therefore, we illustrate this method with the simplest model we could find in the well known literature. Be $f_a$ the attraction force, $f_r$ the repulsion force, $d$ the distance between the vertices and $k$ a constant. The model introduced by Fruchterman and Reingold~\cite{fr} defines the forces as:
+\begin{align}
+	f_a = \frac{d^2}{k}\\
+	f_d = -\frac{k^2}{d}
+\end{align}
+	\item Graph drawings are often developed for specific applications as in biology (e.g. protein and gene interactions), social networks and trees.
+\end{itemize}
 
 The core difference of dynamic graphs to static graphs is that vertices and edges
 can be added and removed over time.
 In dynamic graph visualization most usually graphs are represented as animated diagrams
-or charts based on a timeline.
+or charts based on a timeline~\cite{dynGraph}.
+In this thesis we make use of node-link diagrams of both static and dynamic graphs.
 
 \subsection{Linked data}
 The fields of social network analysis and complex networks
@@ -177,7 +191,7 @@ yielding diverse results from poorly related sources.
 Recently, a myriad of results have been reported which are based in
 diverse datasets most often not accessible to researchers other than the publishing authors.
 In this thesis we present resources for having open databases to provide the scientific community with a friendly and common repertoire.
-% This work makes availalable an open database with diverse provenance and
+% This work makes available an open database with diverse provenance and
 % to furnish the scientific community with a friendly and common repertoire.
 
 Integration and uniformity of access is obtained through linked data
@@ -186,13 +200,13 @@ representation, as explained in Section~\ref{queries}.
 \subsection{Social participation}
 \subsection{Other}
 % statistics, circular statistics, PCA, programming, free culture, anthropological physics
-% tipologies of human persolanity (myer-briggs and adorno and ours)
-% social network analysis, social web
+% typologies of human persolanity (myer-briggs and adorno and ours)
+% social network analysis, social web, big data
 
 % actor-network theory, mathematical sociology, network science, network theory, social media mining, 
 % database and datasets
 
-\section{Polisemy and synonyms}
+\section{Polysemy and synonyms}
 In the context of complex networks, the words \emph{network} and \emph{graph}
 are often used interchangeably, although the word graph might refer to the
 mathematical structure of vertices and edges and the word network might refer to the
@@ -201,6 +215,7 @@ Furthermore, the word graph can be used to refer to a \emph{graph of a function}
 This parallelism between network and graphs also apply to network visualization and graph visualization.
 One might add here the term \emph{graph drawing} another synonym for the visualization of graphs, although the term
 seem to be more traditional in relation to the achievement of node-edge network diagrams.
+Evolutionary graph or network visualization is an example variant of dynamic graph visualization.
 The nomenclature of vertices and edges vary widely among interested fields (mathematics, physics, biology, sociology, etc).
 A vertex might be called e.g. a node, a point, an agent, a actor, a participant.
 An edge might be called e.g. a link, a bond, a relation, a tie, a connection.
