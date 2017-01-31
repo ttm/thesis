@@ -32,10 +32,10 @@ but it is not relevant for the present work because email messages and addresses
 \section{Related knowledge}
 \subsection{Complex networks}
 Although not universally accepted, it is commonplace to define a complex network to be
-a ``graph with non-trivial topological features''.
+a ``graph with non-trivial topological features''~\cite{newmanBook}.
 We might add to this definition that a complex network is also a large graph (even while there
 seems not to be a consensus to what \emph{large} means in such context)
-and that it is a graph representation of a system found in nature or in real or empirical systems.
+and that it is a graph representation of a system found in natural, real or empirical systems.
 Another way to approach the definition of ``complex networks'' is to define it as
 complex systems modeled as networks.
 This second definition is also useful but is even more problematic as
@@ -44,15 +44,15 @@ Even so, one should keep in mind that authors often define a complex system
 to be a system composed with many parts in which ``the whole is more than
 the sum of its parts''.
 Authors also often consider complex systems to have capabilities
-to ``process information'', to adapt, to reproduce. 
+to ``process information'', to adapt and to reproduce~\cite{complexity}.
 
 A graph is a structure that consists of a set of objects (called vertices)
 and a set of binary/dual relations of the objects (called edges).
-Such graph might be unweighted and undirected (the simplest possibility),
+A graph might be unweighted and undirected (the simplest possibility),
 weighted and undirected, unweighted and directed, or weighted and directed.
 
 The most usual representations of graphs (and networks) are the matrix, list and node-edge representations.
-In the matrix representation, each entry $a_{ij})$ is non-zero if $i$ is linked to $j$;
+In the matrix representation, each entry $a_{ij}$ is non-zero if $i$ is linked to $j$;
 entries might be other than 0 and 1 in weighted graphs; undirected graphs yield symmetric matrices.
 There are two common list representations of graphs, one lists each pair of vertices that are connected,
 the other holds a list for each vertex in which are all the vertices connected to it (a list of lists).
@@ -60,13 +60,13 @@ In the node-edge representation, each node i represented as a point while each e
 by a line between correspondent nodes.
 The matrix representation is essential for algebraic reasoning and for deriving measures
 while the node-edge representation is important for illustration and intuitive guidance
-of the characterization of the systems.
+in characterizing the systems.
 
 \subsubsection{A good justification for the complex networks theory}
 The estimated number of atoms in the universe is often used as a reference of largeness
-and is $10^80$.
+and is $\approx 10^{80}$.
 Let us find the number of vertices needed to reach such number of possible networks.
-Let also us consider the simplest case of the unweighted and undirected networks.
+Consider the simplest case of the unweighted and undirected networks.
 Each edge can exist or not (i.e. it is a Bernoulli variable) and with $n$ vertices there are
 at most ${n \choose 2}$ edges.
 Therefore:
@@ -87,8 +87,8 @@ of paradigmatic networks and generic measures for nodes and the network (and les
 
 \subsubsection{Basic measures}
 Section~\ref{measures} gives a mathematical account of the following measures,
-which are here for pointing the characteristics of basic types
-of networks presented in the next section.
+which are here for characterizing basic types
+of networks in the next section.
 Such measures are:
 \begin{itemize}
 	\item Degree     $k_i$: number of edges linked to vertex $i$.
@@ -101,23 +101,25 @@ Such measures are:
 	\item Clustering coefficient $cc_i$: fraction of pairs of neighbors of $i$ that are linked, i.e. the standard clustering coefficient metric for undirected graphs.
 \end{itemize}
 % distance between vertices
+In the following discussion, we also use the concept of distance between a pair of nodes,
+which is the number of edges between the nodes.
 
 \subsubsection{Basic types of networks}
 Complex networks are often characterized in terms of paradigmatic models.
 There are diverse models, but we can glimpse the background theory
-with the following ones:
+with the following ones~\cite{luMeasures}:
 \begin{itemize}
-	\item The Erdös-Rényi model\footnote{This name is also used for the model in which, for a fixed number of vertices and a fixed number of edges, all graphs are equally likely. This is the model originally introduces by Paul Erdös and Alfréd Rényi~\cite{erdosOrig}.
+	\item The Erdös-Rényi model\footnote{This name is also used for the model in which, for a fixed number of nodes and a fixed number of links, all networks are equally likely. This is the model originally introduces by Paul Erdös and Alfréd Rényi~\cite{erdosOrig}.
 		We choose the definition given inline, which is closely related to the one given in this footnote, because it is more commonly used nowadays.}: each pair of nodes is connected with a fixed random probability $p$.
-		This model presents a characteristic degree ($n.p$ where $n$ is the number of vertices), low clustering and low average distance between nodes.
-	\item Spatial network, also called geographic network or geometric graph: nodes are located in a metric space and the probability that two vertices are connected is greater as the distance between them gets smaller. These networks present characteristic degrees, high clustering and large average distance between nodes.
-	\item Small-word network: defined as a network where the typical distance between vertices grows with the logarithm of the number of nodes while the average clustering coefficient is not small (larger than e.g. in the Erdös-Rényi model).
-		To construct a small-world network, start with a regular lattice in which each vertex is connected to $k$ nearest neighbors.
-		Each edge is then rewired with probability $p$.
-		With intermediate values of $p$ such as $0.01<p<0.1$, we obtain a network with both short average distance between vertices (as in the Erdös-Rényi model) and a high average clustering coefficient (as in the spatial network).
-		This model presents also a characteristic degree.
-	\item Scale-free networks: in which the degree distribution $p(k)$ follows a power law ($p(k)=C.k^{-\gamma}$ where C and k are constants).
-		These networks are qualitatively characterized by the presence of a large number of poorly connected and of few highly connected vertices.
+		This model presents a characteristic degree ($n.p$ where $n$ is the number of nodes), low clustering and low average distance between nodes.
+	\item Spatial network, also called geographic network or geometric graph: nodes are located in a metric space and the probability that two nodes are connected is greater as the distance between nodes gets smaller. These networks present characteristic degrees, high clustering and large average distance between nodes.
+	\item Small-word network: defined as a network where the typical distance between nodes grows with the logarithm of the number of nodes while the average clustering coefficient is not small (larger than e.g. in the Erdös-Rényi model).
+		One method for constructing a small-world network is to start with a regular lattice in which each node is connected to $k$ nearest neighbors.
+		Each link is then rewired with probability $p$.
+		With intermediate values of $p$ such as $0.01<p<0.1$, we obtain a network with both short average distance between nodes (as in the Erdös-Rényi model) and a high average clustering coefficient (as in the spatial network).
+		This model presents a characteristic degree.
+	\item Scale-free networks: in which the degree distribution $p(k)$ follows a power law ($p(k)=C.k^{-\alpha}$ where C and k are constants).
+		These networks are qualitatively characterized by the presence of a large number of poorly connected and of few highly connected hubs.
 		Important is the absence of a characteristic degree, thus the name 'scale-free network'.
 	\item Other networks: among important models of networks are exponential networks, networks with community structure and hybrid models.
 \end{itemize}
@@ -125,17 +127,17 @@ Real networks most often exhibit scale-free and small-world properties.
 This is the case of most of e.g. social, gene and food networks.
 However, one should be cautious about such statement because
 the networks derived from the real systems depend heavily
-in what is considered a vertex and an edge,
+in what is considered a node and a link,
 i.e. on how the system is modeled as a graph.
 Another noteworthy remark is that
 the Erdös-Rényi networks, i.e. graphs of the Erdös-Rényi model, are frequently pin-pointed as the networks with trivial
 topological properties.
 Even though, it is posed as a paradigmatic ``complex network'', concept often defined as graphs with non-trivial topological properties,
 which is a contradiction and exposes that complex networks is not a very well defined notion,
-as is the case with the complexity field in general.
+as is the case with the \emph{complexity theory} in general.
 
 \subsection{Text mining of social data}
-Text mining is a multidisciplinary field, 
+Text mining is a multidisciplinary field,
 it is an extension of data mining to (often unstructured) textual data
 with the goal of discovering structure and meaning~\cite{customText}.
 A general outline of a text mining endeavor involves structuring input text,
@@ -150,7 +152,7 @@ publishing and making tools for semantics, sentiment and general natural languag
 It is believed that applying text mining to social media
 can yield interesting findings in human behavior~\cite{customText}.
 Although there is no clear cut, text mining is sometimes divided into linguistic and non-linguistic~\cite{customText}.
-In the first case, linguistic techniques are present, such as
+In the first case, techniques borrowed from linguistics are present, such as
 the analysis of discourse and part of speech tagging,
 and it is often mingled with natural language processing or computational linguistics (see Section~\ref{amb} for a coherent distinction of the fields).
 In the non-linguistic text mining, text is analyzed by means of statistical features
@@ -161,18 +163,20 @@ On this thesis we use both perspectives.
 \subsection{Visualization of static and dynamic graphs}
 Static graph visualization is achieved in many ways,
 most usually through the node-link (often called network diagram)
-and matrix representations as illustrated in Figure~\ref{nlmatrix}.
+and matrix representations.
 Representing graphs as node-link diagrams has a long tradition which remotes
 at least to the works of Ramon Llull in the 13th century~\cite{llull}.
 To glimpse at the theory involved in visualizing networks~\cite{eades}, we mention three aspects:
 \begin{itemize}
-	\item criteria for the quality of layouts include the number of crossing edges, the area of the drawing relative to closest distance between two vertices.
+	\item criteria for the quality of layouts might include the number of crossing edges or the area of the drawing relative to closest distance between two vertices.
 	\item Layout methods are derived e.g. by placing vertices in a circular fashion, by using the eigen vectors from a worked out variant of the adjacency matrix as coordinates, or by force-based methods. For large graphs, including a number of social networks, the force-based networks are reported as useful. Therefore, we illustrate this method with the simplest model we could find in the well known literature. Be $f_a$ the attraction force, $f_r$ the repulsion force, $d$ the distance between the vertices and $k$ a constant. The model introduced by Fruchterman and Reingold~\cite{fr} defines the forces as:
 \begin{align}
 	f_a = \frac{d^2}{k}\\
 	f_d = -\frac{k^2}{d}
 \end{align}
-	\item Graph drawings are often developed for specific applications e.g. in biology (e.g. protein and gene interactions), social networks, tree diagrams.
+	On a computer software, one usually starts with a random layout and performs a number of iterations updating the position of nodes
+		using these forces to obtain the intended force-directed layout.
+	\item Graph drawings are often developed for specific applications e.g. in biology (as for protein and gene interactions), social networks, tree diagrams.
 \end{itemize}
 
 The core difference of dynamic graphs to static graphs is that vertices and edges
@@ -185,6 +189,17 @@ or charts based on a timeline~\cite{dynGraph}.
 In this thesis we make use of node-link diagrams of both static and dynamic graphs.
 
 \subsection{Linked (open) data}
+The fields of social network analysis and complex networks
+are widely researched.
+However, there is a lack of open datasets for benchmarking results,
+especially associated with the complex networks field,
+yielding diverse results from poorly related sources.
+Recently, a myriad of results have been reported which are based in
+diverse datasets most often not accessible to researchers other than the publishing authors.
+In this thesis we present resources for having open databases to provide 
+the scientific community with a friendly and common repertoire.
+We chose to use the linked data technology and follow W3C best practices for publishing data.
+
 Linked data refers to data published in the web in such a way that it is
 machine readable and complies with a set of best practices.
 The web of data is constructed with documents on the web 
@@ -207,17 +222,6 @@ the global data space, which is usually
 conceived as centered around the DBPedia, a linked data representation
 of data from Wikipedia~\cite{dbpedia0,dbpedia}.
 
-The fields of social network analysis and complex networks
-are widely researched.
-However, there is a lack of open datasets for benchmarking results,
-especially associated with the complex networks field,
-yielding diverse results from poorly related sources.
-Recently, a myriad of results have been reported which are based in
-diverse datasets most often not accessible to researchers other than the publishing authors.
-In this thesis we present resources for having open databases to provide 
-the scientific community with a friendly and common repertoire.
-We chose to use the linked data technology and follow W3C best practices for publishing data.
-
 \subsubsection{RDF}
 The Resource Description Framework (RDF), a W3C
 recommendation, is a model for data
@@ -230,7 +234,7 @@ Turtle and Manchester, all of which, in essence, represent a labeled and
 directed multi-graph.
 RDF may be stored in a type of database referred to as a triplestore~\cite{rdf}.
 
-As an example of a RDF statement, the following triple in the Turtle
+As an example of an RDF statement, the following triple in the Turtle
 format asserts that ``the paper has color white'':\\
 \texttt{http://example.org/Things\#Paper http://example.org/hasColor\\
 http://example.org/Colors\#White .}
@@ -244,7 +248,7 @@ representation, as explained in Section~\ref{queries}.
 A significant share of our endeavor was oriented towards social participation,
 i.e. to facilitate civil engagement in a community, most significantly in State affairs.
 More concretely, we published data from a social participation federal portal~\cite{participaData},
-applied complex networks and data mining criteria for resources recommendation~\cite{participaRecommend} and
+applied complex networks and text mining criteria for resources recommendation~\cite{participaRecommend} and
 proposed a ranking algorithm for voted proposals in another federal participation portal~\cite{dialogaAlgorithm}.
 Such works were performed within a United Nations Development Program consulting contract,
 in partnership with the Brazilian Presidency of the Republic and published publicly mainly as technical reports~\cite{participa3,participa4,participa5}.
@@ -268,18 +272,18 @@ the observation of natural/physical laws in human social systems.
 The term should not be confused with physical anthropology, which is a synonym for biological anthropology,
 a subfield of anthropology concerned with the evolution of humans~\cite{phyAn}.
 
-\section{Polysemy and synonyms}
+\section{Polysemy and synonyms}\label{amb}
 In the context of complex networks, the words \emph{network} and \emph{graph}
 are often used interchangeably, although the word graph might refer to the
 mathematical structure of vertices and edges and the word network might refer to the
 real system being represented as a graph or to the graph obtained by means of representing a real system.
 Furthermore, the word graph can be used to refer to a \emph{graph of a function} (mathematics) or to an abstract datatype (computer science).
 This parallelism between network and graphs also apply to network visualization and graph visualization.
-One might add here the term \emph{graph drawing} another synonym for the visualization of graphs, although the term
-seem to be more traditional in relation to the achievement of node-edge network diagrams.
-Evolutionary graph or network visualization is an example variant of dynamic graph visualization.
+One might add here the term \emph{graph drawing}, another synonym for the visualization of graphs, although the term
+seems to be more traditional in relation to the achievement of node-edge network diagrams.
+Evolutionary graph visualization or evolutionary network visualization are examples of variants of \emph{dynamic graph visualization}.
 The nomenclature of vertices and edges vary widely among interested fields (mathematics, physics, biology, sociology, etc).
-A vertex might be called e.g. a node, a point, an agent, a actor, a participant.
+A vertex might be called e.g. a node, a point, an agent, an actor, a participant.
 An edge might be called e.g. a link, a bond, a relation, a tie, a connection.
 
 % There is also some ambiguity related to measures that can be take with respect to each vertex (or, less often, to each edge),
@@ -289,7 +293,7 @@ An edge might be called e.g. a link, a bond, a relation, a tie, a connection.
 The terms \emph{text mining}, \emph{natural language processing} and \emph{computational linguistics}
 are often used for similar endeavors.
 A distinction might be made in that text mining refers to data mining of text,
-natural language processing is concerned with the interactions between computer and human natural languages,
+natural language processing is concerned with the interactions between the computer and the human natural languages,
 and computational linguistics aims for statistical or rule-based modeling of natural language from a computational perspective.
 Such fields are multidisciplinary and there is no sharp distinction between them.
 
@@ -298,7 +302,7 @@ terms are often used without distinction.
 Tim Berners-Lee coined both terms: 
 the semantic web was conceived as a web of data that can be processed by machines~\cite{lee0},
 the expression linked data appeared in a 2006 design note about the Semantic Web project~\cite{lee1}
-and refers to structured data that can emphasizes interlinking and usefulness through semantic queries.
+and refers to structured data that emphasizes interlinking and usefulness through semantic queries.
 
 \emph{Social participation}, \emph{social envolvement} and \emph{social engagement} are synonyms that
 refer to the participation of an individual or group in a community or society.
@@ -323,7 +327,7 @@ methods and results in this thesis:
 		the maximum distance to other vertices is the diameter (i.e. the maximum distance between vertices).
 		By extension, the intermediary might be regarded as the set of vertices that are not in the center or the periphery.
 		These definitions yield fractions of members that do not agree with the literature with respect to hubs, intermediary and periphery.
-		We present a suitable method for deriving such memberships, in that it fits the literature prediction, in Section~\label{sectioning}.
+		We present a suitable method for deriving such classification, in the sense that it fits the literature prediction, in Section~\ref{sectioning}.
 	\item Lace, loop, selfloop and autoloop are terms used to designate an edge from a vertex to itself.
 \end{itemize}
 
@@ -336,15 +340,15 @@ as an independent field, graph drawing arose in the 1990s~\cite{dynGraph};
 the term linked data was coined in 2006~\cite{lee1}.
 % fields are recent, point starting works and/or dates for the fields.
 
-\section{Considerations about the presented work}
-The initial idea of this research was to enable
-the use of complex and social networks scientific knowledge by the participant.
-This motivated the open software and texts produced, and the endeavors with
+\section{Further considerations about the present work}
+An initial proposal of this research was to enable
+the use of complex and social networks scientific knowledge by the participant of the networks.
+This motivated the open software and texts produced, conferences attended, and the endeavors with
 the United Nations, Brazilian Presidency and civil parties.
 As this was a practical goal, we found by hands-on processes that
-many fields are related to the subject, which reflected in the number of fields tackled in the thesis
+many fields are deeply related to the subject, which reflected in the number of fields tackled in the thesis
 and related documents~\cite{pnud3,pnud4,pnud5,anPhy,dialoga,losd,versinus,kolmSmir}.
-Furthermore, we understand that the open software, texts, videos and processes proided
+Furthermore, we understand that the open software, texts, videos and processes provided
 by our work contributes for the popularization of the knowledge and technologies implied
 by the empowerment of civil individuals and groups through the management of the
 networks in which they exist.
@@ -353,7 +357,7 @@ networks in which they exist.
 Next Chapter presents data, visualization and code infrastructure for using the methods
 and obtaining the results in this thesis.
 Chapter~\ref{ch:mat} presents the methods while the results and discussion are in Chapter~\ref{ch:disc}.
-Conclusions and further work are stated in Chapter~\ref{ch:conc}.
+Conclusions and further work are stated in Chapter~\ref{ch:concl}.
 Appendixes display auxiliary tables, figures and resources developed in our research.
 % canonical chapters; stability through circular statistics and topological statistics (PCA, sectioning)
 % text mining through measures of sizes of tokens, sentences, messages
