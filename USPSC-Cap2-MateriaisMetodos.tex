@@ -7,7 +7,7 @@
 
 \chapter{Materials and Methods}\label{ch:mat}
 
-\section{Data and scripts}\label{sec:data}\label{scripts}
+\section{Core data and scripts}\label{sec:data}\label{scripts}
 Email list messages were obtained from
 the Gmane email archive, which consists of more than $20,000$
 email lists (discussion groups) and more than $130\times 10^6$ messages~\cite{Gmanewikipedia}. These lists cover a variety of topics, mostly technology-related. The archive can be described as a corpus along with message metadata, including sent time, place, sender name, and sender email address.
@@ -44,6 +44,78 @@ list & $date_1$ & $date_{M}$    & $N$  & $\Gamma$ & $\overline{M}$ \\\hline
 \end{tabular}
 \end{table} 
 
+\subsection{Linked Open Social Database for scientific benchmarking}
+Beyond core data used to derive topological and text related results,
+we provided a database for scientific benchmarking and to derive further results in our research.
+The data used here were obtained from Facebook, Twitter, IRC, Email and the
+detached instances of ParticipaBR, AA and Cidade Democr\'atica.
+These were represented as linked data to homonenize access,
+complying with current best practices and facilitationg analyzes which integrate third
+party and provided instances. 
+ 
+Data was gathered from:
+\begin{itemize}
+	\item public APIs (Twitter, Email);
+	\item public logs (IRC and AA);
+	\item Netvizz software~\cite{netvizz} and subsequent donation by users (Facebook);
+	\item donation by system administrators (AA, ParticipaBR, Cidade Democr\'atica).
+\end{itemize}
+
+This section introduces the underlying data in a very concise fashion.
+Further information is available in the Appendix~\ref{ap:losd} and in an article~\cite{olsd}.
+ 
+\subsubsection{Snapshots}
+Of central importance to the provided database is the concept of a snapshot.
+A snapshot is herein a set of data gathered together,
+at a contiguous time span.
+For example: the first 20 thousand email messages of an email list
+comprises a snapshot; the tweets from the MAMA music event are a
+snapshot; the friendship, interaction and posts structures of a facebook
+group, prospected at the same time, are a snapshot.
+
+\subsubsection{Facebook data}
+Friendship ego networks (networks whose constituents are friends of a user)
+were donated from individual users in 2013 and 2014.
+Friendship and interaction networks from groups were gathered from
+groups where the author was a participant.
+Additionally, some groups have post texts along some metadata, such as
+the number of likes.
+
+\subsubsection{Twitter data}
+Tweets were gathered through the Twitter streaming public API.
+Each snapshot is unified by a distinct hashtag.
+Edges are canonically yield by retweets but replies and user mentions
+are also kept in the database.
+
+\subsubsection{IRC data}
+Public IRC logs were used to render IRC snapshots.
+The database has records of users to which the message is directed or
+mentions.
+
+\subsubsection{Email data}
+Email snapshots refer to individual email lists.
+All messages were obtained from the Gmane public email database~\cite{gmane}.
+Each message has the original text and the text without some of the lines
+from previous messages or that are software code.
+Most importantly, each message instance holds the ID of the message it is
+a reply to, if any.
+
+\subsubsection{ParticipaBR data}
+The ParticipaBR is a Brazilian federal platform for social participation.
+Texts are derived from blog posts and networks are derived from
+friendship and interaction criteria.
+
+\subsubsection{Cidade Democr\'atica data}
+Cidade Democr\'atica is a Brazilian civil society social participation portal.
+Data gathered is complex with many types of instances and no intuitive criteria
+for deriving networks, such as friendships or replies.
+
+\subsubsection{AA data}
+The Algorithmic Autoregulation~\cite{aa} is a software development
+methodology based on testifying and sharing ongoing work.
+The data was gathered from different versions of the system and from an IRC
+log. 
+
 \subsection{Availability}
 The data and scripts used to derive the results, figures and tables are publicly available. Email messages are downloadable from the Gmane public database~\cite{Gmanewikipedia}.
 Data annotated from Facebook and Twitter are in a public repository~\cite{fbtwData}.
@@ -51,8 +123,6 @@ Data from Participabr was used from the linked data/semantic web RDF triples~\ci
 Computer scripts are delivered through public domain Python PyPI packages and open Git repositories~\cite{gmanePack}.
 This open approach to both data and scripts reinforces the scientific aspect of the contribution~\cite{openSci} and mitigates ethical and moral issues involved in researching systems constituted of human individuals~\cite{anPhy,ccs15}.
  
-
-
 \section{Methods}\label{sec:carac}
 %The networks were characterized with: 1) statistics of activity along time, in scales from seconds to years; 2) dispersion of basic topological metrics; 3) sectioning of the networks in hubs, intermediary and periphery; 4) iterative visualization, sonification and data inspection.
 %These procedures are described below.
@@ -171,7 +241,7 @@ near the average, and less frequent in the real network, are classified as inter
 \clearpage
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.5\textwidth]{figs/fser__}
+\includegraphics[width=\textwidth]{figs/fser__}
 \caption{Classification of vertices by comparing degree
 distributions~\cite{3setores}.
 The binomial distribution of the Erd\"os-R\'enyi network model exhibits more intermediary vertices, while a scale-free network, associated with the power-law distribution, has more peripheral and hub vertices. The sector borders are defined with respect to the intersections of the distributions. Characteristic degrees are in the compact intervals: $[0,k_L]$, $(k_L,k_R]$, $(k_R,k_{max}]$ for the periphery, intermediary and hub sectors, the ``Erd\"os sectors''.
@@ -472,114 +542,4 @@ the distributions differ~\cite{kolm}
 and for deriving hypotheses
 about how different are the underlying mechanisms of generation of texts.
 
-\subsection{Linked Open Social Database for Scientific Benchmarking}
-The data used here were obtained from Facebook, Twitter, IRC, Email and the
-detached instances of ParticipaBR, AA and Cidade Democr\'atica.
-These were represented as linked data to homonenize access,
-complying with current best practices and facilitationg analyzes which integrate third
-party and provided instances. 
- 
-Data was gathered from:
-\begin{itemize}
-	\item public APIs (Twitter, Email);
-	\item public logs (IRC and AA);
-	\item Netvizz software~\cite{netvizz} and subsequent donation by users (Facebook);
-	\item donation by system administrators (AA, ParticipaBR, Cidade Democr\'atica).
-\end{itemize}
-
-This section introduces the underlying data in a very concise fashion.
-Further information is available in the Appendix~\ref{ap:losd} and in an article~\cite{olsd}.
- 
-\subsubsection{Snapshots}
-Of central importance to the database is the concept of a snapshot.
-A snapshot is herein a set of data gathered together,
-at a contiguous time span.
-For example: the first 20 thousand email messages of an email list
-comprises a snapshot; the tweets from the MAMA music event are a
-snapshot; the friendship, interaction and posts structures of a facebook
-group, prospected at the same time, are a snapshot.
-
-\subsubsection{Facebook data}
-Friendship ego networks (networks whose constituents are friends of a user)
-were donated from individual users in 2013 and 2014.
-Friendship and interaction networks from groups were gathered from
-groups where the author was a participant.
-Additionally, some groups have post texts along some metadata, such as
-the number of likes.
-
-\subsubsection{Twitter data}
-Tweets were gathered through the Twitter streaming public API.
-Each snapshot is unified by a distinct hashtag.
-Edges are canonically yield by retweets but replies and user mentions
-are also kept in the database.
-
-\subsubsection{IRC data}
-Public IRC logs were used to render IRC snapshots.
-The database has records of users to which the message is directed or
-mentions.
-
-\subsubsection{Email data}
-Email snapshots refer to individual email lists.
-All messages were obtained from the Gmane public email database~\cite{gmane}.
-Each message has the original text and the text without some of the lines
-from previous messages or that are software code.
-Most importantly, each message instance holds the ID of the message it is
-a reply to, if any.
-
-\subsubsection{ParticipaBR data}
-The ParticipaBR is a Brazilian federal platform for social participation.
-Texts are derived from blog posts and networks are derived from
-friendship and interaction criteria.
-
-
-\subsubsection{Cidade Democr\'atica data}
-Cidade Democr\'atica is a Brazilian civil society social participation portal.
-Data gathered is complex with many types of instances and no intuitive criteria
-for deriving networks, such as friendships or replies.
-
-\subsubsection{AA data}
-The Algorithmic Autoregulation~\cite{aa} is a software development
-methodology based on testifying and sharing ongoing work.
-The data was gathered from different versions of the system and from an IRC
-log.
-
-\subsection{Linked open data}
-Linked data refers to data published in the web in such a way that it is
-machine readable and complies with a set of best practices.
-The web of data is constructed with documents on the web 
-such as the web of HTML documents.
-In practice, the idea of linked data can me summarized
-by 1) the use of RDF to publish data on the web and 2) the use of RDF
-links to interlink data from different sources.
-The web is expected to be interconnected and to grow by the systematic application of four
-steps~\cite{lee1}:
-\begin{itemize}
-	\item Use URIs to identify things~\cite{uri}.
-	\item Use HTTP URIs.
-	\item Provide useful information when an URI is accessed via HTTP.
-	\item Provide other URIs in the description of resources so human
-		and machine agents can perform discovery.
-\end{itemize}
-
-The Linked Open Data~\cite{lod} builds an ever growing cloud of data,
-the global data space, which is usually
-conceived as centered around the DBPedia, a linked data representation
-of data from Wikipedia~\cite{dbpedia0,dbpedia}.
-
-\subsubsection{RDF}
-The Resource Description Framework (RDF), a W3C
-recommendation, is a model for data
-interchange.
-It is based on the idea of making statements about resources in the form
-of triples, i.e. expressions in the form ``subject - predicate -
-object''.
-RDF can be serialized in several file formats, including RDF/XML,
-Turtle and Manchester, all of which, in essence, represent a labeled and
-directed multi-graph.
-RDF may be stored in a type of database referred to as a triplestore~\cite{rdf}.
-
-As an example of a RDF statement, the following triple in the Turtle
-format asserts that ``the paper has color white'':\\
-\texttt{http://example.org/Things\#Paper http://example.org/hasColor\\
-http://example.org/Colors\#White .}
 
