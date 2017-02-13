@@ -3,87 +3,148 @@ min depth
 - -  - -    - - - -    - - - -
 - h* - -    - - h -    - - - -
 
-
+- -   - -    - -
+- i/p - p    - -
 
 max depth
 - -  - -    - - - -    - - - -
 - h* - -    h - h -    - - - -
 
+- -   - -    - -
+- i/p - -    - -
+
 holonyms
 p h p     p*/h    -  p*  p* i/p      i* h*   i*h* -
 p h h**/p h*/p    h* p** -  i**/h    -  i*/h -    h*
+
+i  i**/h* h*/p p**       - pi
+h* i*/h   h**  i**/h     - p*
 
 meronyms
 i*/h h**/p p*    h**/p*     p* p*  p*  i*/h    i*/h p**   -    p
 i**/h p*/h p*/h  h**/p*     p* p** p** p       i*/p p**/h p*/h p*
 
+i**/p i**/h* h*   p*      -  p**
+i**/p h*     i*/h p*      p* p**
+
 domains
 h* h**/p - h*/p     i*/h h*/p - p*    i**/p* i p* -
 h  h**/p - h*/p     i/h  -    p -     i*/p   - p  -
+
+p p* i*/p p*i*     h*p* p*
+p -  -    -        -    p
 
 lemmas
 - p* - p*      -   -   p p    -   - - -
 p p* - p**     i/p p/h p p    i/p - - -
 
+- h*/p - p*/h     p -
+- h*/p - p**      - -
+
 hyponyms
 i/h h** - h*     i*/h h/p h/p  h*       p  i*/h  - -
 i/p h** - h*     i/h  p/h p*/h h*/p     p* i**/h - i/h
 
+h*/p i*/h i/p i*/h     h*/p -
+h*/p h*   i/p i/p      h/p  p/h
+
 hypernyms
 -  -  - -     -   -    - -       - -   - -
 p* h* h p*    h** h*/p - p*/h    p i/p - -
+
+- - - -       - -
+- p i i/h     - i*/h
 
 [[[[[[AS
 domains
 h* h** i* -    p* p*/h* i h*/p     h**/p p*h* i*  -
 h  h** -  -    -  p*/h* - -        h*/p  p    i/p -
 
+h* i**/h* i**/h h*i*     	h** i
+-  i*/h*  i*/h  h*              h*  i/h
+
 similar
 h** h*/p h/p h*    h* -   - -     - h/p -   -
 h   h*   h/p p     h* p/h - -     p -   i/h -
 
+- p**/h h -   - -
+h p*/h  h -   - -
+
 lemmas
 - - -  p*    - -   p  h    -   -   i/h -
 - h p* p*    - h/p p* h*   p/h p/h i/h -
+
+- i/h   - -    -   -
+h i*/h* i -    i/h -
 
 [[[[[[[[V
 min depth
 p* -  - p    h - - -    h/p - - -
 p  h* - -    - - - -    -   - - -
 
+- i*/h - -     p/h -
+- i/h  - -     p/h -
+
 max depth
 p -  - p    h - - -     h/p - - -
 p h* - -    - - - -     -   - p -
+
+- i*/h - -    -   -
+- i/h  - -    p/h -
 
 domains
 p** h*  - p*    p* - h* -    p** i**  - i*
 p**  h* - p     p* p h* -    p   i*/h - -
 
+p**i** p*h* p*i* h**i**     i* p**
+p      p*/h i/p  h*         i  p*
+
 verb groups
 p - - -    i/p - - -    h - - -
 - - - -    -   - - -    - - - -
+
+i/h h* - -     - -
+-   -  - -     - -
 
 lemmas
 - h - h    - - - -    - - - -
 - h - -    - p - h    - - - -
 
+- - - -     - -
+h - - -     - -
+
 entailments
 h* p* - h*    p* h**/p p**/i** p*     p* - i* p*i*
 h  p* - h     p  h**/p -       -      p  - i  -
+
+h*i* h**/p* h*i* p**/i*      h -
+-    h*/p   -    p*          h -
 
 hyponyms
 h* h** h  h*       - - -   -     i*/h h - -
 h* h** h* i*/h*    - p h/p -     h*   h - h*
 
+- p**/h -   h*          i/h -
+- p**/h i/h h**/i*      i/h -
+
 hypernyms
 p i*/p* - -    - - - -    - - - -
 - h*/p  - -    - - - -    - - - -
+
+p i/h - -    - -
+p -   - -    - -
 
 [[[[[[[[R
 domains
 p/h h**/p h** p*/i    i*/h h**/i** - h*/p    h**   i*h* p/h h/i
 p/h h*/p  h*  i/p     i/h  h*/i*   - -       i*/h* i*h* -   -
 
+h* i**/h** h*/p i*/p     h/p hp
+h  i*h*    h/p  i        -   -
+
 lemmas
 -   h/p  - -    - - - -    -   - - -
 i/p h*/p - p    - - p -    p/h - - -
+
+- - - -     - -
+- - h -     - -
