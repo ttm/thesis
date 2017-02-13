@@ -417,51 +417,95 @@ Further details are given in Table~\ref{tab:sizesTokens}.
 \subsection{Sizes of sentences}\label{subsec:ss}
 \input{tables/sentencesInline_}
 Hubs present the lowest average sentence size,
-both in characters and in tokens.
-We hypothesize that this smaller sentence use
-is related to the efficiency of hub specialization.
-Also, the incidence of usual known words seems to decay with connectivity, as does the number of known words with wordnet synsets.
-This reflects our view that connectivity is inversely proportional
-to diversity.
-
-Further information is given in Table~\ref{tab:sizesSents}.
+in characters, tokens or known words.
+We hypothesize that this smaller sentence size
+is related to hub specialization.
+This result is illustrated in Table~\ref{tab:sizesSents}
+and might be considered counterintuitive given that punctuation
+is more abundant in the texts of less connected participants.
 
 \subsection{Messages}\label{subsec:mm}
 \input{tables/messagesInline_}
-Connectivity was related to smaller messages in terms of characters and tokens.
+Connectivity was found correlated to smaller messages in terms of characters, tokens.
+Connectivity was also found correlated to smaller messages in terms of sentences, but
+it was less consistent.
+This result is exemplified in Table~\ref{tab:sizesMsgs}.
+
+
 % tirar medidas de correlacao: perason e spearmanA TTM
-ELE list displayed an inverse situation:
-the more connected the sector,
-the longer the messages are.
-This was considered a peculiarity of the culture bonded
-with the political subject of ELE list, to be further verified.
+% ELE list displayed an inverse situation:
+% the more connected the sector,
+% the longer the messages are.
+% This was considered a peculiarity of the culture bonded
+% with the political subject of ELE list, to be further verified.
 % make some sort of verification TTM
 % process the lists just for this feature
-Regarding sentences,
-the size of messages seem to hold steady throughout connectivity.
 % ver a correlação das medidas de grau e força com TTM
 % texto
 % ver em especial se algo eh mais para in ou out
 % e se indifere greu e força como no particionamento de erdos
-Further information is given in Table~\ref{tab:sizesMsgs}.
 
 \subsection{POS tags}\label{subsec:pos}
 \input{tables/posInline_}
 % rever taggeamento e tentar melhor accuracy com o Bril Tagger TTM
-Lower connectivity yields more nouns and less adjectives,
-adverbs and verbs.
-This suggests that the networks collect meaningful issues
+We found that lower connectivity yields more nouns and less verbs and adverbs.
+Also, the fraction of adjectives does not change,
+but given that peripherals use more nouns,
+we can conclude that hubs use more adjectives per noun.
+This suggests that the networks gather issues
 through the peripheral sector. 
-These issues are qualified, elaborated about,
+These issues are qualified and proposed to be acted upon
 by the more connected participants.
 This is a further indicative that peripheral sectors
 are related to diversity while hubs relate to specialization.
-Further information is given in Table~\ref{tab:pos}.
+These results are exemplified in Table~\ref{tab:pos}.
+Weaker evidence was found that hubs use more \emph{adpositions},
+determinants and 'particles and other functional words' while
+peripherals use more numerals.
 
-\subsection{Wordnet synsets}\label{subsec:pos}
-\input{tables/wnPOSInline_} % uma soh
-%\input{tables/wnInline_} % uma soh
+
+\subsection{Wordnet-related results}
+For correctly analyzing text production in terms of the Wordnet lexical database,
+we only considered words that had synsets of with the POS tag obtained with the POS tagger.
+This resulted in portions of tokens considered of $\approx 30\%$,
+but of more than $90\%$ of all tokens with Wordnet synsets.
+This yields less strong results, but which we found still relevant.
+Measures regarding Wordnet synsets often reach an extreme value (maximum or minimum)
+in the intermediary sector, which we understood as evidence that:
+\begin{itemize}
+	\item the Erd\"os sectioning of the networks into peripheral, intermediary and hubs sectors are in fact relevant for human social structures, at least to the ones analyzed in this thesis.
+	\item Human social networks present relations between connectivity and semantics.
+	\item The intermediary sector might hold a deeper identity than that of a sector bounded by hubs and periphery sectors.
+	\item The analysis of social networks texts using Wordnet reveals aspects of the structures which are not clear with the non-semantic analysis we performed.
+\end{itemize}
+
+Furthermore, the analysis of the measures we obtained by means of the Wordnet
+is not trivial because of the number of different measures
+and because differences in measures are not obviously relevant.
+In order to obtain consistent results, we considered evidence of difference in sectors in a network
+if maximum measure is at least 10\% greater than minimum measure,
+i.e. $\frac{maximum\;measure}{minumum\;measure}>1.1$.
+We considered strong evidence of difference in sectors in a network if
+$\frac{maximum\;measure}{minumum\;measure}>1.2$.
+We than looked through each measure in each network to find evidence of
+differences of sectors through all networks.
+
+\subsubsection{Wordnet POS tags}\label{subsec:wnpos}
+The observations here are somewhat consistent with those in Section~\ref{subsec:pos}:
+peripherals use more nouns and less verbs and adverbs.
+The difference here is regarding adjectives, which was found more frequent in hubs texts
+in this reduced set of tokens.
+These results are illustrated in Table~\ref{tab:wnpos}.
+\input{tables/wnPOSInline_}
+
+
+\subsubsection{Wordnet synsets characteristics}\label{subsec:wn1}
 \input{tables/wnPOSInline2} % uma soh
+\subsubsection{Wordnet synset hypernyms}\label{subsec:wn1}
+\input{tables/wnPOSInline2} % uma soh
+%\input{tables/wnInline_} % uma soh
+
+\subsection{Wordnet synsets}\label{subsec:wnres}
 
 %\input{tables/wnInline2-n_} % uma para cada nivel do synset
 %\input{tables/wnInline2a-n_}

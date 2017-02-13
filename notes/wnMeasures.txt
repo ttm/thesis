@@ -1,0 +1,87 @@
+[[[[[[[N
+min depth
+- -  - -    - - - -
+- h* - -    - - h -
+
+max depth
+- -  - -    - - - -
+- h* - -    h - h -
+
+holonyms
+p h p     p*/h    -  p*  p* i/p
+p h h**/p h*/p    h* p** -  i**/h
+
+meronyms
+i*/h h**/p p*    h**/p*     p* p*  p*  i*/h
+i**/h p*/h p*/h  h**/p*     p* p** p** p
+
+domains
+h* h**/p - h*/p     i*/h h*/p - p*
+h  h**/p - h*/p     i/h  -    p -
+
+lemmas
+- p* - p*      -   -   p p
+p p* - p**     i/p p/h p p
+
+hyponyms
+i/h h** - h*     i*/h h/p h/p  h*
+i/p h** - h*     i/h  p/h p*/h h*/p
+
+hypernyms
+-  -  - -     -   -    - -
+p* h* h p*    h** h*/p - p*/h
+
+[[[[[[AS
+domains
+h* h** i* -    p* p*/h* i h*/p
+h  h** -  -    -  p*/h* - -
+
+similar
+h** h*/p h/p h*    h* -   - -
+h   h*   h/p p     h* p/h - -
+
+lemmas
+- - -  p*    - -   p  h
+- h p* p*    - h/p p* h*
+
+[[[[[[[[V
+min depth
+p* -  - p    h - - -
+p  h* - -    - - - -
+
+max depth
+p -  - p    h - - -
+p h* - -    - - - -
+
+domains
+p** h*  - p*    p* - h* -
+p**  h* - p     p* p h* -
+
+verb groups
+p - - -    i/p - - -
+- - - -    -   - - -
+
+lemmas
+- h - h    - - - -
+- h - -    - p - h
+
+entailments
+h* p* - h*    p* h**/p p**/i** p*
+h  p* - h     p  h**/p -       -
+
+hyponyms
+h* h** h  h*       - - -   -
+h* h** h* i*/h*    - p h/p -
+
+hypernyms
+p i*/p* - -    - - - -
+- h*/p  - -    - - - -
+
+[[[[[[[[R
+domains
+p/h h**/p h** p*/i    i*/h h**/i** - h*/p
+p/h h*/p  h*  i/p     i/h  h*/i*   - -
+
+lemmas
+-   h/p  - -    - - - -
+i/p h*/p - p    - - p -
