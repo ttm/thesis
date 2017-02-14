@@ -53,6 +53,11 @@ p p* - p**     i/p p/h p p    i/p - - -
 - h*/p - p*/h     p -
 - h*/p - p**      - -
 
+(6/0/1)
+(0/2)
+(7/2/1)
+(2/2)
+
 hyponyms
 i/h h** - h*     i*/h h/p h/p  h*       p  i*/h  - -
 i/p h** - h*     i/h  p/h p*/h h*/p     p* i**/h - i/h
@@ -60,12 +65,22 @@ i/p h** - h*     i/h  p/h p*/h h*/p     p* i**/h - i/h
 h*/p i*/h i/p i*/h     h*/p -
 h*/p h*   i/p i/p      h/p  p/h
 
+(1/6/7)
+(6/4)
+(4/6/6)
+(6/6)
+
 hypernyms
 -  -  - -     -   -    - -       - -   - -
 p* h* h p*    h** h*/p - p*/h    p i/p - -
 
 - - - -       - -
 - p i i/h     - i*/h
+
+(0/0/0)
+(0/0)
+(5/4/4)
+(4/2)
 
 [[[[[[AS
 domains
@@ -75,6 +90,11 @@ h  h** -  -    -  p*/h* - -        h*/p  p    i/p -
 h* i**/h* i**/h h*i*     	h** i
 -  i*/h*  i*/h  h*              h*  i/h
 
+2/7/7
+7/4
+2/4/5
+4/2
+
 similar
 h** h*/p h/p h*    h* -   - -     - h/p -   -
 h   h*   h/p p     h* p/h - -     p -   i/h -
@@ -82,12 +102,22 @@ h   h*   h/p p     h* p/h - -     p -   i/h -
 - p**/h h -   - -
 h p*/h  h -   - -
 
+1/0/7
+0/4
+4/1/6
+1/3
+
 lemmas
 - - -  p*    - -   p  h    -   -   i/h -
 - h p* p*    - h/p p* h*   p/h p/h i/h -
 
 - i/h   - -    -   -
 h i*/h* i -    i/h -
+
+2/2/1
+2/0
+5/4/4
+4/3
 
 [[[[[[[[V
 min depth
@@ -110,6 +140,8 @@ p**  h* - p     p* p h* -    p   i*/h - -
 
 p**i** p*h* p*i* h**i**     i* p**
 p      p*/h i/p  h*         i  p*
+
+6/6/3
 
 verb groups
 p - - -    i/p - - -    h - - -
@@ -139,6 +171,11 @@ h* h** h* i*/h*    - p h/p -     h*   h - h*
 - p**/h -   h*          i/h -
 - p**/h i/h h**/i*      i/h -
 
+1/2/6
+2/1
+2/3/8
+3/2
+
 hypernyms
 p i*/p* - -    - - - -    - - - -
 - h*/p  - -    - - - -    - - - -
@@ -153,6 +190,11 @@ p/h h*/p  h*  i/p     i/h  h*/i*   - -       i*/h* i*h* -   -
 
 h* i**/h** h*/p i*/p     h/p hp
 h  i*h*    h/p  i        -   -
+
+3/4/10
+4/7
+1/6/5
+6/3
 
 lemmas
 -   h/p  - -    - - - -    -   - - -
