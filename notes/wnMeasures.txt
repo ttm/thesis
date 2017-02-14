@@ -27,12 +27,24 @@ i**/h p*/h p*/h  h**/p*     p* p** p** p       i*/p p**/h p*/h p*
 i**/p i**/h* h*   p*      -  p**
 i**/p h*     i*/h p*      p* p**
 
+(p/i/k)
+(peaksiM/min/total)
+(8/5/3)
+(5/2)
+(12/4/2)
+(4/5)
+
 domains
 h* h**/p - h*/p     i*/h h*/p - p*    i**/p* i p* -
 h  h**/p - h*/p     i/h  -    p -     i*/p   - p  -
 
 p p* i*/p p*i*     h*p* p*
 p -  -    -        -    p
+
+(5/5/5)
+(5/3)
+(4/2/3)
+(2/2)
 
 lemmas
 - p* - p*      -   -   p p    -   - - -

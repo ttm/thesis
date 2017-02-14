@@ -482,13 +482,32 @@ in the intermediary sector, which we understood as evidence that:
 Furthermore, the analysis of the measures we obtained by means of the Wordnet
 is not trivial because of the number of different measures
 and because differences in measures are not obviously relevant.
-In order to obtain consistent results, we considered evidence of difference in sectors in a network
+In order to obtain consistent results, we considered \emph{weak evidence of difference} in sectors in a network
 if maximum measure is at least 10\% greater than minimum measure,
 i.e. $\frac{maximum\;measure}{minumum\;measure}>1.1$.
-We considered strong evidence of difference in sectors in a network if
+We considered \emph{evidence of difference} in sectors in a network if
 $\frac{maximum\;measure}{minumum\;measure}>1.2$.
-We than looked through each measure in each network to find evidence of
+When 
+$\frac{maximum\;measure}{minumum\;measure}>1.5$, we considered \emph{strong evidence of difference}.
+We than looked through each measure in all networks to reach compelling observations about the
 differences of sectors through all networks.
+Also useful here is the definition of lower sectors (peripheral and intermediary),
+upper sectors (intermediary and hubs) and extreme sectors (peripheral and hubs).
+We should also point when measurements peak at the intermediary sector,
+be it a maximum our minimum peak.
+
+Noteworthy is that extra skepticism should be kept in mind about these results
+because of the unquantified noise in the measurements.
+Observations seem consistent and meaningful, but only about a third of total tokens
+were considered.
+This is because tokens were discarded if not having a Wordnet synset
+or when not having a synset with a POS tag true to the POS tag attributed by the POS tagger.
+Besides that, there are often more than one synset with the same POS tag for each word,
+and we chose the most frequent synset as ranked by Wordnet.
+In the positive side, we observe that $\approx 95\%$ of tokens which had synsets
+were considered.
+Example of types tokens without synsets are stopwords, punctuations, numerals, acronyms and typos.
+
 
 \subsubsection{Wordnet POS tags}\label{subsec:wnpos}
 The observations here are somewhat consistent with those in Section~\ref{subsec:pos}:
@@ -500,6 +519,46 @@ These results are illustrated in Table~\ref{tab:wnpos}.
 
 
 \subsubsection{Wordnet synsets characteristics}\label{subsec:wn1}
+Wordnet synsets with different POS tags have different relations.
+Therefore, we made separate observations about each POS tag:
+\begin{itemize}
+	\item Nouns
+		\begin{itemize}
+			\item Minimum and maximum depth: 
+				differences were found in the mean of minimum and maximum depth of a synset between email lists,
+		but not once among sectors of a network derived from an email list.
+		Differences between the variance of minimum and maximum depth of synsets of sectors was found mostly non existent or weak.
+			\item Holonyms:
+				words with more holonyms were present in $\approx 85\%$ of the networks and were
+		more incident in the lower sectors in $\approx 90\%$ of the observations in which we found such differences.
+		Differences in the variance in the number of holonyms was also found with the same regularity,
+		but were greater in the upper sectors in $\approx 80\%$ of the networks.
+				Both mean and variance of the number of holonyms peaked in the intermediary sector in $\approx50\%$ of the observations.
+			\item Meronyms:
+				words with more meronyms were present in $\approx 90\%$ of the networks and were
+		more incident in the lower sectors in $\approx 80\%$ of the observations in which we found such differences.
+			Differences in the variance in the number of meronyms was found in $100\%$ of the networks, was often strong.
+				The variance was greater in the periphery in $66.66\%$ and in the lower sectors in $\approx 90\%$ of the observations.
+			\item Domain:
+				differences in the mean and variance of the number of domains of words were found respectively in $90\%$ and $50\%$ of the networks and maximum values were found evenly distributed across sectors.
+				Peaks were found in the intermediary sector in $\approx 50\%$ of the networks.
+			\item Lemmas:
+				differences in the mean and variance of the number of lemmas of words were found respectively in $40\%$ and $55\%$ of the networks.
+				In $\approx 90\%$ of the cases where there was difference in the mean, the maximum number of lemmas was found in the periphery.
+				Peaks in the intermediary sector were less often, occurring only in $\approx 35\%$ of the observations.
+			\item Hyponyms:
+				differences in the mean and variance of the number of hyponyms of words were found respectively in $77.77\%$ and $88.88\%$ of the networks.
+				In $\approx 93\%$ of the cases where there was difference in the mean, 
+				the maximum number of hyponyms was found indistinctly in the upper sectors.
+				In $75\%$ of the cases where there was difference in the variance, 
+				the maximum variance was found indistinctly in the upper sectors.
+				Peaks occurred in the intermediary sector in $\approx 75\%$ of the observations.
+			\item Hypernyms:
+				between the sectors of all networks analyzed, we found no differences in the mean of the number of hypernyms.
+				There were differences in the variance of the number of hypernyms of the words used by the sectors in $\approx 72\%$ of the networks.
+				Greatest values occurred indistinctly in all sectors and peaked in the intermediary sector in $\approx 50\%$ of the observations.
+		\end{itemize}
+\end{itemize}
 \input{tables/wnPOSInline2} % uma soh
 \subsubsection{Wordnet synset hypernyms}\label{subsec:wn1}
 \input{tables/wnPOSInline2} % uma soh
