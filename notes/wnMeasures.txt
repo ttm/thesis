@@ -1,3 +1,85 @@
+[[[[[[[[[[[[[[[N
+
+1
+abstr
+- p - p    p* - - -    - - - -
+
+phy
+- h - h    h* - p_ -    ip_ - - -
+
+2
+psyc_feat
+h h h ih    ip h* ph h*    hp h*p - p
+
+measure
+p p p p**  p** p* ip* p**    - p** ih ih
+
+causal_ag
+p h - -    h* h*_ - h    ph p - ph_
+
+communication
+h ip - p    ph p h p    h  p ph -
+
+group
+p h i_ p_   ip_ - h* -   p_ h_ - p_
+
+
+attribute
+- hp - h_   hi h_ - h    p_ h_ h_ -
+
+object
+h** - h**    h** p p -    ih - - -
+
+matter
+h* - ph_     p*_ ph* p_ p_     ip_ - - -
+
+relation
+
+- - - h**    hp_ ih_ p_ h_    - - - -
+
+3
+definite_quantity
+p p** p* p**    p** p** ip** p**    ph p** hi ih
+
+person
+p - - ip_       h** h* - h    ph - - -
+
+event
+h - - h         - h hp h     ph h - p
+
+whole
+hp h** - h**    h** p p ip     ih h h h
+
+cognition
+h h** h ip_     p_  h* ph h**    - h* ph_ -
+
+message
+- ip* h*        h* p*  h p_      hp ph ph ih
+
+shape
+- h* - -        - - - -     -  - -
+
+fundamental_quantity
+- - - h*        - - - -     - - -
+
+possession
+- - - h*_       - - - -     - - -
+
+written communication
+- - - -    - - h* -        i_ - -
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------
 [[[[[[[N
 min depth
 - -  - -    - - - -    - - - -
