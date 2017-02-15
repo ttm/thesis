@@ -607,7 +607,6 @@ Therefore, we made separate observations about each POS tag:
 		\end{itemize}
 \end{itemize}
 \subsubsection{Wordnet synset hypernyms}\label{subsec:wn1}
-\input{tables/finalSynsetsN_} % uma soh
 \begin{itemize}
 	\item Noun synsets: differences in the use of nouns with physical entity hypernyms was found indistincly in all sectors.
 		In deeper layers, more systematic differences arises.
@@ -618,11 +617,13 @@ Therefore, we made separate observations about each POS tag:
 		With depth 3, hubs presented more nouns related to written communication, event and cognition.
 		Peripherals showed greater use of nouns related to definite quantity.
 		Message related nouns often peaked at the intermediary sector.
+\input{tables/finalSynsetsN_} % uma soh
 	\item Adjective synsets: the use of adjectives revealed loss less systematic.
 		The synsets varied greatly among lists and differences were not strong.
 		We obseved weak evidence that hubs use more adjectives related to certainty,
 		and that the use of such adjectives always peaked at the intermediary sector.
 		Even weaker evidence was found that hubs use more adjectives related to newness.
+\input{tables/finalSynsetsAS_} % uma soh
 	\item Verbs synset hypernyms of move and travel was found more numerous in the peripheral sector.
 		Verbs related to change was found more common in the hubs sector.
 		Verbs related to making was found with differences in the frequency of use among sectors,
@@ -633,12 +634,11 @@ Therefore, we made separate observations about each POS tag:
 		Hubs used more increase-related verbs.
 		Periphery presented more verbs related to running and communication.
 		With depth 4, lower sectors used more verbs related to informing, peripherals might be regarded as using more verbs related to recording (set in a permanent form), and hubs as using more verbs related to adding.
+\input{tables/finalSynsetsV_} % uma soh
 	\item Adverb synsets was found with particularly interesting patterns as greater use of adverbs related to possibility and stillness was found in the intermediary sector.
 		Adverbs related to however and even were more frequent in the peripheral sector while advers related to well (good way to perform) was more used by hubs.
-\end{itemize}
-\input{tables/finalSynsetsAS_} % uma soh
-\input{tables/finalSynsetsV_} % uma soh
 \input{tables/finalSynsetsR_} % uma soh
+\end{itemize}
 % \input{tables/wnPOSInline2} % uma soh
 %\input{tables/wnInline_} % uma soh
 
@@ -672,7 +672,7 @@ Therefore, we made separate observations about each POS tag:
 
 
 
-\subsection{Differentiation of the texts from Erd\"os sectors}\label{subsec:di}
+\subsection{Further differentiation of the texts from Erd\"os sectors}\label{subsec:di}
 \input{tables/ksTokens_}
 \input{tables/ksWords_}
 \input{tables/ksSents_}
@@ -682,41 +682,63 @@ Therefore, we made separate observations about each POS tag:
 \input{tables/ksPuns_}
 
 Results from our adaptation of the Kolmogorov-Smirnov test
-suggest that the texts produced by each sector are extremely different.
+hold even stronger evidence
+that the texts produced by each sector are different.
 Intermediary sectors sometimes exhibit greater differences 
-from periphery and hubs than these extreme sectors themselves 
+from periphery and hubs than these extreme sectors between themselves 
 (Tables~\ref{tab:kolSub} and~\ref{tab:kolSw}).
-This differentiation of the three sectors is a
-strong indicative that the Erd\"os Sectioning
-described in~\cite{evoSN} reveals meaningful
+This differentiation of the three sectors is an
+indicative that the Erd\"os Sectioning
+described in Section~\ref{sectioning} reveals meaningful
 sectors of the networks.
 
 Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter}
-illustrate two strong results:
+illustrate two results:
 \begin{itemize}
-    \item Differences of textual production of the Erd\"os sectors are extreme.
-	    This can be noticed from the high values on these tables,
+    \item Differences of textual production of the Erd\"os sectors are statistical facts.
+	    This can be noticed from the high values of $c'$ on these tables,
 	    beyond reference values used for the acceptance of the 
 	    null hypothesis (see Section~\ref{sec:ks}).
     \item Differences between sectors on the same network 
-	    (Tables~\ref{tab:kolSub},~\ref{tab:kolAdj},~\ref{tab:kolSw} and~\ref{tab:kolPct}) are greater than differences between same sector from distinct lists (Tables~\ref{tab:kolSubInter},~\ref{tab:kolAdjInter},~\ref{tab:kolSwInter} and~\ref{tab:kolPctInter}).
+	    (Tables~\ref{tab:kolSub},~\ref{tab:kolAdj},~\ref{tab:kolSw} and~\ref{tab:kolPct}) are often greater than differences between same sector from distinct lists (Tables~\ref{tab:kolSubInter},~\ref{tab:kolAdjInter},~\ref{tab:kolSwInter} and~\ref{tab:kolPctInter}).
 \end{itemize}
 
-We can summarize these results stating that the extreme difference
-found between the texts produced by the Erd\"os sectors
-are greater than the difference found between texts from different
-networks or from the same sector of different networks.
+\begin{table}[!h]
+	\begin{center}
+		\setlength{\tabcolsep}{.06667em}
+		  \begin{tabular}{|l|| c|c|c|c|c|c|}\hline
+			  & CPP-LAD & CPP-LAU & CPP-ELE & LAD-LAU & LAD-ELE & LAU-ELE \\\hline
+			  P & 1.35 & 4.05 & 5.80 & 3.00 & 5.41 & 4.94 \\\hline
+			  I & 1.27 & 0.78 & 4.01 & 0.84 & 3.84 & 3.94 \\\hline
+			  H & 0.98 & 1.94 & 3.17 & 1.32 & 3.82 & 4.47 \\\hline
+		  \end{tabular}
+	\end{center}
+\end{table}
+
+We can summarize these results stating that the difference
+found between texts from distinct Erd\"os sectors
+is further evidenced.
+% We can summarize these results stating that the difference
+% found between the texts produced by the Erd\"os sectors
+% are greater than the difference found between texts from different
+% networks or from the same sector of different networks.
 
 \subsection{Correlation of topological and textual metrics}\label{subsec:cor}
 
-\input{tables/correlationInline_}
-Correlation of degree 
-and strength metrics is
-substantially smaller for intermediary sector.
+\input{tables/correlationInline9_}
+Overall, small correlation is found between textual and topological metrics.
+An exception is that, in the hubs sector, strengh was very often negatevely correlated to the mean and variance of the number
+of punctuations (and sometimes with the number of known words or stopwords)
+with values bellow -0.4, but a few positive and high values (above 0.5) were also found.
 % verificar e quantificar TTM
-Also noteworthy is the negative correlation of degree and message size (number of characters, tokens or sentences) that intermediaries presented.
+Interestingly, the number of punctuations per sentence was most often correlated to the number of stopwords
+while most often correlated to the number of known words.
+Noteworthy is that degree is negatively correlated to clustering coefficient in intermediary and hubs sectors,
+which is consistent with the literature, but it is positively correlated for
+peripheral sectors.
+Other strong correlation associations of textual and topological characteristics occurred,
+but not systematically and might be indicatives of style from the different lists analyzed.
 This and other insights can be drawn from Tables~\ref{tab:corTop},~\ref{tab:corTex} and~\ref{tab:corTexTop}.
-Overall, negligible correlation is found between textual and topological metrics.
 % verificar e fazer tabelas corretamente:
 % focadas para texto, extensivas para SI
 
@@ -731,15 +753,16 @@ Overall, negligible correlation is found between textual and topological metrics
 
 
 
-Principal components formation seem to be the less stable of all results reported in this study.
-First component, with $\approx 25\%$ of dispersion, relies heavily on POS tags,
-and slightly on sizes of tokens, sentences and messages.
-Second component, with almost $12\%$ of dispersion, blends topology, POS tags and size of textual units.
-Third component, with about $8.5\%$ of dispersion is mostly nouns frequency and size of textual units.
-Fourth and fifth components present less than $5\%$ of total dispersion,
-but are included in the Supporting Information document for completeness of exposition.
-
-Tables~\ref{tab:pca1}-\ref{tab:pca5} yield these results and further insights.
+Principal components formation seems to be the less stable of all results reported in this study.
+The concentration of dispersion often peaked in the intermediary sector.
+Clustering coefficient was dominant in a principal component almost exclusively
+when the whole network as used for PCA, otherwise it combined more evenly with
+other measures.
+This reveals that clustering coefficient might be a more relevant feature for the complete network
+than for each separate sector.
+Components are most often composed of topological or textual features.
+Other than that, we observe that PCA is sensisive to meatrics included
+and should reveal other insights in other settings.
 
 \subsection{Results still to be interpreted}\label{subsec:sii}
 %These networks yield diverse characteristics,
@@ -756,6 +779,8 @@ the difference found was different, but still constant, slightly above $0.5$.
 When only stopwords were considered, the difference is $\approx 0.6$.
 When only known English words that does not have wordnet synsets are used,
 this difference is $\approx 1.2$.
+We considered this result a number of times in the past years and presented it to other researchers,
+but reached no conclusions about its meaning.
 Appendix ~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated to this histogram differences.
 
 \section{Results from visualization}
