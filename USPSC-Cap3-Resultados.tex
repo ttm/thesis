@@ -777,49 +777,47 @@ the difference sums up to $\approx 1.0$.
 When stopwords are discarded,
 the difference found was different, but still constant, slightly above $0.5$.
 When only stopwords were considered, the difference is $\approx 0.6$.
-When only known English words that does not have wordnet synsets are used,
+When only known English words that does not have Wordnet synsets are used,
 this difference is $\approx 1.2$.
 We considered this result a number of times in the past years and presented it to other researchers,
 but reached no conclusions about its meaning.
 Appendix ~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated to this histogram differences.
 
 \section{Results from visualization}
-Results from versinus are divided in two groups:
+Results from Versinus are divided in two groups:
 observations on features that made it useful for the task,
 and the network properties it made possible to grasp.
 
 \subsection{Useful visualization features for dynamic networks}
 
-Among the numerous insights related to versinus, a few of them seem more fundamental, or plain useful.
+Among the numerous insights related to Versinus, a few of them seem more fundamental, others seem simply useful.
 Such insights were incorporated to Versinus as the result of tests which presented clear benefits within the context of our research.
-The folowing list is an attempt to present them in an importance-first order:
+The following list is an attempt to present them in an importance-first order:
 \begin{enumerate}
 	\item Vertices need to remain static.
-		Even if they move smoothly, one notices solely transient artifacts.
+		Even if they move smoothly, one tends to notice solely transient artifacts from the structure.
 	\item Very connected sectors (hubs and intermediary) need to be in a curve, otherwise the edges enclose each other and reasoning about the network becomes harsh.
-	\item Height and width of a vertex are very informative, specially if measures mapped to them have a strong relation, such as out-degree (mapped to height in versinus) and in-degree (mapped to width).
-	\item The color of nodes is also informative although less than height and weight, as differences is the latter are more noticeable.
+	\item Height and width of a vertex are very informative, specially if measures mapped to them have a strong relation, such as out-degree (mapped to height in Versinus) and in-degree (mapped to width).
+	\item The color of nodes is also informative although less than height and weight, as differences in the latter are more noticeable.
 	\item An ordering of nodes, related to their fixed position, is very useful. Among all tests, ordering of vertices by degree was considered the most informative, which led to the hub, intermediary and peripheral sectioning of the network delineated in Section~\ref{sectioning}.
 		As node position in the layout is fixed throughout an animation which comprises consecutive but distinct network activity, such ordering is done with respect to the resulting network of all the activity.
-	Numbering these positions with respect to the order of the vertices in the larger structure (e.g. all $M$ messages) is useful for understanding how much a vertex preserves the position in different scales of activity.
+	Numbering these positions with respect to the order of the vertices in the larger structure (i.e. all $M$ messages) is useful for understanding how much a vertex preserves the position in different scales of activity.
 \end{enumerate}
 
-Many other insights were given by Versinus, such as possible visualization tools, other kind of convenient layouts and glyph elaborations.
+Many other insights were derived from Versinus, such as possible visualization tools, other kind of convenient layouts and glyph elaborations.
 These receives dedicated attention in Section~\ref{sec:ref}.
 
 \subsection{Understanding of network properties through Versinus}
 A number of hypotheses were drawn about the networks for which Versinus was designed.
-Another number of hypothesis were driven from versinus use itself.
-
 As suggested by Palla, Barab\'asi and Vicsek~\cite{barabasiEvo}, stability of participant activity in social networks is more incident in smaller networks.
 In accordance with this result, all hubs have intermittent activity in the settings analyzed, except for the email list with the smallest number of participants (the Metareciclagem email list).
-The intermitence of hubs itself was one of the top hypotheses which motivated Versinus development.
+The intermitence of hubs was one of the top hypotheses which motivated Versinus development.
 The stability of the network structure, concomitant with the instability of the activity of each participant,
 motivated a deeper analysis~\cite{evoSN}.
 In doing so, we also found evidence for another hypothesis drawn from Versinus:
 that in- and out-degree differences in each vertex are important for network characterization.
 Furthermore, the visualization suggests that there are modes of operation of the network.
-As an example, the intermediary sector often communicates mostly with the hubs or with the peripheral vertex.
+As an example, the intermediary sector often communicates mostly with the hubs or with the peripheral vertices.
 Other hypotheses,
 such as discrepancies in the authority and the degree of a vertex,
 are numerous but need further research to be valuable.
@@ -920,12 +918,12 @@ Table~\ref{tab:provenance}.
 		\end{tabular}\end{center}
 	\end{table*}                    
 \subsubsection{Topological and textual analysis}\label{ana}
-Routines are available for taking topological and textual measures from
+Routines are available for taking the topological and textual measures from
 the database.
 Auxiliary routines, such as performing principal component analysis
 and taking Kolmogorov-Smirnov measures, are available
 to ease pattern recognition.
-Single, timeline and multi-scale analyzes are automated.
+All the analysis routines used for this thesis are in these publicly accessible scripts.
 
 \subsubsection{Multimedia rendering}\label{media}
 It is a core purpose of the framework to provide routines for rendering
