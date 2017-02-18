@@ -171,7 +171,7 @@ Edges in both directions are allowed. Each time an interaction occurs, the value
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.29\textwidth]{figs/criaRede3_}
+\includegraphics[width=0.5\textwidth]{figs/criaRede3_}
 \caption{The formation of interaction networks from exchanged messages. Each vertex represents a participant. A reply message from author B to a message from author A is regarded as evidence that B received information from A and yields a directed edge. 	Multiple messages add ``weight'' to a directed edge. Further details are given in Section~\ref{intNet}.}
 \label{formationNetwork}
 \end{figure}
@@ -488,11 +488,12 @@ This work focuses on very simple metrics derived from texts as they have been su
 Such metrics are:
 \begin{itemize}
     \item Frequency of characters: letters, vowels, punctuations and uppercase letters.
-    \item Number of tokens, frequency of punctuations among tokens, frequency of known words, frequency of words that have wordnet synsets, frequency of tokens that are stopwords.
+    \item Number of tokens, frequency of punctuations among tokens, frequency of known words, frequency of words that have Wordnet synsets, frequency of tokens that are stopwords.
     \item Mean and standard deviation for word, token sentence and message sizes.
     \item Fraction of morphosyntactic classes, such as adverbs, adjectives, nouns and other POS (Part-Of-Speech) tags.
-    \item Fraction of words in each wordnet~\cite{wordnet} top-most hypernyms,
+    \item Fraction of words in each Wordnet~\cite{wordnet} top-most hypernyms,
 	    such as abstraction and physical entities for nouns or act for verbs.
+    \item Mean and standard deviation of the number of Wordnet synset relations, such as holonyms and meronyms, domains, lemmas and verb groups.
 \end{itemize}
 % \noindent To such measures are dedicated Tables~\ref{tab:cha},~\ref{tab:tokens},~\ref{tab:sizesTokens},~\ref{tab:sizesSents},~\ref{tab:sizesMsgs},~\ref{tab:pos}.
 
@@ -501,6 +502,18 @@ This choice is based on: 1) the lack of such information in the literature, to t
 3) the interdependence of textual artifacts suggests that simple measures should reflect complex and more subtle aspects.
 A preliminary study, with the complete works from the Brazilian writer Machado de Assis~\cite{letrasMachado},
 made clear that these metrics vary with respect to style.
+
+\subsubsection{About Wordnet}
+In this thesis, we made use of the statistics derived from the incidence of Wordnet synsets and their characteristics.
+This calls for a brief description of what is Wordnet, what is a synset and what are such characteristics:
+\begin{itemize}
+	\item Wordnet: a lexical database for the English language released in a BSD style license. It groups synonyms into synsets, provides a number of relations among the synsets and provides definitions and use examples.
+	\item Synset: defined by Wordnet as a set of one or more synonyms that are (somewhat) interchangeable without changing the true value of the proposition in which they occur.
+	\item Synset characteristics: a synset is associated to other synsets by a number of semantic relations which differ with the POS tag attributed to them.
+		Examples of such relations are yield by hyponyms and hypernyms (respectively less and more general terms), meronyms and holonyms (respectively is part of and has part), lemmas (canonical forms of a word), similar words by semantic criteria, entailments.
+		Some characteristics are derived from the synset in relation to the whole Wordnet network.
+		In this respect, we used only the maximum and minimum depth of the synset, which are respectively the maximum and minimum number of hypernyms from the synset to the root synset (e.g. 'thing' for nouns).
+\end{itemize}
 
 \subsubsection{Relating text and topology}\label{sec:ks}
 The topological and textual measures were related by:
