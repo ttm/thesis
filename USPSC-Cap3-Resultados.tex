@@ -154,7 +154,7 @@ list & hub & $ Q_1 $ & $ Q_3 $ & $D_{-1}$ \\ \hline
 %The contribution of each metric to the variance is very similar for all the networks and along time.
 
 The principal components of the participants are very stable in the topological space,
-i.e. in the space of network measures.
+i.e. in the space of network metrics.
 Table~\ref{tab:pcainin} exemplifies the formation of principal components by providing the averages over non-overlapped activity snapshots of a network. The most important result of this application of PCA, the stability of principal components, is underpinned by the very small dispersion of the contribution of each metric to each principal component.
 %The contribution of each metric to the
 %principal components presents
@@ -219,7 +219,7 @@ of edges $\sigma^{asy}$ and $\sigma^{dis}$ in the third principal component.
 %These results are also reported for 12 networks from Facebook, Twitter and Participabr
 %in Section~\ref{si:ext} of the Supporting Information document.
 Similar results are presented in Sections~\ref{si:pcat} and~\ref{si:ext}
-of the Supporting Information for other email lists and interaction networks. A larger variability was found for the latter networks,
+of the Appendix for other email lists and interaction networks. A larger variability was found for the latter networks,
 which motivated the use of interaction networks derived from email lists for benchmarking.
 
 %the overall behavior was maintained in that centrality measurements 
@@ -347,10 +347,10 @@ Perhaps the most outreaching implications are related to sociological consequenc
 components of the social system. The peripheral participants have very limited interaction with the network. This suggests that intermediary participants tend to dictate structure, legitimate the hubs and stand out as authorities.
 
  
-With regard to the limitations of our study, one should emphasize that not all types of human interaction networks were analyzed. Therefore, the plausible generalization of properties has to be treated with caution, as a natural tendency of such systems and not as a rule. Also, the stable properties in the networks were not explored to the limit, which leaves many open questions. For example, what are the maximum and minimum sizes of the networks for which they hold? What is the outcome of PCA analysis when more metrics are considered? What is the granularity in which the activity along the timescales is preserved? Do the findings reported also apply to other systems, beyond human networks?
+With regard to the limitations of our study, one should emphasize that not all types of human interaction networks were analyzed. Therefore, the plausible generalization of properties has to be treated with caution, as a natural tendency of such systems and not as a rule. Also, the stable properties in the networks were not explored to the limit, which leaves many open questions. For example, what are the maximum and minimum sizes of the networks for which they hold? What is the outcome of PCA when more metrics are considered? What is the granularity in which the activity along the timescales is preserved? Do the findings reported also apply to other systems, beyond human networks?
  
  % TTM find
-\section{Text results and discussion}\label{sec:tresults}
+\section{Text-related results and discussion}\label{sec:tresults}
 % Aqui será necessária uma Introdução a este novo tipo de resultado.
 
 The most important result of including textual metrics in our analysis is the
@@ -364,7 +364,7 @@ Other relevant results are:
 		For example: hubs seem to use more contractions,
 		more common words, and less punctuation if compared to the rest of the network,
 		especially the peripheral sector.
-		In general, the rise or fall of a text-related metric is not relevant or monotonic along connectivity,
+		In general, the rise or fall of a text-related metric is not relevant or is monotonic along connectivity,
 		but some of them reaches extreme values in the intermediary sector.
 		% Comparative insights by means of statistics from email lists, the King James Bible and Shakespeare, which are often regarded as pillars of the English language. TTM
 \end{itemize}
@@ -373,11 +373,16 @@ The next sections summarize results of immediate interest
 and further insights can be obtained by skimming through
 the tables and figures of the Appendix~\ref{ap:texttop} and the Conclusions chapter.
 We illustrate with just one table of each kind,
-and from networks derived with 1000 messages.
+and from networks obtained with 2000 messages.
 In the Appendix~\ref{ap:texttop} we display tables for various email lists
-for networks derived with 1000 and 2000 messages.
-The scale of 1000 and 2000 messages was chosen as the networks are found with
-stable topological structure, as exposed in Section~\ref{subsec:pih}.
+for networks.
+The scale of 1000 and 2000 messages was chosen for deriving results,
+as the networks in this scale are found with stable topological structure,
+as exposed in Section~\ref{subsec:pih}.
+The findings with 1000 messages are the same as with 2000 messages,
+and there are many tables.
+This setting motivated the exclusion of the tables with measurements in
+networks of 1000 messages.
 
 \subsection{General characteristics of activity distribution among participants}\label{sec:gen}
 \input{tables/geralInline_}
@@ -417,7 +422,7 @@ Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in periphe
 this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity.
 This can be noticed by the token diversity of the whole network, which is lower than in any of the sectors.
 The same observation apply to the lexical diversity ($\frac{|kw\neq|}{kw}$).
-This results are exemplified in Table~\ref{tab:tokensInline}.
+These results are exemplified in Table~\ref{tab:tokensInline}.
 % medir para tamanhos equivalentes de texto TTM
 
 % ELE and CPP both exhibit intermediaries 
@@ -434,8 +439,6 @@ This results are exemplified in Table~\ref{tab:tokensInline}.
 % among known English words, are less frequent in hubs sector,
 % evidencing the jargon and specialization of hubs.
 % verificar, desenvolvar
-
-Further information is given in Table~\ref{tab:tokens}.
 
 \subsection{Sizes of tokens and words}\label{subsec:tw2}
 %\input{tables/tokenSizesInline_}
