@@ -23,7 +23,7 @@ from which general properties can be inferred. These lists are as follows:
 
 \item Developer's list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in Gmane.}, with computer programmers from different countries. English is the prevailing language. Abbreviated as CPP from now on.
 \item List of the MetaReciclagem project\footnote{gmane.politics.organizations.metareciclagem is list ID in Gmane.}, a Brazilian email list for digital culture. 	Portuguese is the prevailing language, although some messages are written in Spanish and English. Abbreviated as MET from now on.
-\item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE.}. English is the prevailing language. Abbreviated ELE from now on.
+\item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in Gmane.}. English is the prevailing language. Abbreviated ELE from now on.
 \end{itemize} 
 
 The first 20,000 messages of each list were considered, with basic attributes of total timespan, authors, threads and missing messages indicated in Table~\ref{tab:genLists}. We considered 140 additional email lists to report on the interdependence between the number of participants and the number of discussion threads. Furthermore, 12 networks from Facebook (8), Twitter (2) and Participabr (2) were scrutinized, and their analysis is given in the Supporting Information document for the purpose of testing the generality of the results.
@@ -42,6 +42,9 @@ $\overline{M}$ is the number of messages missing in the 20,000 collection
 list & $date_1$ & $date_{M}$    & $N$  & $\Gamma$ & $\overline{M}$ \\\hline
 \input{tables/tab1Overview}
 \end{tabular}
+\begin{flushleft}
+		Source: Prepared by the authors.\
+\end{flushleft}
 \end{table} 
 
 \subsection{Linked Open Social Database for scientific benchmarking}
@@ -171,9 +174,12 @@ Edges in both directions are allowed. Each time an interaction occurs, the value
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.5\textwidth]{figs/criaRede3_}
 \caption{The formation of interaction networks from exchanged messages. Each vertex represents a participant. A reply message from author B to a message from author A is regarded as evidence that B received information from A and yields a directed edge. 	Multiple messages add ``weight'' to a directed edge. Further details are given in Section~\ref{intNet}.}
+\includegraphics[width=0.5\textwidth]{figs/criaRede3_}
 \label{formationNetwork}
+\begin{flushleft}
+		Source: Prepared by the authors.\
+\end{flushleft}
 \end{figure}
 
 %Edges can be created from all antecedent message authors on the message-response thread to each message author.
@@ -241,12 +247,15 @@ near the average, and less frequent in the real network, are classified as inter
 \clearpage
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\textwidth]{figs/fser__}
 \caption{Classification of vertices by comparing degree
 distributions~\cite{3setores}.
 The binomial distribution of the Erd\"os-R\'enyi network model exhibits more intermediary vertices, while a scale-free network, associated with the power-law distribution, has more peripheral and hub vertices. The sector borders are defined with respect to the intersections of the distributions. Characteristic degrees are in the compact intervals: $[0,k_L]$, $(k_L,k_R]$, $(k_R,k_{max}]$ for the periphery, intermediary and hub sectors, the ``Erd\"os sectors''.
 The connectivity distribution of empirical interaction networks, e.g. derived from email lists, can be sectioned by comparison against the associated binomial distribution with the same number of vertices and edges. In this figure, a snapshot of 1000 messages from CPP list yields the degree distribution of an interaction network of 98 nodes and 235 edges. A thorough explanation of the method is provided in Section~\ref{sectioning}.}
+\includegraphics[width=\textwidth]{figs/fser__}
 \label{fig:setores}
+\begin{flushleft}
+		Source: Prepared by the authors.\
+\end{flushleft}
 \end{figure}
 
 To ensure statistical validity of the histograms, bins can be chosen to contain at least $\eta$ vertices of the real network.
@@ -472,13 +481,16 @@ i.e. with respect to all $M$ messages.
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=.25]{figs/versinus_}
-				    \caption{The versinus visualization method in use. 5\% of the most connected vertexes (hubs) are on the left half-period of the sinusoid.
+				    \caption{The Versinus visualization method in use. 5\% of the most connected vertexes (hubs) are on the left half-period of the sinusoid.
 				    15\% of the most connected remaining vertices are on the right half-period.
 				    80\% of the least connected vertices are on the straight line, above the sinusoidal shape.
 				    White dots with numbers keep track of node position in the overall degree ordering.
 				    Measures blink periodically near the vertices they are related to.}
+		\includegraphics[scale=.25]{figs/versinus_}
 					    \label{fig:versinus}
+\begin{flushleft}
+		Source: Prepared by the authors.\
+\end{flushleft}
 	\end{center}
 \end{figure}
 
