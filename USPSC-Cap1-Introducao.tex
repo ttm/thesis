@@ -56,13 +56,13 @@ In the matrix representation, each entry $a_{ij}$ is non-zero if $i$ is linked t
 entries might be other than 0 and 1 in weighted graphs; undirected graphs yield symmetric matrices.
 There are two common list representations of graphs, one lists each pair of vertices that are connected,
 the other holds a list for each vertex in which are all the vertices connected to it (a list of lists).
-In the node-edge representation, each node i represented as a point while each edge is represented
+In the node-edge representation, each node represented as a point while each edge is represented
 by a line between correspondent nodes.
 The matrix representation is essential for algebraic reasoning and for deriving measures
 while the node-edge representation is important for illustration and intuitive guidance
 in characterizing the systems.
 
-\subsubsection{A good justification for the complex networks theory}
+\subsubsection{A good justification for applying the complex networks theory}
 The estimated number of atoms in the universe is often used as a reference of largeness
 and is $\approx 10^{80}$.
 Let us find the number of vertices needed to reach such number of possible networks.
@@ -83,7 +83,7 @@ the estimated number of atoms in the universe.
 We should also add that the number of possible networks grows
 very fast with the number of vertices.
 This is a good reason for characterizing such systems by means
-of paradigmatic networks and generic measures for nodes and the network (and less often for the edges).
+of paradigmatic networks and generic measures for nodes and the network (and edges, but it is less often).
 
 \subsubsection{Basic measures}
 Section~\ref{measures} gives a mathematical account of the following measures,
@@ -118,13 +118,13 @@ with the following ones~\cite{luMeasures}:
 		Each link is then rewired with probability $p$.
 		With intermediate values of $p$ such as $0.01<p<0.1$, we obtain a network with both short average distance between nodes (as in the Erdös-Rényi model) and a high average clustering coefficient (as in the spatial network).
 		This model presents a characteristic degree.
-	\item Scale-free networks: in which the degree distribution $p(k)$ follows a power law ($p(k)=C.k^{-\alpha}$ where C and k are constants).
+	\item Scale-free networks: in which the degree distribution $p(k)$ follows a power law ($p(k)=C.k^{-\alpha}$ where $C$ and $\alpha$ are constants).
 		These networks are qualitatively characterized by the presence of a large number of poorly connected and of few highly connected hubs.
 		Important is the absence of a characteristic degree, thus the name 'scale-free network'.
 	\item Other networks: among important models of networks are exponential networks, networks with community structure and hybrid models.
 \end{itemize}
 Real networks most often exhibit scale-free and small-world properties.
-This is the case of most of e.g. social, gene and food networks.
+This is the case of most e.g. social, gene and food networks.
 However, one should be cautious about such statement because
 the networks derived from the real systems depend heavily
 in what is considered a node and a link,
@@ -176,7 +176,7 @@ To glimpse at the theory involved in visualizing networks~\cite{eades}, we menti
 \end{align}
 	On a computer software, one usually starts with a random layout and performs a number of iterations updating the position of nodes
 		using these forces to obtain the intended force-directed layout.
-	\item Graph drawings are often developed for specific applications e.g. in biology (as for protein and gene interactions), social networks, tree diagrams.
+	\item Graph drawings are often developed for specific applications e.g. in biology (as for protein and gene interactions), in social networks, in tree diagrams.
 \end{itemize}
 
 The core difference of dynamic graphs to static graphs is that vertices and edges
@@ -354,11 +354,9 @@ by the empowerment of civil individuals and groups through the management of the
 networks in which they exist.
 
 \section{Structure of the thesis}
-Next Chapter presents data, visualization and code infrastructure for using the methods
-and obtaining the results in this thesis.
-Chapter~\ref{ch:mat} presents the methods while the results and discussion are in Chapter~\ref{ch:disc}.
+Next Chapter presents data and methods while the results and discussion are in Chapter~\ref{ch:disc}.
 Conclusions and further work are stated in Chapter~\ref{ch:concl}.
-Appendixes display auxiliary tables, figures and resources developed in our research.
+Appendixes display auxiliary tables, figures and other results.
 % canonical chapters; stability through circular statistics and topological statistics (PCA, sectioning)
 % text mining through measures of sizes of tokens, sentences, messages
 % through kolmogorov-smirnov, POS tagging, PCA
