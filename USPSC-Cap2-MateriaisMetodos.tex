@@ -27,6 +27,7 @@ from which general properties can be inferred. These lists are as follows:
 \end{itemize} 
 
 The first 20,000 messages of each list were considered, with basic attributes of total timespan, authors, threads and missing messages indicated in Table~\ref{tab:genLists}. We considered 140 additional email lists to report on the interdependence between the number of participants and the number of discussion threads. Furthermore, 12 networks from Facebook (8), Twitter (2) and Participabr (2) were scrutinized, and their analysis is given in the Supporting Information document for the purpose of testing the generality of the results.
+We systematicaly used 18 lists for taking text-related measures.
 
  
 \begin{table}
@@ -50,7 +51,7 @@ list & $date_1$ & $date_{M}$    & $N$  & $\Gamma$ & $\overline{M}$ \\\hline
 \subsection{Linked Open Social Database for scientific benchmarking}
 Beyond core data used to derive topological and text related results,
 we provided a database for scientific benchmarking and to derive further results in our research.
-The data used here were obtained from Facebook, Twitter, IRC, Email and the
+The data used here were obtained from Facebook, Twitter, IRC, Email lists and the
 detached instances of ParticipaBR, AA and Cidade Democr\'atica.
 These were represented as linked data to homonenize access,
 complying with current best practices and facilitationg analyzes which integrate third
@@ -65,7 +66,7 @@ Data was gathered from:
 \end{itemize}
 
 This section introduces the underlying data in a very concise fashion.
-Further information is available in the Appendix~\ref{ap:losd} and in an article~\cite{olsd}.
+Further information is available in the Appendix~\ref{ap:losd} and in an article~\cite{losd}.
  
 \subsubsection{Snapshots}
 Of central importance to the provided database is the concept of a snapshot.
@@ -163,7 +164,8 @@ S(z)&= \sqrt{-2\ln(R_1)}\\
 \noindent
 Also, the ratio $r=\frac{b_l}{b_h}$ between the lowest $b_l$ and the highest $b_h$ incidences on the histograms 
 served as a further clue of how close the distribution was to being uniform. As expected, a positive correlation was found in all $r, Var(z)$, $S(z)$ and $\delta(z)$ dispersion measures,
-which can be noticed in Section~\ref*{si:circ} of the Supporting Information. The circular dispersion $\delta(z)$ was found more sensitive and therefore preferred in the discussion of results.
+which can be noticed in Section~\ref*{si:circ}.
+The circular dispersion $\delta(z)$ was found more sensitive and therefore preferred in the discussion of results.
 
 \subsection{Interaction networks}\label{intNet}
 Edges in interaction networks can be modeled both as weighted or unweighted, as directed or undirected~\cite{bird,newmanCommunityDirected,newmanCommunity2013}.
@@ -189,18 +191,9 @@ Edges in both directions are allowed. Each time an interaction occurs, the value
 
 The topology of the networks was characterized 
 from a small selection of the most basic 
-and fundamental measurements for each vertex~\cite{newmanBook}, as follows:
-
-\begin{itemize}
-\item Degree     $k_i$: number of edges linked to vertex $i$.
-\item In-degree  $k_i^{in}$: number of edges ending at vertex $i$.
-\item Out-degree $k_i^{out}$: number of edges departing from vertex $i$.
-\item Strength $s_i$: sum of weights of all edges linked to vertex $i$.
-\item In-strength $s_i^{in}$: sum of weights of all edges ending at vertex $i$.
-\item Out-strength $s_i^{out}$: sum of weights of all edges departing from vertex $i$.
-\item Clustering coefficient $cc_i$: fraction of pairs of neighbors of $i$ that are linked, i.e. the standard clustering coefficient metric for undirected graphs.
-\item Betweenness centrality $bt_i$: fraction of geodesics that contain vertex $i$. The betweenness centrality index was computed for weighted digraphs as specified in~\cite{faster}.
-\end{itemize}
+and fundamental measurements for each vertex~\cite{newmanBook},
+as introduced in Section~\ref{se:intMea}.
+The betweenness centrality index was computed for weighted digraphs as specified in~\cite{faster}.
 
 The non-standard metrics below were formulated to capture symmetries in the activity of participants:
 
@@ -213,12 +206,13 @@ The non-standard metrics below were formulated to capture symmetries in the acti
 \item Standard deviation of disequilibrium of edges: $\sigma_i^{dis}=\sqrt{\frac{\sum_{j\in J_i}\left[\mu^{dis}_i-\frac{w_{ji}-w_{ij}}{w_{ji}+w_{ij}}\right]^2}{|J_i|}}$.
 \end{itemize}
 
-Both standard and non-standard metrics are used for the Erd\"os sectioning (described in Section~\ref{sectioning})
-and for performing principal component analysis (PCA) (as described in Section~\ref{sec:pca}).
+Standard metrics are used for the Erd\"os sectioning (described in the next section).
+Both standard and non-standard metrics are used
+for performing principal component analysis (PCA) (as described in Section~\ref{sec:pca}).
 
 
 \subsection{Erd\"os sectioning}\label{sectioning}
-It is often useful to think of vertices as hubs, peripheral and intermediary. We have therefore derived the peripheral, intermediary and hub sectors of an empirical network from a comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
+It is often useful to think of vertices as hubs, peripheral and intermediary. We have therefore derived the peripheral, intermediary and hub sectors of an empirical network from the comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
 as depicted in Figure~\ref{fig:setores}. We refer to this procedure as \emph{Erd\"os sectioning}, with the resulting sectors being named as \emph{Erd\"os sectors}. The Erd\"os sectioning was recognized as a theoretical possibility by M. O. Jackson in his video lectures~\cite{3setores}, but to our knowledge it has not as yet been applied to empirical data.
 
 The degree distribution $\widetilde{P}(k)$ of a real network with a scale-free profile $\mathcal{N}_f(N,z)$ with $N$ vertices and $z$ edges has less
@@ -238,7 +232,7 @@ P(k)=\binom{2(N-1)}{k}p_e^k(1-p_e)^{2(N-1)-k}
 \end{equation}
 
 The lower degree fat tail corresponds to the border vertices, i.e. the peripheral sector or periphery where $\widetilde{P}(k)>P(k)$ and $k$ is lower than any value of $k$ in the intermediary sector.
-The higher degree fat tail is the hub sector, i.e. $\widetilde{P}(k)>P(k)$ and $k$ is higher than any value of $k$ in the intermediary sector. The reasoning for this classification is as follows: vertices so connected that they are virtually nonexistent in the Erd\"os-R\'enyi model, are coherently associated to the hub sector.
+The higher degree fat tail is the hubs sector, i.e. $\widetilde{P}(k)>P(k)$ and $k$ is higher than any value of $k$ in the intermediary sector. The reasoning for this classification is as follows: vertices so connected that they are virtually nonexistent in the Erd\"os-R\'enyi model, are coherently associated to the hubs sector.
 Vertices with very few connections, which are way more abundant than expected in the Erd\"os-R\'enyi model,
 are assigned to the periphery.
 Vertices with degree values predicted as the most abundant in the Erd\"os-R\'enyi model,
@@ -316,7 +310,7 @@ e_{\gamma,3}&=\{\;i\;|\;&&\overline{k}_{\gamma,i}>\overline{k}_{\gamma,R}\} \non
 \noindent and both $\overline{k}_{\gamma,L}$ and $\overline{k}_{\gamma,R}$ are found using $P(\overline{k})$ or $\hat{P}(\overline{k})$ as described above and illustrated in Figure~\ref{fig:setores}.
 
 Since different metrics can be used to identify the three types of vertices, more than one metric can be used simultaneously, which is convenient when analysing small networks,
-such as the cases where only 50 messages are considered in Section~\ref*{si:frac} of the Supporting Information.
+such as the cases where only 50 messages are considered in Section~\ref*{si:frac}.
 %For example, a very stringent criterion can be used, according to which a vertex is only regarded as pertaining to a sector if it is so for all the metrics.
 After a careful consideration of possible combinations, these were reduced to six:
 
@@ -418,7 +412,7 @@ high values indicate positive correlation;
 negative values with a high absolute value indicate negative correlation.
 Notice that in this case the variable $k$ is not the degree value
 but a principal component.
-In the results the principal components are numbered
+In the results, the principal components are numbered
 according to the magnitude of associated eigenvalue and $k$ is incorporated into
 the notation (e.g. PC2 for metrics of $\mu_{V'}[j,2]$).
 
@@ -432,14 +426,14 @@ The snapshots were made disjoint in the message timeline, and were used to perfo
 Figures and tables were usually inspected with 
 $ws=\{50, 100, 200, 400, 500, 800, 1000, 2000, 2500, 5000, 10000\}$ messages. Variations in the number of vertices, edges
 and other network characteristics, within the same window size $ws$,
-are given in Section~\ref*{si:frac} of the Supporting Information document. 
+are given in Section~\ref*{si:frac}. 
 
 \subsection{The Versinus graph visualization method}
 Network structures were mapped to video animations, sound and musical structures developed for this research~\cite{animacoes}.% ,galGmane,appGmane}.
 Such \emph{audiovisualizations} were crucial in the initial steps and
 to guide the research into the most important features of network evolution.
 Versinus is a visualization method for dynamic graphs based on experimental observations.
-This method receives dedicated attention by recurrence of the suggestion, by fellow researchers,
+This method received dedicated attention by recurrence of the suggestion, by fellow researchers,
 to write about it.  
 In visualizing a network, the method consists of creating an animation,
 of a fixed-size message sliding window (e.g. 400 messages) and 
@@ -470,7 +464,7 @@ while each participant exhibits a wide variation of characteristics.
 Understanding the mechanisms of this compatibility (unstable vertices and stable network)
 led to experimenting with a series of layouts and visualization techniques, from which Versinus emerged.
 
-Taking advantage of the fact that vertices are roughly split into usual $80\%$ of peripheral, $15\%$ of intermediary and $5\%$ of hubs,
+Taking advantage from the fact that vertices are roughly split into usual $80\%$ of peripheral, $15\%$ of intermediary and $5\%$ of hubs,
 hubs are laid on the first half of a sinusoid,
 intermediary on the second half,
 and peripheral on the straight line.
@@ -484,9 +478,9 @@ i.e. with respect to all $M$ messages.
 				    \caption{The Versinus visualization method in use. 5\% of the most connected vertexes (hubs) are on the left half-period of the sinusoid.
 				    15\% of the most connected remaining vertices are on the right half-period.
 				    80\% of the least connected vertices are on the straight line, above the sinusoidal shape.
-				    White dots with numbers keep track of node position in the overall degree ordering.
+				    White dots in the bottom with numbers keep track of node position in the overall degree ordering.
 				    Measures blink periodically near the vertices they are related to.}
-		\includegraphics[scale=.25]{figs/versinus_}
+		\includegraphics[scale=.45]{figs/versinus_}
 					    \label{fig:versinus}
 \begin{flushleft}
 		Source: Prepared by the authors.\
@@ -512,15 +506,15 @@ Such metrics are:
 This choice is based on: 1) the lack of such information in the literature, to the best of our knowledge; 
 2) potential relations of these incidences with topological aspects, such as connectivity;
 3) the interdependence of textual artifacts suggests that simple measures should reflect complex and more subtle aspects.
-A preliminary study, with the complete works from the Brazilian writer Machado de Assis~\cite{letrasMachado},
+A preliminary study, with the complete works from the Brazilian writer Machado de Assis (in Section~\ref{ap:machado}),
 made clear that these metrics vary with respect to style.
 
 \subsubsection{About Wordnet}
 In this thesis, we made use of the statistics derived from the incidence of Wordnet synsets and their characteristics.
 This calls for a brief description of what is Wordnet, what is a synset and what are such characteristics:
 \begin{itemize}
-	\item Wordnet: a lexical database for the English language released in a BSD style license. It groups synonyms into synsets, provides a number of relations among the synsets and provides definitions and use examples.
-	\item Synset: defined by Wordnet as a set of one or more synonyms that are (somewhat) interchangeable without changing the true value of the proposition in which they occur.
+	\item Wordnet: a lexical database for the English language released in a BSD style license. It groups synonyms into synsets, provides a number of relations among the synsets, definitions and use examples.
+	\item Synset: defined by Wordnet documentation as a set of one or more synonyms that are (somewhat) interchangeable without changing the true value of the proposition in which they occur.
 	\item Synset characteristics: a synset is associated to other synsets by a number of semantic relations which differ with the POS tag attributed to them.
 		Examples of such relations are yield by hyponyms and hypernyms (respectively less and more general terms), meronyms and holonyms (respectively is part of and has part), lemmas (canonical forms of a word), similar words by semantic criteria, entailments.
 		Some characteristics are derived from the synset in relation to the whole Wordnet network.
@@ -542,7 +536,8 @@ The two-sample Kolmogorov-Smirnov test rejects the null hypothesis if:
 D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
 \end{equation}
 
-\noindent where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ and $c(\alpha)$ is related to the significance level $\alpha$ by:
+\noindent where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ is the Kolmogorov-Smirnov statistic
+and $c(\alpha)$ is related to the significance level $\alpha$ by:
 
 \begin{table}[H]
 \centering
@@ -550,6 +545,9 @@ D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
 $\alpha$    & 0.1  & 0.05 & 0.025 & 0.01 & 0.005 & 0.001 \\\hline
 $c(\alpha)$ & 1.22 & 1.36 & 1.48  & 1.63 & 1.73  & 1.95  \\\hline
 \end{tabular}
+\begin{flushleft}
+	Source: Wikipedia \url{https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test}.\
+\end{flushleft}
 \end{table}
 
 We need to compare empirical distribution functions,
@@ -566,5 +564,14 @@ We used $c'$ as a measure of how much
 the distributions differ~\cite{kolm}
 and for deriving hypotheses
 about how different are the underlying mechanisms of generation of texts.
+We made systematic measurements of the $c'$ statistic in Section~\ref{ap:ks}
+which illustrate that $c'$ and $D_{n,n'}$ are useful in considering the
+similarity or difference in the distributions underlying sets of samples.
+A note of caution should be given here: what is a difference in distributions
+might vary with context.
+A $D_{n,n'}$ of only $0.0001$ will yield a very large $c'$ if $n$ and $n'$ are large enough
+On the other hand, a large $D_{n,n'}$ with a small $c'$ is not a strong evidence that
+the distributions differ.
+Therefore, we consider both $D_{n,n'}$ and $c'$ simultaneously in our analysis.
 
 
