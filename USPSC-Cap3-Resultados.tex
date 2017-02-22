@@ -501,7 +501,8 @@ Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in periphe
 this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity.
 This can be noticed by the token diversity of the whole network, which is lower than in any of the sectors.
 The same observation apply to the lexical diversity ($\frac{|kw\neq|}{kw}$).
-These results are exemplified in Table~\ref{tab:tokensInline}.
+These results are exemplified in Table~\ref{tab:tokensInline}
+where mean and variance were taken with respect to the length in characters of tokens, known words and stopwords.
 \input{tables/tokensMergedInline}
 \FloatBarrier
 % medir para tamanhos equivalentes de texto TTM
@@ -629,7 +630,9 @@ These results are illustrated in Table~\ref{tab:wnpos}.
 
 \subsubsection{Wordnet synsets characteristics}\label{subsec:wn1}
 Wordnet synsets with different POS tags have different relations.
-Therefore, we made separate observations about each POS tag:
+Therefore, we made separate observations about each POS tag.
+In each synset we performed a count of the number of the relations (e.g. max depth, hyponyms),
+thus yielding a mean and variance of each of the relations.
 \begin{itemize}
 	\item Nouns, exemplified in Table~\ref{tab:wnn}.
 		\begin{itemize}
@@ -738,9 +741,17 @@ synset was found with incidence greater than $10\%$ in at least one sector,
 and the depth of the hypernym.
 All the words with synsets were taken into account but when measures were bellow $10\%$ in all
 sectors, the differences were considered negligible in the corresponding network.
-For each POS tag, we consider the minimum number of networks for which there has to be such
-significant incidence of the synset.
-This number of networks was cho
+For each POS tag, we consider synsets for which there is such significant incidence in a minimum number of networks,
+i.e. \emph{total} should be above a certain threshold.
+This threshold was chosen to yield few synsets and some structure:
+total $\geq$ 16 for nouns;
+total $\geq$ 11 for adjectives;
+total $\geq$ 14 for verbs;
+total $\geq$ 13 for adverbs.
+This is surely an \emph{ad hoc} procedure,
+but suited our purposes of making sense of many measurements
+and for a first semantic consideration of the texts from the sectors. 
+
 \begin{itemize}
 	\item Noun synsets: differences in the use of nouns with physical entity hypernyms was found indistincly in all sectors.
 		In deeper layers, more systematic differences arises.
@@ -752,7 +763,6 @@ This number of networks was cho
 		Peripherals showed greater use of nouns related to definite quantity.
 		Message related nouns often peaked at the intermediary sector.
 		These results are shown in Table~\ref{tab:wnnh}.
-		\input{tables/finalSynsetsN_} % uma soh
 \input{tables/finalSynsetsN_} % uma soh
 \FloatBarrier
 	\item Adjective synsets: the use of adjectives was found less systematic.
