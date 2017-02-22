@@ -380,6 +380,8 @@ the tables and figures of~\cite{stab,textTables} and the Conclusions chapter.
 We illustrate with just one table of each kind,
 and from networks obtained with 2000 messages.
 In~\cite{textTables} we display tables for various networks.
+In the same document, we relate the email lists to each numerical
+TAG in the tables of the following sections.
 The scale of 1000 and 2000 messages was chosen for deriving results,
 as the networks in this scale are found with stable topological structure,
 as exposed in Section~\ref{subsec:pih}.
@@ -444,7 +446,28 @@ sectors of the networks.
 \input{tables/ksPuns_}
 \input{tables/ksInter}
 
-
+\FloatBarrier
+\subsection{What and how the texts from the sectors differs}
+In the next sections we will look through text-related measures
+and summarize the findings about what might be different in
+the textual features of the sectors.
+One should keep in mind that our core result is the evidence that
+the texts from distinct sectors differ.
+The following discussion of what differs and how it differs
+is interesting but is both derived from less strong statistical evidence
+and less crucial for our current stage of researching these structures.
+Nonetheless, for the sake of clarity, we state the main findings:
+\begin{itemize}
+	\item Peripherals use more nouns while hubs use more verbs and adverbs.
+		The fraction of adjectives did not change systematically with respect to connectivity,
+		but given that the nouns are more numerous in the periphery, there are more adjectives per noun in the hubs sector texts.
+	\item The size of tokens and words were found greater in the more connected sectors,
+		which might be related to the use of a more specialized vocabulary.
+		Sentences and messages were found smaller in the more connected sectors.
+	\item The differences found with respect to Wordnet synsets were found less well behaved.
+		Often, the sectors exhibit noticeable differences but greater and smaller incidences are found in all sectors (but in different networks).
+		Some incidences are more systematic and this analysis assisted by Wordnet is semantic, reasons that motivated our inclusion of these results by means not of example tables but by explicit counts of greater incidence in each sector throughout the networks.
+\end{itemize}
 
 
 % We can summarize these results stating that the difference
@@ -454,14 +477,14 @@ sectors of the networks.
 % found between the texts produced by the Erd\"os sectors
 % are greater than the difference found between texts from different
 % networks or from the same sector of different networks.
-\FloatBarrier
 
 \subsection{Characters}\label{sec:cha}
-\input{tables/charsInline_}
 Most often, peripheral and intermediary sectors use more digits and upper case letters.
 Hubs use more letters and vowels among letters.
 The use of white spaces, for example, does not seem to have any relation to connectivity. 
 These results are illustrated in Table~\ref{tab:cha}.
+\input{tables/charsInline_}
+\FloatBarrier
 % The total number of characters in ELE list,
 % in the 20 thousand messages,
 % is more than three times what other lists exhibited.
@@ -469,7 +492,6 @@ These results are illustrated in Table~\ref{tab:cha}.
 
 \subsection{Tokens and words}\label{subsec:tw}
 %\input{tables/tokensInline_}
-\input{tables/tokensMergedInline}
 
 %The largest average size of tokens is from the most wordy list (ELE).
 %This implies that is has more characters, tokens, and characters per token in comparison to the other lists. 
@@ -480,6 +502,8 @@ this result has the masking artifact that the peripheral sector corpus is smalle
 This can be noticed by the token diversity of the whole network, which is lower than in any of the sectors.
 The same observation apply to the lexical diversity ($\frac{|kw\neq|}{kw}$).
 These results are exemplified in Table~\ref{tab:tokensInline}.
+\input{tables/tokensMergedInline}
+\FloatBarrier
 % medir para tamanhos equivalentes de texto TTM
 
 % ELE and CPP both exhibit intermediaries 
@@ -500,19 +524,21 @@ These results are exemplified in Table~\ref{tab:tokensInline}.
 %\input{tables/tokenSizesInline_}
 
 \subsection{Sizes of sentences}\label{subsec:ss}
-\input{tables/sentencesInline_}
 Hubs present the lowest average sentence size,
 in characters, tokens or known words.
 This result is illustrated in Table~\ref{tab:sizesSents}
 and might be considered counterintuitive given that punctuation
 is more abundant in the texts of less connected participants.
+\input{tables/sentencesInline_}
+\FloatBarrier
 
 \subsection{Messages}\label{subsec:mm}
-\input{tables/messagesInline_}
 Connectivity was found correlated to smaller messages in terms of characters and tokens.
 Connectivity was also found correlated to smaller messages in terms of the number of sentences, but
 it was less consistent.
 This result is exemplified in Table~\ref{tab:sizesMsgs}.
+\input{tables/messagesInline_}
+\FloatBarrier
 
 
 % tirar medidas de correlacao: perason e spearmanA TTM
@@ -529,7 +555,6 @@ This result is exemplified in Table~\ref{tab:sizesMsgs}.
 % e se indifere greu e força como no particionamento de erdos
 
 \subsection{POS tags}\label{subsec:pos}
-\input{tables/posInline_}
 % rever taggeamento e tentar melhor accuracy com o Bril Tagger TTM
 We found that lower connectivity yields more nouns and less verbs and adverbs.
 Also, the fraction of adjectives does not change,
@@ -545,6 +570,8 @@ These results are exemplified in Table~\ref{tab:pos}.
 Weaker evidence was found that hubs use more \emph{adpositions},
 determinants and 'particles and other functional words' while
 peripherals use more numerals.
+\input{tables/posInline_}
+\FloatBarrier
 
 
 \subsection{Wordnet-related results}
@@ -589,16 +616,17 @@ Besides that, there are often more than one synset with the same POS tag for eac
 and we chose the most frequent synset as ranked by Wordnet.
 In the positive side, we observe that $\approx 95\%$ of tokens which had synsets
 were considered.
-Example of types tokens without synsets are stopwords, punctuations, numerals, acronyms and typos.
+Examples of types tokens without synsets are stopwords, punctuations, numerals, acronyms and typos.
 
 
 \subsubsection{Wordnet POS tags}\label{subsec:wnpos}
 The observations here are somewhat consistent with those in Section~\ref{subsec:pos}:
 peripherals use more nouns and less verbs and adverbs.
-The difference here is regarding adjectives, which was found more frequent in hubs texts
+The variation here is regarding adjectives, which was found more frequent in hubs texts
 in this reduced set of tokens.
 These results are illustrated in Table~\ref{tab:wnpos}.
 \input{tables/wnPOSInline_}
+\FloatBarrier
 
 
 \subsubsection{Wordnet synsets characteristics}\label{subsec:wn1}
@@ -606,7 +634,6 @@ Wordnet synsets with different POS tags have different relations.
 Therefore, we made separate observations about each POS tag:
 \begin{itemize}
 	\item Nouns, exemplified in Table~\ref{tab:wnn}.
-\input{tables/wnPOSInline2-n-13tag_}
 		\begin{itemize}
 			\item Minimum and maximum depth: 
 				differences were found in the mean of minimum and maximum depth of a synset between email lists,
@@ -641,9 +668,10 @@ Therefore, we made separate observations about each POS tag:
 				between the sectors of all networks analyzed, we found no differences in the mean of the number of hypernyms.
 				There were differences in the variance of the number of hypernyms of the words used by the sectors in $\approx 72\%$ of the networks.
 				Greatest values occurred indistinctly in all sectors and peaked in the intermediary sector in $\approx 50\%$ of the observations.
+\input{tables/wnPOSInline2-n-13tag_}
+\FloatBarrier
 		\end{itemize}
 	\item Adjectives, exemplified in Table~\ref{tab:wnas}.
-\input{tables/wnPOSInline2-as-9tag_}
 		\begin{itemize}
 			\item Domain:
 				differences in the mean and variance of the number of domains of words were found respectively in $88.88\%$ and $61.11\%$ of the networks.
@@ -664,9 +692,10 @@ Therefore, we made separate observations about each POS tag:
 			\item Lemmas:
 				differences in the mean and variance of the number of lemmas of adjectives were found respectively only in $27.78\%$ and $72.22\%$ of the networks.
 				Maximum values occurred indistinctly in all sectors and peaks were found in the intermediary sector in $\approx 50\%$ of the observed cases.
+\input{tables/wnPOSInline2-as-9tag_}
+\FloatBarrier
 		\end{itemize}
 	\item Verbs, illustrated in Table~\ref{tab:wnv}.
-\input{tables/wnPOSInline2-v-3tag_}
 		\begin{itemize}
 			\item No significant differences were found in the mean and variance verb synset relations of minimum and maximum depth, verb groups, lemmas and hypernyms.
 			\item Domains and entailments:
@@ -680,9 +709,10 @@ Therefore, we made separate observations about each POS tag:
 				In $\approx 85\%$ of the cases where there was difference in the variance, 
 				the maximum number of domains was found indistinctly the upper sectors ($61.54\%$ in the hubs sector).
 				Peaks occurred in the intermediary sector in $\approx 35\%$ with respect to both mean and variance.
+\input{tables/wnPOSInline2-v-3tag_}
+\FloatBarrier
 		\end{itemize}
 	\item Adverbs, exemplified in Table~\ref{tab:wnr}.
-\input{tables/wnPOSInline2-r-17tag_}
 		\begin{itemize}
 			\item Domains:
 				differences in the mean and variance of the number of domains of adverbs were found respectively in $\approx 95.45\%$ and $\approx 66.67\%$ of the networks.
@@ -693,8 +723,11 @@ Therefore, we made separate observations about each POS tag:
 				Peaks occurred in the intermediary sector in $\approx 64.71\%$ and $75\%$ in the mean and variance respectively.
 			\item Lemmas:
 				no systematic difference was found in the mean and variance of the number of lemmas of adverbs.
+\input{tables/wnPOSInline2-r-17tag_}
+\FloatBarrier
 		\end{itemize}
 \end{itemize}
+
 \subsubsection{Wordnet synset hypernyms}\label{subsec:wn1}
 \begin{itemize}
 	\item Noun synsets: differences in the use of nouns with physical entity hypernyms was found indistincly in all sectors.
@@ -708,6 +741,7 @@ Therefore, we made separate observations about each POS tag:
 		Message related nouns often peaked at the intermediary sector.
 		These results are shown in Table~\ref{tab:wnnh}.
 \input{tables/finalSynsetsN_} % uma soh
+\FloatBarrier
 	\item Adjective synsets: the use of adjectives was found less systematic.
 		The synsets varied greatly among lists and differences were not strong.
 		We obseved weak evidence that hubs use more adjectives related to certainty,
@@ -715,6 +749,7 @@ Therefore, we made separate observations about each POS tag:
 		Even weaker evidence was found that hubs use more adjectives related to newness.
 		These results are shown in Table~\ref{tab:wnash}.
 \input{tables/finalSynsetsAS_} % uma soh
+\FloatBarrier
 	\item Verbs synset hypernyms of move and travel was found more numerous in the peripheral sector.
 		Verbs related to change was found more common in the hubs sector.
 		Verbs related to making was found with differences in the frequency of use among sectors,
@@ -727,10 +762,12 @@ Therefore, we made separate observations about each POS tag:
 		With depth 4, lower sectors used more verbs related to informing, peripherals might be regarded as using more verbs related to recording (set in a permanent form), and hubs as using more verbs related to adding.
 		These results are shown in Table~\ref{tab:wnvh}.
 \input{tables/finalSynsetsV_} % uma soh
+\FloatBarrier
 	\item Adverb synsets was found with particularly interesting patterns as greater use of adverbs related to possibility and stillness was found in the intermediary sector.
 		Adverbs related to however and even were more frequent in the peripheral sector while adverbs related to well (good way to perform) was more used by hubs.
 		These results are shown in Table~\ref{tab:wnrh}.
 \input{tables/finalSynsetsR_} % uma soh
+\FloatBarrier
 \end{itemize}
 % \input{tables/wnPOSInline2} % uma soh
 %\input{tables/wnInline_} % uma soh
