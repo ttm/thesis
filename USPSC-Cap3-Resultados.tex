@@ -555,7 +555,6 @@ This result is exemplified in Table~\ref{tab:sizesMsgs}.
 % e se indifere greu e força como no particionamento de erdos
 
 \subsection{POS tags}\label{subsec:pos}
-% rever taggeamento e tentar melhor accuracy com o Bril Tagger TTM
 We found that lower connectivity yields more nouns and less verbs and adverbs.
 Also, the fraction of adjectives does not change,
 but given that peripherals use more nouns,
@@ -617,7 +616,6 @@ and we chose the most frequent synset as ranked by Wordnet.
 In the positive side, we observe that $\approx 95\%$ of tokens which had synsets
 were considered.
 Examples of types tokens without synsets are stopwords, punctuations, numerals, acronyms and typos.
-
 
 \subsubsection{Wordnet POS tags}\label{subsec:wnpos}
 The observations here are somewhat consistent with those in Section~\ref{subsec:pos}:
@@ -729,6 +727,17 @@ Therefore, we made separate observations about each POS tag:
 \end{itemize}
 
 \subsubsection{Wordnet synset hypernyms}\label{subsec:wn1}
+In measuring the incidence of hypernyms, significant differences were often found, but greater values
+occurred in all sectors.
+This motivated the inclusion of the tables bellow in which incidences are observed in all the networks at once.
+The drawback is that the individual values have to be reviewed in~\cite{textTables}.
+The advantage is the more immediate observation of the findings with respect to all the networks analyzed.
+Each line holds the count of the greater incidence of each hypernym in each sector,
+the count of peaks in the intermediary sector, the total number of networks in which the
+synset was found with incidence greater than $10\%$ in at least one sector,
+and the depth of the hypernym.
+All the words with synsets were taken into account but when measures were bellow $10\%$ in all
+sectors, the differences were considered negligible in the corresponding network.
 \begin{itemize}
 	\item Noun synsets: differences in the use of nouns with physical entity hypernyms was found indistincly in all sectors.
 		In deeper layers, more systematic differences arises.
@@ -740,6 +749,9 @@ Therefore, we made separate observations about each POS tag:
 		Peripherals showed greater use of nouns related to definite quantity.
 		Message related nouns often peaked at the intermediary sector.
 		These results are shown in Table~\ref{tab:wnnh}.
+		Only noun synsets which were found incident in at least 16 networks
+		above $10\%$ in at The minimum incidence of measures above $10\%$ were 
+		\input{tables/finalSynsetsN_} % uma soh
 \input{tables/finalSynsetsN_} % uma soh
 \FloatBarrier
 	\item Adjective synsets: the use of adjectives was found less systematic.
