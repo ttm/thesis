@@ -354,14 +354,19 @@ With regard to the limitations of our study, one should emphasize that not all t
 % Aqui será necessária uma Introdução a este novo tipo de resultado.
 
 The most important result of including textual metrics in our analysis is the
-extreme differentiation of each Erd\"os sector with respect to the texts produced.
+statistical evidence of extreme differentiation of each Erd\"os sector with respect to the texts produced.
+This conclusion can be reached by observing the differences in the measurements of textual features in
+each sector, but is reached with greater theoretical background from the adaptation of the
+Kolmogorov-Smirnov test we presented in Section~\ref{sec:ks}.
 % derived from the kolmogorov-smirnov test adaptation
 Other relevant results are:
 \begin{itemize}
 	\item the achievement of references for the amount of nouns, adverbs, sizes of words, depth of Wordnet synsets and other linguistic traces, used in social networks.
 		We did not find in literature any indication for such values and understood useful to acknowledge e.g. that about 15\% of the characters are spaces and more than 50\% of tokens are nouns.
+		These values are available in~\cite{textTables} and not in the body of the text,
+		since we focus in this thesis in the evidence that the texts from distinct sectors differ.
 	\item Indicatives of what is different in the texts produced by each of the Erd\"os sectors.
-		For example: hubs seem to use more contractions,
+		For example: hubs were found to use more contractions,
 		more common words, and less punctuation if compared to the rest of the network,
 		especially the peripheral sector.
 		In general, the rise or fall of a text-related metric is not relevant or is monotonic along connectivity,
@@ -371,30 +376,34 @@ Other relevant results are:
 
 The next sections summarize results of immediate interest
 and further insights can be obtained by skimming through
-the tables and figures of the Appendix~\ref{ap:texttop} and the Conclusions chapter.
+the tables and figures of~\cite{stab,textTables} and the Conclusions chapter.
 We illustrate with just one table of each kind,
 and from networks obtained with 2000 messages.
-In the Appendix~\ref{ap:texttop} we display tables for various email lists
-for networks.
+In~\cite{textTables} we display tables for various networks.
 The scale of 1000 and 2000 messages was chosen for deriving results,
 as the networks in this scale are found with stable topological structure,
 as exposed in Section~\ref{subsec:pih}.
 The findings with 1000 messages are the same as with 2000 messages,
 and there are many tables.
-This setting motivated the exclusion of the tables with measurements in
+This motivated the exclusion of the tables with measurements in
 networks of 1000 messages.
 
-\subsection{General characteristics of activity distribution among participants}\label{sec:gen}
+\subsection{General characteristics of activity distribution among sectors}\label{sec:gen}
 \input{tables/geralInline_}
+Before we dig into the findings derived from text-related measures,
+let us look once more at the general structure of these networks,
+now giving emphasis on the activity of the sectors.
 In almost all our observations,
-Peripheral sector is responsible for starting most of the discussion threads,
+the peripheral sector is responsible for starting most of the discussion threads,
 i.e. messages to the list which are not replies.
-This is surprising as the peripheral sector is responsible for fewer messages.
+This is surprising since the peripheral sector is responsible for fewer messages.
 This suggests a complementarity between peripheral diversity and hub specialization
 which, on its turn, deepens the understanding of the interaction network as a meaningful system. 
 These assertions are condensed in Table~\ref{geralListas}.
 Less often, the intermediary sector is responsible for the greatest number of messages
 and of threads.
+Also meaningful is that the hubs sector is responsible for most of the messages,
+which is not completely obvious: hub participants are far more active but way less numbered.
 
 %Also, comparing lists with a fixed number of messages,
 %the number of threads created seem to increase as the number of participants decrease.
@@ -781,7 +790,7 @@ Therefore, we made separate observations about each POS tag:
 \input{tables/finalSynsetsV_} % uma soh
 	\item Adverb synsets was found with particularly interesting patterns as greater use of adverbs related to possibility and stillness was found in the intermediary sector.
 		Adverbs related to however and even were more frequent in the peripheral sector while adverbs related to well (good way to perform) was more used by hubs.
-		These results are shown in Table~\ref{tab:wnrh}
+		These results are shown in Table~\ref{tab:wnrh}.
 \input{tables/finalSynsetsR_} % uma soh
 \end{itemize}
 % \input{tables/wnPOSInline2} % uma soh
