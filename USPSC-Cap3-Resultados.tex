@@ -886,34 +886,33 @@ but reached no conclusions about its meaning.
 Appendix ~\ref{sec:resE} are dedicated to this histogram differences.
 
 \section{Results from visualization}
-Results from Versinus are divided in two groups:
-observations on features that made it useful for the task of hypothesizing about general properties of human interaction networks,
+The results associated with Versinus are divided into two groups:
+observations on features that made it useful for the task of analyzing the general properties of human interaction networks,
 and the network properties it made possible to grasp.
 
 \subsection{Useful visualization features for dynamic networks}
 
-Among the numerous insights related to Versinus, a few of them seem more fundamental, others seem simply useful.
-Such insights were incorporated to Versinus as the result of tests which presented clear benefits within the context of our research.
-The following list is an attempt to present them in an importance-first order:
+Among the numerous insights related to Versinus, a few seem more fundamental, while others were simply useful. These
+insights were incorporated to Versinus as the result of tests which presented clear benefits within the context of our research.
+The following list is an attempt to present the observations and insights in an importance-first order:
 \begin{enumerate}
 	\item Vertices need to remain static.
-		Even if they move smoothly, one tends to notice solely transient artifacts from the structure.
-	\item Very connected sectors (hubs and intermediary) need to be in a curve, otherwise the edges enclose each other and reasoning about the network becomes harsh.
-	\item Height and width of a vertex are very informative, specially if measures mapped to them have a strong relation, such as out-degree (mapped to height in Versinus) and in-degree (mapped to width).
+		Even if they move smoothly, one should notice solely transient artifacts from the structure.
+	\item Very connected sectors (hubs and intermediary) need to be in a curve, otherwise the edges enclose each other and it is difficult to infer information from the network.
+	\item The height and width of a vertex are very informative, especially if metrics mapped to them have a strong relation, such as out-degree (mapped to height in Versinus) and in-degree (mapped to width).
 	\item The color of nodes is also informative although less than height and weight, as differences in the latter are more noticeable.
 	\item An ordering of nodes, related to their fixed position, is very useful. Among all tests, ordering of vertices by degree was considered the most informative, which led to the hub, intermediary and peripheral sectioning of the network delineated in Section~\ref{sectioning}.
 		As node position in the layout is fixed throughout an animation which comprises consecutive but distinct network activity, such ordering is done with respect to the resulting network of all the activity.
-	Numbering these positions with respect to the order of the vertices in the larger structure (i.e. all $M$ messages) is useful for understanding how much a vertex preserves the position in different scales of activity.
+		Numbering these positions with respect to the order of the vertices in the larger structure (i.e. all $M$ messages) is useful for understanding to which extent a vertex preserves the position in different scales of activity.
 \end{enumerate}
-
-Many other insights were derived from Versinus, such as possible visualization tools, other kind of convenient layouts and glyph elaborations.
-These receives dedicated attention in Section~\ref{sec:verref}.
+Many other insights were derived from Versinus, such as possible visualization tools, other kinds of convenient layouts and glyph elaborations.
+These received attention in Section~\ref{sec:verref}.
 
 \subsection{Understanding of network properties through Versinus}
 A number of hypotheses were drawn about the networks for which Versinus was designed.
 As suggested by Palla, Barab\'asi and Vicsek~\cite{barabasiEvo}, stability of participant activity in social networks is more incident in smaller networks.
-In accordance with this result, all hubs have intermittent activity in the settings analyzed, except for the email list with the smallest number of participants (the Metareciclagem email list).
-The intermitence of hubs was one of the top hypotheses which motivated Versinus development.
+Consistent with this result, all hubs have intermittent activity in the settings analyzed, except for the email list with the smallest number of participants (the Metareciclagem email list).
+The intermittence of hubs was one of the top hypotheses which motivated the development of Versinus.
 The stability of the network structure, concomitant with the instability of the activity of each participant,
 motivated a deeper analysis~\cite{stab}.
 In doing so, we also found evidence for another hypothesis drawn from Versinus:
@@ -922,8 +921,8 @@ Furthermore, the visualization suggests that there are modes of operation of the
 As an example, the intermediary sector often communicates mostly with the hubs or with the peripheral vertices.
 Other hypotheses,
 such as discrepancies in the authority and the degree of a vertex,
-are numerous but need further research to be valuable.
- 
+are numerous but need further research to be validated.
+
 \subsection{Refinement of Versinus}\label{sec:verref}
 Versinus was convenient for obtaining insights about how to enhance its layout and use.
 It was immediate to think of a tool for using Versinus
@@ -937,19 +936,19 @@ The waveform need not to be a sinusoid.
 One can think of many ways to make more informative glyphs.
 Also, visual and auditory signals for specific occurrences can be interesting
 (e.g. when a new vertex appears, when one vanishes, when an ordering of vertices changes).
-Measures of each vertex can be exposed with a vertical displacement,
-to enable multiple measures, to avoid the need to blink the numbers and to keep network visualization free from occlusion.
+Measurements of each vertex can be shown with a vertical displacement,
+to enable multiple measurements, to avoid the need to blink the numbers and to keep network visualization free from occlusion.
 Working with Versinus has also suggested other kinds of layout for vertices, 
-specially geometric figures and iterative force-based methods for positioning vertex in a fixed layout.
+especially geometric figures and iterative force-based methods for positioning vertices in a fixed layout.
 The traditional matrix representation of the graphs has been gazed upon as support to Versinus 
 as has been some recent approaches to network visualization~\cite{Viz1}.
 
 
 \section{Linked data results}
 \label{outline}
-Current results include data selection and preparation for knowledge discovery.
-In this respect, the main result is the data made available, which enables benchmarking of scientific results
-and easy experimentations.
+The current results include data selection and preparation for knowledge discovery.
+In this respect, the main result lies in the fact that data were made available, which enables benchmarking of scientific results
+and experimentations.
 Secondary results include data outline through figures and tables,
 software support and example SparQL queries.
 
@@ -976,6 +975,8 @@ To enable annotations which differ when the snapshot changes,
 The observation instances are then linked to the snapshot and the
 data.
 
+
+
 Instances are built on top of the class they derive from plus a hashtag character,
 a provenance string (e.g. \textttt{facebook-legacy} or
 \textttt{participabr-legacy}) of the snapshot they refer to, and an identifier;
@@ -984,11 +985,8 @@ All snapshot URIs follow the formation rule: \textttt{po:<SnapshotProvenance>\#<
 All snapshot ids follow the formation rule: \textttt{<platform>-legacy-<further\_identifier>}; e.g.
 \textttt{irc-legacy-labmacambira} or
 \textttt{email-legacy-linux.audio.devel1-20000}.
-
 \subsection{Data outline}
 \input{misc/overallText}
-
-
 \input{tables/nsnapshots}
 % stats:
 %% number of triples
@@ -1010,25 +1008,27 @@ Table~\ref{tab:provenance}.
 		the database.}\label{tab:provenance}
 		\begin{tabular}{| l || p{3cm} | p{3cm} | c |}\hline
 			\textbf{social platform} & \textbf{original format} & \textbf{further observations} & \textbf{toolbox} \\\hline\hline
-				AA & MySQL and MongoDB databases; IRC text logs & donated by AA users & Participation~\cite{participation} \\\hline
-				    Cidade Democrática & MySQL database & donated by admins & Participation \\\hline
-					Email & mbox & obtained through Gmane public database & Gmane~\cite{gmane} \\\hline
-					    Facebook & GDF, GML and TAB & obtained through Netvizz~\cite{netvizz} & Social~\cite{social} \\\hline
-						IRC & plain text log & obtained through Supybot logging & Social \\\hline
-						    ParticipaBR & PostgreSQL database & donated by admins & Participation \\\hline
-							Twitter & JSON & obtained through Twitter streaming API & Social \\\hline
+			AA & MySQL and MongoDB databases; IRC text logs & donated by AA users & Participation~\cite{participation} \\\hline
+			Cidade Democrática & MySQL database & donated by admins & Participation \\\hline
+			Email & mbox & obtained through Gmane public database & Gmane~\cite{gmane} \\\hline
+			Facebook & GDF, GML and TAB & obtained through Netvizz~\cite{netvizz} & Social~\cite{social} \\\hline
+			IRC & plain text log & obtained through Supybot logging & Social \\\hline
+			ParticipaBR & PostgreSQL database & donated by admins & Participation \\\hline
+			Twitter & JSON & obtained through Twitter streaming API & Social \\\hline
 		\end{tabular}
-\begin{flushleft}
-		Source: Prepared by the authors.\
-\end{flushleft}
+		\begin{flushleft}
+			Source: Prepared by the author.\
+		\end{flushleft}
 	\end{center}
-	\end{table*}                    
+\end{table*} 
+
+
 \subsubsection{Topological and textual analysis}\label{ana}
-Routines are available for taking the topological and textual measures from
+Routines are available for taking the topological and textual measurements from
 the database.
 Auxiliary routines, such as performing principal component analysis
-and taking Kolmogorov-Smirnov measures, are available
-to ease pattern recognition.
+and taking Kolmogorov-Smirnov measurements, are available
+to facilitate pattern recognition.
 All the analysis routines used for this thesis are in these publicly accessible scripts.
 
 \subsubsection{Multimedia rendering}\label{media}
@@ -1044,87 +1044,87 @@ toolboxes~\cite{gmaneLegacy,percolationLegacy} into newly designed
 toolboxes~\cite{percolation,visuals}.
 
 \subsection{Diagrams of the data and auxiliary tables}
-The database exploration can be assisted through diagrams which expose
+The database exploration can be assisted through diagrams which shows
 the structure from each provenance.
 Such diagrams are exemplified in the Appendix~\ref{losd} and 
-fully available in a dedicated article~\cite{losd}
+are fully available in an article~\cite{losd}
 with some tables to make it easier to understand the data provided.
 A simplified example is given in Figure~\ref{dia} where the friendship
-structure of the Facebook snapshots are exposed.
+structure of the Facebook snapshots is illustrated.
 
-	\begin{figure}[!ht]
-		\centering
-			    \caption{A diagram of the structure involved in the friendship networks
-				of the Facebook snapshots.
-				A green edge denotes an OWL existential class restriction;
-				an inverted nip denotes an OWL universal class restriction;
-				a full (non-dashed) edge denotes an OWL functional property axiom.
-				Further information and complete diagrams for each provenance are in the dedicated article~\cite{losd}.}\label{dia}
-			\includegraphics[width=0.5\textwidth]{ontologies/facebook-legacy-AntonioAnzoategui18022013Friendship.ttl/draw}
-\begin{flushleft}
-		Source: Prepared by the authors.\
-\end{flushleft}
-	\end{figure}
+\begin{figure}[!ht]
+	\centering
+	\caption{A diagram of the structure involved in the friendship networks
+	of the Facebook snapshots.
+	A green edge denotes an OWL existential class restriction;
+	an inverted nip denotes an OWL universal class restriction;
+	a full (non-dashed) edge denotes an OWL functional property axiom.
+	Further information and complete diagrams for each provenance are given in ~\cite{losd}.}\label{dia}
+	\includegraphics[width=0.5\textwidth]{ontologies/facebook-legacy-AntonioAnzoategui18022013Friendship.ttl/draw}
+	\begin{flushleft}
+		Source: Prepared by the author.\
+	\end{flushleft}
+\end{figure}
 
 
-	\subsection{SPARQL queries}\label{queries}
-	There are numerous useful and general purpose SPARQL queries to be performed against the database.
-	Here we write some of such queries selected by their simplicity and potential to be varied.
-	All queries assume the use the preamble \textttt{PREFIX po: <http://purl.org/socialparticipation/po/>}.
-	\begin{enumerate}[leftmargin=0cm]
-		\item Retrieve the number of participants:\\
-			\textttt{SELECT (COUNT(DISTINCT ?author) as ?c) WHERE \{
-				?author a po:Participant . \} }
-			\item Retrieve the number of relations, be them interactions or
-				friendships:\\
-														\textttt{SELECT (COUNT(?interaction) as ?c) WHERE \{\\
-																    \h \{ ?interaction a po:Friendship \} UNION \{ ?interaction
-																			a po:Interaction \} UNION\\
-																					    \h \{ ?interaction po:retweetOf
-																								?message \} UNION \{ ?interaction po:replyTo ?message
-																										    \}\\
-																													\h UNION \{ ?interaction po:directedTo ?participant
-																															    \}\\ \} }
-																														    \item Retrieve all text produced by an specific user:\\
-																															    \textttt{SELECT (CONCAT(?text) as ?texts) WHERE \{\\
-																																					\h ?activity po:author <user\_uri> . ?activity po:text ?text .\\
-																																					    \}}
-																																				    \item List 1000 users (URIs and names) with the most friendships and the number of
-																																					    friendships in descending order by the number of friendships:\\
-																																										    \textttt{SELECT DISTINCT ?participant (COUNT(?friendship)
-																																												as ?c) WHERE \{\\
-																																														\h ?friendship a po:Friendship . ?friendship po:member ?participant . \\
-																																															    \} ORDER BY DESC(?c) LIMIT 1000}
-																																														    \item Retrieve text messages with the word ``pineapple'' (case insensitive):\\
-																																															    \textttt{SELECT ?text WHERE \{ \\
-																																																					    \h ?activity po:text ?text . FILTER regex(?text, 'pineapple', 'i')\\
-																																																						\}}
-																																																					\item List participants and respective full names whose name has the substring ``Amanda'':\\
-																																																						\textttt{SELECT DISTINCT ?participant ?name WHERE \{\\
-																																																							\h ?participant po:observation ?obs . ?obs po:name ?name .\\
-																																																							    \h FILTER regex(?name, 'Amanda', 'i') \\
-																																																								\}}
-																																																							\item Return all pairs of friends of a participant which are friends themselves:\\
-																																																								\textttt{SELECT DISTINCT ?friend1 ?friend2 WHERE \{\\
-																																																									 \h       ?friendship1 po:member <participant\_uri> .  ?friendship1 po:member ?friend1 .\\
-																																																									      \h       ?friendship2 po:member <participant\_uri> .  ?friendship2 po:member ?friend2 .\\
-																																																										   \h       ?friendship3 po:member ?friend1 .  ?friendship3 po:member ?friend2 .\\
-																																																										       \}}
-																																																									       \item Return all interactions from replies in a snapshot:\\
-																																																										       \textttt{SELECT ?from ?to WHERE \{\\
-																																																												     \h  ?message1 po:snapshot <snapshot\_uri> .  ?message2 po:replyTo ?message1 .\\
-																																																													       \h  ?message1 po:author ?from .  ?message2 po:author ?to .\\
-																																																														   \}}
-	\end{enumerate}
+\subsection{SPARQL queries}\label{queries}
+There are numerous useful and general purpose SPARQL queries to be performed against the database.
+Here we write some of such queries selected by their simplicity and potential to be varied.
+All queries assume the use of the preamble \textttt{PREFIX po: <http://purl.org/socialparticipation/po/>}.
+\begin{enumerate}[leftmargin=0cm]
+	\item Retrieve the number of participants:\\
+		\textttt{SELECT (COUNT(DISTINCT ?author) as ?c) WHERE \{
+			?author a po:Participant . \} }
+	\item Retrieve the number of relations, be them interactions or
+		friendships:\\
+		\textttt{SELECT (COUNT(?interaction) as ?c) WHERE \{\\
+		\h \{ ?interaction a po:Friendship \} UNION \{ ?interaction
+		a po:Interaction \} UNION\\
+		\h \{ ?interaction po:retweetOf
+		?message \} UNION \{ ?interaction po:replyTo ?message
+		\}\\
+		\h UNION \{ ?interaction po:directedTo ?participant
+		\}\\ \} }
+	\item Retrieve all text produced by a specific user:\\
+		\textttt{SELECT (CONCAT(?text) as ?texts) WHERE \{\\
+		\h ?activity po:author <user\_uri> . ?activity po:text ?text .\\
+		\}}
+	\item List 1000 users (URIs and names) with the most friendships and the number of
+		friendships in descending order by the number of friendships:\\
+		\textttt{SELECT DISTINCT ?participant (COUNT(?friendship)
+		as ?c) WHERE \{\\
+		\h ?friendship a po:Friendship . ?friendship po:member ?participant . \\
+		\} ORDER BY DESC(?c) LIMIT 1000}
+	\item Retrieve text messages with the word ``pineapple'' (case insensitive):\\
+		\textttt{SELECT ?text WHERE \{ \\
+		\h ?activity po:text ?text . FILTER regex(?text, 'pineapple', 'i')\\
+		\}}
+	\item List participants and respective full names whose name has the substring ``Amanda'':\\
+		\textttt{SELECT DISTINCT ?participant ?name WHERE \{\\
+		\h ?participant po:observation ?obs . ?obs po:name ?name .\\
+		\h FILTER regex(?name, 'Amanda', 'i') \\
+		\}}
+	\item Return all pairs of friends of a participant which are friends themselves:\\
+		\textttt{SELECT DISTINCT ?friend1 ?friend2 WHERE \{\\
+		\h ?friendship1 po:member <participant\_uri> . ?friendship1 po:member ?friend1 .\\
+		\h ?friendship2 po:member <participant\_uri> . ?friendship2 po:member ?friend2 .\\
+		\h ?friendship3 po:member ?friend1 . ?friendship3 po:member ?friend2 .\\
+		\}}
+	\item Return all interactions from replies in a snapshot:\\
+		\textttt{SELECT ?from ?to WHERE \{\\
+		\h ?message1 po:snapshot <snapshot\_uri> . ?message2 po:replyTo ?message1 .\\
+		\h ?message1 po:author ?from . ?message2 po:author ?to .\\
+		\}}
+\end{enumerate}
 
-	\subsection{License issues}
-	% Facebook, Twitter, IRC, Gmane, Participa, CD, AA.
-	The database presented in this thesis is released under public domain.
-	Computer scripts are in git repositories and PyPI Python packages, also under public domain.
-	Although most data is already in open licenses (Twitter, Email, Participabr, Cidade Democrática, and AA data), IRC and Facebook data was collected
-	and donated by the individuals which yield the data.
-	This rises the understanding of the right to study such data as the right to access the self,
-	in parity with anthropological endeavors~\cite{antphy,antphy2}.
+\subsection{License issues}
+% Facebook, Twitter, IRC, Gmane, Participa, CD, AA.
+The database presented in this thesis is released under public domain.
+Computer scripts are in git repositories and PyPI Python packages, also under public domain.
+Although most data is already in open licenses (Twitter, Email, Participabr, Cidade Democrática, and AA data), IRC and Facebook data was collected
+and donated by the individuals which yielded the data.
+This rises the understanding of the right to study such data as the right to access the self,
+in line with anthropological endeavors~\cite{antphy,antphy2}.
 
 
 \subsection{Data-driven ontology synthesis}
@@ -1132,54 +1132,52 @@ OWL Ontologies are critical tools to describe taxonomies and the
 structure of knowledge.
 Most ontologies are created by domain experts even though there often is data they
 organize that is given by a software system and which has a predefined
-structure.  
+structure. 
 
 We developed a simple ontology synthesis method that probes
 the ontological structure in data with
 SPARQL queries and post-processing.
 The results are OWL code and diagrams which are 
 exemplified in the Appendix~\ref{losd} and 
-fully available in a dedicated article~\cite{losd}.
+available in an article~\cite{losd}.
 The method can be extended to comprise further OWL axioms and restrictions,
 but is currently performed to fit present needs with maximum simplicity.
-Present needs are limited to informative figures and
+The present needs are limited to informative figures and
 the steps implemented are as follows:
 \begin{enumerate}[leftmargin=0cm]
 	\item Obtain all distinct classes with the query:\\
 		\textttt{SELECT DISTINCT ?class\_uri WHERE \{ ?s a ?class\_uri \}}
 	\item For each class, obtain the properties that occur as predicates in triples where the subject is an instance of the class:\\
 		\textttt{SELECT DISTINCT ?property\_uri WHERE \{ ?s a <class\_uri> . ?s ?property\_uri ?o . \}}\\
-					Such properties are used to assert existential and universal restrictions for the class.
-				\item Compare the total number of individuals (\textttt{?cs1}) of the class (\textttt{class\_uri}) with
-					the number of such individuals (\textttt{?cs2}) that are subjects of at least one triple where 
-							the predicate is the property (\textttt{property\_uri}).
-								If the numbers match, there is an existential restriction for the class. The queries are:\\
-									\textttt{SELECT (COUNT(DISTINCT ?s) as ?cs1) WHERE \{ ?s a <class\_uri> \}}\\
-										\textttt{SELECT (COUNT(DISTINCT ?s) as ?cs) WHERE \{\\
-											\h ?s a <class\_uri>. ?s <property\_uri> ?o .\\ \}}
-										\item Find the number of instances which are subjects of triples where the predicate is the property but are not instances of the class.
-											If there is zero of such instances, there is an universal restriction:\\
-													\textttt{SELECT (COUNT(DISTINCT ?s)=0 as ?cs) WHERE \{\\
-														\h ?s <property\_uri> ?o . ?s a ?ca . FILTER(str(?ca) != 'class\_uri')\\ \}}
-													\item To keep a record of the restrictions (and occurring triples), get all object classes or datatypes where the subject is an instance of the class and the predicate is the property:\\
-														\textttt{SELECT DISTINCT ?co (datatype(?o) as ?do) WHERE \{\\
-																	\h ?s a <class\_uri>. ?s <property\_uri> ?o . OPTIONAL \{ ?o a ?co . \}\\
-																	\}}
-																\item Obtain all distinct properties:\\
-																	\textttt{SELECT DISTINCT ?p WHERE \{ ?s ?p ?o \}}
-																\item Check if each property is functional, i.e. if it
-																	occurs at most once with each subject.
-																							This is performed by counting the objects and further verifying
-																								that they are at most one. The query is:\\
-																									\textttt{SELECT DISTINCT (COUNT(?o) as ?co) WHERE \{ ?s
-																										    <property\_uri> ?o \} GROUP BY ?s}
-																									    \item For each property, find the incident range and domain with the
-																										    queries:\\
-																														\textttt{SELECT DISTINCT ?co (datatype(?o) as ?do) WHERE \{\\
-																																	\h ?s <property\_uri> ?o . OPTIONAL \{ ?o a ?co . \}\\\}} \\
-																																		and \\
-																																			\textttt{SELECT DISTINCT ?cs WHERE \{ ?s <property\_uri> ?o . ?s a ?cs . \}}
-																																		\item Render diagrams as exposed in the next section and in the Supporting Information file.
+		Such properties are used to assert existential and universal restrictions for the class.
+	\item Compare the total number of individuals (\textttt{?cs1}) of the class (\textttt{class\_uri}) with
+		the number of such individuals (\textttt{?cs2}) that are subjects of at least one triple where 
+		the predicate is the property (\textttt{property\_uri}).
+		If the numbers match, there is an existential restriction for the class. The queries are:\\
+		\textttt{SELECT (COUNT(DISTINCT ?s) as ?cs1) WHERE \{ ?s a <class\_uri> \}}\\
+		\textttt{SELECT (COUNT(DISTINCT ?s) as ?cs) WHERE \{\\
+		\h ?s a <class\_uri>. ?s <property\_uri> ?o .\\ \}}
+	\item Find the number of instances which are subjects of triples where the predicate is the property but are not instances of the class.
+		If there is zero of such instances, there is a universal restriction:\\
+		\textttt{SELECT (COUNT(DISTINCT ?s)=0 as ?cs) WHERE \{\\
+		\h ?s <property\_uri> ?o . ?s a ?ca . FILTER(str(?ca) != 'class\_uri')\\ \}}
+	\item To keep a record of the restrictions (and occurring triples), get all object classes or datatypes where the subject is an instance of the class and the predicate is the property:\\
+		\textttt{SELECT DISTINCT ?co (datatype(?o) as ?do) WHERE \{\\
+		\h ?s a <class\_uri>. ?s <property\_uri> ?o . OPTIONAL \{ ?o a ?co . \}\\
+		\}}
+	\item Obtain all distinct properties:\\
+		\textttt{SELECT DISTINCT ?p WHERE \{ ?s ?p ?o \}}
+	\item Check if each property is functional, i.e. if it
+		occurs at most once with each subject.
+		This is performed by counting the objects and further verifying
+		that they are at most one. The query is:\\
+		\textttt{SELECT DISTINCT (COUNT(?o) as ?co) WHERE \{ ?s
+		<property\_uri> ?o \} GROUP BY ?s}
+	\item For each property, find the incident range and domain with the
+		queries:\\
+		\textttt{SELECT DISTINCT ?co (datatype(?o) as ?do) WHERE \{\\
+		\h ?s <property\_uri> ?o . OPTIONAL \{ ?o a ?co . \}\\\}} \\
+		and \\
+		\textttt{SELECT DISTINCT ?cs WHERE \{ ?s <property\_uri> ?o . ?s a ?cs . \}}
+	\item Render diagrams as explained in the next section and in the Supporting Information file.
 \end{enumerate}
-
-
