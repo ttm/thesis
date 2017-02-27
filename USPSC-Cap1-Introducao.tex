@@ -25,8 +25,8 @@ aspect or to deal with text produced by social networks from the complex network
 Research on network evolution is often restricted to network growth, in which there is a monotonic increase in the number of events~\cite{barabasiEvo}.
 Network types have been discussed with regard to the number of participants, intermittence of their activity and network longevity~\cite{barabasiEvo}. Two topologically different networks emerged from human interaction networks, depending on whether the frequency of interactions follows a generalized power law or an exponential connectivity distribution~\cite{barabasiTopologicalEv}. In email list networks, scale-free properties were reported with $\alpha \approx 1.8$~\cite{bird} (as in web browsing and library loans~\cite{barabasiHumanDyn}), and different linguistic traces were related to weak and strong ties~\cite{Gmane2}.
 
-In this thesis, e-mail lists were chosen to represent human interaction networks, which were analyzed according to two broad aspects: the possible stability of the topology of the networks and the linguistic usage of distinct types of participants in the network. In the analysis, the topology of the networks was studied with regard to well-established topological metrics and well-established networks models. The text of the networks was studied with regard to statistics derived from the strings and from syntactics and semantics.
-Four email lists and additional networks from Twitter, Facebook and ParticipaBR were selected for a thorough exposition of
+In this thesis, e-mail lists were chosen to represent human interaction networks, which were analyzed according to two broad aspects: the possible stability of the topology of the networks and the linguistic usage of distinct types of participants in the network. In the analysis, the topology of the networks was studied with regard to well-established topological metrics and network models. The text of the networks was studied with regard to statistics derived from the strings and from syntax and semantics.
+Four email lists and additional networks from Twitter, Facebook and ParticipaBR were selected for a thorough investigation of
 the topological stability in~\cite{stab}.
 For the consideration of the textual features,
 18 email lists were selected at random.
@@ -35,9 +35,9 @@ No correlation of topological characteristics and geographical coordinates was f
 therefore geographical positions were not considered in our study.
 Gender related behavior in mobile phone datasets was indeed reported~\cite{barabasiSex}
 but it is not relevant for the present work because email messages and addresses have no gender related metadata~\cite{gmanePack}. As for the language usage in the networks, emphasis was given to statistical features of the text such as number of tokens and known words, sizes of tokens, known words, sentences and messages. 
-Statistics were also derived from syntactics through POS tags (e.g. nouns, adjectives, verbs) and semantics through Wordnet synsets.
+Statistics were also derived from syntax through POS tags (e.g. nouns, adjectives, verbs) and semantics through Wordnet synsets.
 
-The remainder of this chapter provides some background knowledge relevant to the topics discussed in the thesis, especially complex networks, text mining, graph visualization and linked data. In Chapter 2, the data and methods where described while the results and discussion are in Chapter~\ref{ch:disc}. 
+The remainder of this chapter provides some background knowledge relevant to the topics discussed in the thesis, especially complex networks, text mining, graph visualization and linked data. In Chapter 2, the data and methods were described while the results and discussion are in Chapter~\ref{ch:disc}. 
 Conclusions and further work are stated in Chapter~\ref{ch:concl}.
 The appendices bring further results from this research.
 
@@ -62,9 +62,7 @@ to ``process information'', to adapt and to reproduce~\cite{complexity}.
 A graph is a structure that consists of a set of objects (called vertices)
 and a set of binary/dual relations of the objects (called edges).
 A graph might be unweighted and undirected (the simplest possibility),
-weighted and undirected, unweighted and directed, or weighted and directed.
-
-The most usual representations of graphs (and networks) are the matrix, list and node-edge representations.
+weighted and undirected, unweighted and directed, or weighted and directed. The most usual representations of graphs (and networks) are the matrix, list and node-edge representations.
 In the matrix representation, each entry $a_{ij}$ is non-zero if $i$ is linked to $j$;
 entries might be other than 0 and 1 in weighted graphs; undirected graphs yield symmetric matrices.
 There are two common list representations of graphs, one lists each pair of vertices that are connected,
@@ -376,3 +374,4 @@ networks in which they exist.
 % Appendices: supporting tables and diagrams, related results:
 
 % kolmogorov-smirnov, ubiquity of inequality through power laws, list of UNDP products, list of software
+
