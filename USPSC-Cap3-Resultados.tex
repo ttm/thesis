@@ -360,15 +360,16 @@ With regard to the limitations of our study, one should emphasize that not all t
   % Aqui será necessária uma Introdução a este novo tipo de resultado.
 
   The most important result of including textual metrics in our analysis is the
-  statistical evidence of extreme differentiation of each Erd\"os sector with respect to the texts produced.
+  statistical evidence of differentiation of each Erd\"os sector with respect to the texts produced.
   This conclusion can be reached by observing the differences in the measurements of textual features in
   each sector, and is supported on firm theoretical grounds by using the adapted Kolmogorov-Smirnov test presented in Section~\ref{sec:ks}.
   % derived from the kolmogorov-smirnov test adaptation
   Other relevant results are:
   \begin{itemize}
-\item the identification of patterns in the frequency of use of nouns, adverbs, sizes of words, depth of Wordnet synsets and other linguistic traces, by different types of participants in the Erd\"os sectors. We did not find in the literature any indication for such values; we believe it is useful to report e.g. that about 15\% of the characters are spaces and more than 50\% of tokens are nouns.
-These values are available in~\cite{textTables} and not in the body of the text,since we focus in this thesis is the evidence that texts from distinct sectors differ.
-\item clear evidence of differences in the texts produced by each of the Erd\"os sectors. For example: hubs were found to use more contractions,
+\item the identification of patterns in the frequency of use of nouns, adverbs, sizes of words, depth of Wordnet synsets and other linguistic traces, by different types of participants in the Erd\"os sectors. We did not find in the literature any indication for such values; we believe it is useful to report e.g. that about 15\% of the characters are spaces and that nouns often account for more than 25\% of the words.
+These values are available in~\cite{textTables} and not in the body of the text,
+		  since we focus in this thesis is the evidence that texts from distinct sectors differ.
+\item Evidence of what are the differences in the texts produced by each of the Erd\"os sectors. For example: hubs were found to use more contractions,
 more common words, and less punctuation if compared to the rest of the network,
 especially the peripheral sector.
 In general, the rise or fall of a text-related metric is not relevant or is monotonic along connectivity,
@@ -398,11 +399,11 @@ let us look once more at the general structure of these networks,
 now giving emphasis on the activity of the sectors.
 In almost all our observations,
 the peripheral sector was responsible for starting most of the discussion threads,
-i.e. messages to the list which are not replies.
+i.e. for sending messages to the list which are not replies.
 This is surprising since the peripheral sector is responsible for fewer messages. It suggests complementarity between peripheral diversity and hub specialization, which, on its turn, deepens the understanding of the interaction network as a meaningful system. 
 These assertions are condensed in Table~\ref{geralListas}.
 Less often, the intermediary sector is responsible for the largest number of messages and of threads.
-Also meaningful is that the hubs sector is responsible for most of the messages, which is not obvious: hub participants are far more active but way less numbered. Interestingly, in such a setting where every characteristic differs with respect to
+Also meaningful is that the hubs sector is responsible for most of the messages, which is not obvious: hub participants are far more active but way less numerous. Interestingly, in such a setting where every characteristic differs with respect to
 distinct sectors, there was no evidence of difference on the size of the threads started by each sector.
 \input{tables/geralInline_}
 
@@ -417,14 +418,16 @@ Tables~\ref{tab:kolTok}-\ref{tab:kolPctInter}
 illustrate three results:
 \begin{itemize}
  \item There is statistical evidence that the textual production of the Erd\"os sectors is different.
- This can be noticed from the high values of $c'$ on these tables, above reference values used for the acceptance of the null hypothesis. Also, we regarded as non-negligible the values often above 0.1 for the Kolmogorov-Smirnov statistics (the maximum difference between the cumulative distributions), which we recognized as relevant for assuming differences in the underlying distributions in our study (see Section~\ref{sec:ks}).
+	 This can be noticed from the high values of $c'$ on these tables, above reference values used for the acceptance of the null hypothesis (the null hypothesis being that the probability distributions generating the samples are the same). Also, we regarded as non-negligible the values often above 0.1 for the Kolmogorov-Smirnov statistics (the maximum difference between the cumulative distributions), which we recognized as relevant for assuming differences in the underlying distributions in our study (see Section~\ref{sec:ks}).
   \item Intermediary sectors sometimes exhibit greater differences 
 from periphery and hubs than these extreme sectors between themselves 
 (Tables~\ref{tab:kolTok} and~\ref{tab:kolSub}).
-This differentiation of the three sectors is indication that the Erd\"os Sectioning described in Section~\ref{sectioning} reveals meaningful sectors of the networks.
- \item The difference between sectors on the same network  (Tables~\ref{tab:kolTok}-\ref{tab:kolPct}) is often larger than the differences between the same sector from distinct lists (Tables~\ref{tab:kolSubInter}-\ref{tab:kolPctInter}).
+This differentiation of the three sectors is an indication that the Erd\"os Sectioning described in Section~\ref{sectioning} reveals meaningful sectors of the networks.
+ \item The evidence of difference (as measured by $c'$) between sectors on the same network (Tables~\ref{tab:kolTok}-\ref{tab:kolPct}) is often larger than found between the same sector from distinct networks (Tables~\ref{tab:kolSubInter}-\ref{tab:kolPctInter}).
  \end{itemize}
 
+ On the following tables, there are two measurements for each pair of sectors.
+ The top value is $c'$ while the bottom value is the Kolmogorov-Smirnov statistic.
  \input{tables/ksTokens_}
  \input{tables/ksWords_}
  \input{tables/ksSents_}
@@ -449,7 +452,7 @@ This differentiation of the three sectors is indication that the Erd\"os Section
 \item Sentences and messages were found smaller in the more connected sectors although punctuation was more incident in the less connected sectors.
 \item The differences found in analyzing Wordnet synset hypernyms were found less well behaved. Often, the sectors exhibit noticeable differences but greater and smaller incidences are found in all sectors (but in different networks). Some of these incidences are more systematic and this analysis assisted by Wordnet is the only semantic analysis we made, which is why we included these results.
 \end{itemize}
-Appendix~\ref{ap:textd} presents tables with the data for larger incidence in each sector throughout the networks. In the following discussion we display example tables for each set of measurements.
+Appendix~\ref{ap:textd} presents tables with counts for larger incidence in each sector throughout the networks. In the following discussion we display example tables for each set of measurements.
 In the measurements derived from synset hypernyms the example tables were less meaningful because of the greater variability and therefore we present the counts of greater incidence directly.
 In any case, the measurements for each of the networks are in~\cite{textTables}.
 
