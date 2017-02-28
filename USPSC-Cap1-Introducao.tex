@@ -37,9 +37,9 @@ Gender related behavior in mobile phone datasets was indeed reported~\cite{barab
 but it is not relevant for the present work because email messages and addresses have no gender related metadata~\cite{gmanePack}. As for the language usage in the networks, emphasis was given to statistical features of the text such as number of tokens and known words, sizes of tokens, known words, sentences and messages. 
 Statistics were also derived from syntax through POS tags (e.g. nouns, adjectives, verbs) and semantics through Wordnet synsets.
 
-The remainder of this chapter provides some background knowledge relevant to the topics discussed in the thesis, especially complex networks, text mining, graph visualization and linked data. In Chapter 2, the data and methods were described while the results and discussion are in Chapter~\ref{ch:disc}. 
+The remainder of this chapter provides some background knowledge relevant to the topics discussed in the thesis, especially complex networks, text mining, graph visualization and linked data. In Chapter~\ref{ch:mat}, the data and methods were described while the results and discussion are in Chapter~\ref{ch:disc}. 
 Conclusions and further work are stated in Chapter~\ref{ch:concl}.
-The appendices bring further results from this research.
+The appendices bring auxiliary tables and further results from this research.
 
 
 \section{Related knowledge}
@@ -48,7 +48,7 @@ Although not universally accepted, it is commonplace to define a complex network
 a ``graph with non-trivial topological features''~\cite{newmanBook}.
 We might add to this definition that a complex network is also a large graph (even though no consensus appears to exist as 
 to what \emph{large} means in this context)
-and that it is a graph representation of a system found in natural, real or empirical system.
+and that it is a graph representation of a system found in natural, real or empirical observations.
 Another way to approach the definition of ``complex networks'' is to define it as
 complex systems modeled as networks.
 This second definition is also useful but is even more problematic as
@@ -97,10 +97,8 @@ This is a good reason for characterizing such systems by means
 of paradigmatic networks and generic metrics for nodes and the network (and edges, but it is less often).
 
 \subsubsection{Basic metrics}\label{se:intMea}
-Section~\ref{measures} gives a mathematical account of the following metrics,
-which are used here for characterizing basic types
-of networks in the next section.
-Such metrics are:
+The following metrics are used for characterizing basic types
+of networks in the next section:
 \begin{itemize}
 \item Degree $k_i$: number of edges linked to vertex $i$.
 \item In-degree $k_i^{in}$: number of edges ending at vertex $i$.
@@ -114,6 +112,7 @@ Such metrics are:
 % distance between vertices
 In the following discussion, we also use the concept of distance between a pair of nodes,
 which is the number of edges between the nodes.
+Section~\ref{measures} gives a mathematical account of further metrics.
 
 \subsubsection{Basic types of networks}
 Complex networks are often characterized in terms of paradigmatic models.
@@ -183,7 +182,7 @@ To glimpse at the theory involved in visualizing networks~\cite{eades}, we menti
 \item Layout methods are derived e.g. by placing vertices in a circular fashion, by using the eigen vectors from a worked out variant of the adjacency matrix as coordinates, or by force-based methods. For large graphs, including a number of social networks, the force-based networks are reported as useful. Therefore, we illustrate this method with the simplest model we could find in the specialized literature. Let $f_a$ be the attraction force, $f_r$ is the repulsion force, $d$ is the distance between the vertices and $k$ is a constant. The model introduced by Fruchterman and Reingold~\cite{fr} defines the forces as:
 \begin{align}
 f_a = \frac{d^2}{k}\\
-f_d = -\frac{k^2}{d}
+f_r = -\frac{k^2}{d}
 \end{align}
 On a computer software, one usually starts with a random layout and performs a number of iterations updating the position of nodes
 using these forces to obtain the intended force-directed layout.
@@ -246,7 +245,7 @@ directed multi-graph.
 RDF may be stored in a type of database referred to as a triplestore~\cite{rdf}.
 
 As an example of an RDF statement, the following triple in the Turtle
-format asserts that ``the paper has color white'':\\
+format asserts that ``paper has color white'':\\
 \texttt{http://example.org/Things\#Paper http://example.org/hasColor\\
 http://example.org/Colors\#White .}
 % This work makes available an open database with diverse provenance and
@@ -265,7 +264,8 @@ Such works were performed within a United Nations Development Program consulting
 in partnership with the Brazilian Presidency of the Republic and published publicly mainly as technical reports~\cite{pnud3,pnud4,opa}.
 This aspect of our research was important for maturing topics and understanding
 the extent to which they are applied in pragmatic contexts.
-It is left mostly as subsidiary documents in this thesis to allow for an easy public access.
+It is left mostly as subsidiary documents in this thesis to allow for an easy public access,
+to avoid redundancy in the documentations and for keeping the expositions of the contributions simple.
 
 \subsection{Other}
 Given the multidisciplinary condition of our work and of the implied topics,
@@ -281,7 +281,7 @@ because we present a new typology of human participants in social networks in Se
 Another topic we should highlight is what we called ``anthropological physics''~\cite{anPhy,antphy2}:
 the observation of natural/physical laws in human social systems.
 The term should not be confused with physical anthropology, which is a synonym for biological anthropology,
-a subfield of anthropology concerned with the evolution of humans~\cite{phyAn}.
+a subfield of anthropology concerned with the biological development of humans~\cite{phyAn}.
 
 \section{Polysemy and synonyms}\label{amb}
 In the context of complex networks, the words \emph{network} and \emph{graph}
