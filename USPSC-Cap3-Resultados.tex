@@ -455,6 +455,26 @@ This differentiation of the three sectors is an indication that the Erd\"os Sect
 Appendix~\ref{ap:textd} presents tables with counts for larger incidence in each sector throughout the networks. In the following discussion we display example tables for each set of measurements.
 In the measurements derived from synset hypernyms the example tables were less meaningful because of the greater variability and therefore we present the counts of greater incidence directly.
 In any case, the measurements for each of the networks are in~\cite{textTables}.
+The analysis of the measurements we obtained
+is not trivial because of the number of different measures
+and because differences in measures are not obviously relevant.
+In order to obtain consistent results, we considered \emph{weak evidence of difference} in sectors in a network
+if maximum measure is at least 10\% greater than minimum measure,
+i.e. $\frac{maximum\;measure}{minumum\;measure}>1.1$.
+We considered \emph{evidence of difference} in sectors in a network if
+$\frac{maximum\;measure}{minumum\;measure}>1.2$.
+When 
+$\frac{maximum\;measure}{minumum\;measure}>1.5$, we considered \emph{strong evidence of difference}.
+We than looked through each measure in all networks to reach compelling observations about the
+differences of sectors through all networks.
+Instead of the counts of maximum incidences, we also performed a weighted count:
+when the evidence was weak, the sector received an add of $0.5$ in the weighted count;
+then the evidence was strong, the sector received an add of $2$ in the weighted count.
+The results were qualitatively the same, so we omit the tables with weighted counts.
+Also useful here is the definition of lower sectors (peripheral and intermediary),
+upper sectors (intermediary and hubs) and extreme sectors (peripheral and hubs).
+We should also point when measurements peak often at the intermediary sector,
+be it a maximum or minimum peak.
 
 % We can summarize these results stating that the difference
 % found between texts from distinct Erd\"os sectors
@@ -465,8 +485,8 @@ In any case, the measurements for each of the networks are in~\cite{textTables}.
 % networks or from the same sector of different networks.
 
 \subsection{Characters}\label{sec:cha}
-Most often, peripheral and intermediary sectors use more digits and upper case letters. Hubs use more letters and vowels among letters.
-The use of white spaces, for example, does not seem to have any relation to connectivity. 
+Most often, peripheral and intermediary sectors use more digits, upper case letters and punctuation.
+Hubs sectors were found to use more spaces in most cases. 
 These results are illustrated in Table~\ref{tab:cha}.
 \input{tables/charsInline_}
 \FloatBarrier
@@ -480,12 +500,10 @@ These results are illustrated in Table~\ref{tab:cha}.
 
 %The largest average size of tokens is from the most wordy list (ELE).
 %This implies that is has more characters, tokens, and characters per token in comparison to the other lists. 
-In most of the networks analyzed, hubs use longer words, which might be related to the use of a specialized vocabulary.
-Hubs use more contractions and known words, while the peripheral sector exhibits greater incidence of punctuations among tokens.
-Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in peripheral sector is far greater,
+Hubs were found to use more contractions and stopwords, while the peripheral sectors exhibits greater incidence of punctuations among tokens.
+Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in peripheral sector is greater,
 this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity.
 This can be noticed by the token diversity of the whole network, which is lower than in any of the sectors.
-The same observation applies to lexical diversity ($\frac{|kw\neq|}{kw}$).
 These results are exemplified in Table~\ref{tab:tokensInline}
 where mean and variance were taken with respect to the length in characters of tokens, known words and stopwords.
 \input{tables/tokensMergedInline}
@@ -510,8 +528,8 @@ where mean and variance were taken with respect to the length in characters of t
 %\input{tables/tokenSizesInline_}
 
 \subsection{Sizes of sentences}\label{subsec:ss}
-Hubs present the lowest average sentence size,
-in characters, tokens or known words.
+Hubs present the lowest average sentence size
+in terms of characters, tokens, known words or punctuations.
 This result is illustrated in Table~\ref{tab:sizesSents}
 and might be considered counterintuitive given that punctuation
 is more abundant in the texts of less connected participants.
@@ -519,9 +537,10 @@ is more abundant in the texts of less connected participants.
 \FloatBarrier
 
 \subsection{Messages}\label{subsec:mm}
-Connectivity was found correlated to smaller messages in terms of characters and tokens.
+Connectivity was found correlated to smaller messages in terms of characters, tokens, known words and punctuations.
 Connectivity was also found correlated to smaller messages in terms of the number of sentences, but
 it was less consistent.
+Interestingly, the number of stopwords per message was found greater in all sectors (but in different networks).
 This result is exemplified in Table~\ref{tab:sizesMsgs}.
 \input{tables/messagesInline_}
 \FloatBarrier
@@ -542,7 +561,7 @@ This result is exemplified in Table~\ref{tab:sizesMsgs}.
 
 \subsection{POS tags}\label{subsec:pos}
 We found that lower connectivity yields more nouns and less verbs and adverbs.
-Also, the fraction of adjectives does not change,
+Also, the fraction of adjectives does not change consistently,
 but given that peripherals use more nouns,
 we can conclude that hubs use more adjectives per noun.
 This suggests that the networks gather issues
@@ -574,23 +593,6 @@ in the intermediary sector, which we understood as evidence that:
 \item The analysis of social networks texts using Wordnet reveals aspects of the structures which are not clear with the non-semantic analysis we performed.
 \end{itemize}
 
-Furthermore, the analysis of the measures we obtained by means of the Wordnet
-is not trivial because of the number of different measures
-and because differences in measures are not obviously relevant.
-In order to obtain consistent results, we considered \emph{weak evidence of difference} in sectors in a network
-if maximum measure is at least 10\% greater than minimum measure,
-i.e. $\frac{maximum\;measure}{minumum\;measure}>1.1$.
-We considered \emph{evidence of difference} in sectors in a network if
-$\frac{maximum\;measure}{minumum\;measure}>1.2$.
-When 
-$\frac{maximum\;measure}{minumum\;measure}>1.5$, we considered \emph{strong evidence of difference}.
-We than looked through each measure in all networks to reach compelling observations about the
-differences of sectors through all networks.
-Also useful here is the definition of lower sectors (peripheral and intermediary),
-upper sectors (intermediary and hubs) and extreme sectors (peripheral and hubs).
-We should also point when measurements peak at the intermediary sector,
-be it a maximum or minimum peak.
-
 Noteworthy is that extra skepticism should be kept in mind about these results
 because of the unquantified noise in the measurements.
 Observations seem consistent and meaningful, but only about a third of total tokens
@@ -599,7 +601,7 @@ This is because tokens were discarded if not having a Wordnet synset
 or when not having a synset with a POS tag true to the POS tag attributed by the POS tagger.
 Besides that, there are often more than one synset with the same POS tag for each word,
 and we chose the most frequent synset as ranked by Wordnet.
-In the positive side, we observe that $\approx 95\%$ of tokens which had synsets
+On the positive side, we observe that $\approx 95\%$ of tokens which had synsets
 were considered.
 Examples of types tokens without synsets are stopwords, punctuations, numerals, acronyms and typos.
 
@@ -614,10 +616,10 @@ These results are illustrated in Table~\ref{tab:wnpos}.
 
 
 \subsubsection{Wordnet synsets characteristics}\label{subsec:wn1}
-Wordnet synsets with different POS tags have different relations.
+Wordnet synsets with different POS tags have different relations (to other synsets).
 Therefore, we made separate observations about each POS tag.
 In each synset we performed a count of the number of the relations (e.g. max depth, hyponyms),
-thus yielding a mean and variance of each of the relations.
+thus yielding a mean and variance of each of the number of relations.
 \begin{itemize}
 \item Nouns, exemplified in Table~\ref{tab:wnn}.
 \begin{itemize}
@@ -632,7 +634,7 @@ Differences in the variance in the number of holonyms was also found with the sa
 but were greater in the upper sectors in $\approx 80\%$ of the networks.
 Both mean and variance of the number of holonyms peaked in the intermediary sector in $\approx50\%$ of the observations.
 \item Meronyms:
-words with more meronyms were present in $\approx 90\%$ of the networks and were
+differences in the number of meronyms of nouns were present in $\approx 90\%$ of the networks and were
 more incident in the lower sectors in $\approx 80\%$ of the observations in which we found such differences.
 Differences in the variance in the number of meronyms was found in $100\%$ of the networks and was often strong.
 The variance was greater in the periphery in $66.66\%$ and in the lower sectors in $\approx 90\%$ of the observations.
@@ -753,7 +755,7 @@ These results are shown in Table~\ref{tab:wnnh}.
 \item Adjective synsets: the use of adjectives was found less systematic.
 The synsets varied greatly among lists and differences were not strong.
 We observed weak evidence that hubs use more adjectives related to certainty,
-and that the use of such adjectives always peaked at the intermediary sector.
+and that the use of such adjectives peaked at the intermediary sector.
 Even weaker evidence was found that hubs use more adjectives related to newness.
 These results are shown in Table~\ref{tab:wnash}.
 \input{tables/finalSynsetsAS_} % uma soh
