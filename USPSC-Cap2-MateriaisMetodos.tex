@@ -17,7 +17,7 @@ We observed various email lists and selected five of them together with data fro
 from which general properties can be inferred. These lists are as follows:
 
 \begin{itemize}
-\item Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in Gmane.},with participants from different countries with artistic and technological interests. English is the prevailing language. Abbreviated as LAU from now on.
+\item Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in Gmane.}, with participants from different countries with artistic and technological interests. English is the prevailing language. Abbreviated as LAU from now on.
 
 \item Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in Gmane.}, with participants from different countries; a more technical and less active version of LAU. English is the prevailing language. Abbreviated as LAD from now on.
 
@@ -64,7 +64,7 @@ Data was gathered from:
 \end{itemize}
 
 This section introduces the underlying data in a very concise fashion.
-Further information is available in the Appendix~\ref{ap:losd} and in an article~\cite{losd}.
+Further information is available in the article~\cite{losd}.
 
 \subsubsection{Snapshots}
 Of central importance to the provided database is the concept of a snapshot.
@@ -161,8 +161,9 @@ S(z)&= \sqrt{-2\ln(R_1)}\\
 
 \noindent
 Also, the ratio $r=\frac{b_l}{b_h}$ between the lowest $b_l$ and the highest $b_h$ incidences on the histograms 
-served as a further clue of how close the distribution was to being uniform. As expected, a positive correlation was found in all $r, Var(z)$, $S(z)$ and $\delta(z)$ dispersion metrics,
-which can be noticed in Section~\ref*{si:circ}.
+served as a further clue of how close the distribution was to being uniform.
+As expected, a positive correlation was found in all $r, Var(z)$, $S(z)$ and $\delta(z)$ dispersion metrics,
+which can be noticed in the supporting information document of~\cite{stab}.
 The circular dispersion $\delta(z)$ was found more sensitive and therefore preferred in the discussion of results.
 
 \subsection{Interaction networks}\label{intNet}
@@ -308,14 +309,14 @@ e_{\gamma,3}&=\{\;i\;|\;&&\overline{k}_{\gamma,i}>\overline{k}_{\gamma,R}\} \non
 \noindent and both $\overline{k}_{\gamma,L}$ and $\overline{k}_{\gamma,R}$ are found using $P(\overline{k})$ or $\hat{P}(\overline{k})$ as described above and illustrated in Figure~\ref{fig:setores}.
 
 Since different metrics can be used to identify the three types of vertices, more than one metric can be used simultaneously, which is convenient when analysing small networks,
-such as the cases where only 50 messages are considered in Section~\ref*{si:frac}.
+such as the cases where only 50 messages are considered in the supporting information document of~\cite{stab}.
 %For example, a very stringent criterion can be used, according to which a vertex is only regarded as pertaining to a sector if it is so for all the metrics.
 After a careful consideration of possible combinations, these were reduced to six:
 
 \begin{itemize}
-\item Exclusivist criterion $C_1$: vertices are only classified if the class is the same according to all metrics. In this case, vertices classified do not usually reach $N$ (or 100\%), which is indicated by a black line in Figure~\ref{fig:sectIL}.
+\item Exclusivist criterion $C_1$: vertices are only classified if the class is the same according to all metrics. In this case, vertices classified do not usually reach $N$ (or 100\%).
 
-\item Inclusivist criterion $C_2$: a vertex has the class given by any of the metrics. Therefore, a vertex may belong to more than one class, and the total number of memberships may exceed $N$ (or 100\%), which is indicated by a black line in Figure~\ref{fig:sectIL}.
+\item Inclusivist criterion $C_2$: a vertex has the class given by any of the metrics. Therefore, a vertex may belong to more than one class, and the total number of memberships may exceed $N$ (or 100\%).
 
 \item Exclusivist cascade $C_3$: vertices are only classified as hubs if they are hubs according to all metrics. Intermediary are the vertices classified either as intermediary or hubs with respect to all metrics. The remaining vertices are regarded as peripheral.
 
@@ -431,7 +432,7 @@ to guide the research into the most important features of network evolution.
 Versinus is a visualization method for dynamic graphs based on experimental observations.
 This method received dedicated attention by recurrence of the suggestion, by fellow researchers,
 to write about it. 
-In visualizing a network, the method consists of creating an animation,
+In visualizing a network, the method consists of creating an animation
 of a fixed-size message sliding window (e.g. 400 messages) and 
 partitioning the network in two fixed-layout segments:
 a sinusoid for the most connected vertices (hubs and intermediary)
@@ -554,13 +555,13 @@ All terms in equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
 c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'
 \end{equation}
 
-When $c'$ is high, low values of $\alpha$ favor rejecting the null hypothesis.
+When $c'$ is high, corresponding low values of $\alpha$ favor rejecting the null hypothesis.
 For example, when $c'$ is greater than $\approx 1.7$, one might assume that $F_{1,n}$ and $F_{2,n'}$ differ.
 We used $c'$ as a measure of how much
 the distributions differ~\cite{kolm}
 and for deriving hypotheses
 about how different are the underlying mechanisms of generation of texts.
-We made systematic measurements of the $c'$ statistic in Section~\ref{ap:ks}
+We made systematic measurements of the $c'$ statistic in~\cite{kolmSmir}
 which illustrate that $c'$ and $D_{n,n'}$ are useful in considering the
 similarity or difference in the distributions underlying sets of samples.
 A note of caution should be given here: what is a difference in distributions

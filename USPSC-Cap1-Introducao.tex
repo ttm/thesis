@@ -86,7 +86,7 @@ Therefore:
 log_2[2^{n \choose 2}] > log_2(10^{80}) \Rightarrow
 {n \choose 2} > \frac{log_{10}(10^{80})}{log_{10}2} \Rightarrow \nonumber\\
 \Rightarrow \frac{n.(n-1)}{2} > \frac{80}{log_{10}2} \Rightarrow
-N > 23,5988 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+N > 23.5988 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
 \nonumber
 \end{align}
 That is, with only 24 vertices we have more possible networks than
@@ -181,8 +181,8 @@ To glimpse at the theory involved in visualizing networks~\cite{eades}, we menti
 \item criteria for the quality of layouts might include the number of crossing edges or the area of the drawing relative to the closest distance between two vertices.
 \item Layout methods are derived e.g. by placing vertices in a circular fashion, by using the eigen vectors from a worked out variant of the adjacency matrix as coordinates, or by force-based methods. For large graphs, including a number of social networks, the force-based networks are reported as useful. Therefore, we illustrate this method with the simplest model we could find in the specialized literature. Let $f_a$ be the attraction force, $f_r$ is the repulsion force, $d$ is the distance between the vertices and $k$ is a constant. The model introduced by Fruchterman and Reingold~\cite{fr} defines the forces as:
 \begin{align}
-f_a = \frac{d^2}{k}\\
-f_r = -\frac{k^2}{d}
+f_a = -\frac{d^2}{k}\\
+f_r = \frac{k^2}{d}
 \end{align}
 On a computer software, one usually starts with a random layout and performs a number of iterations updating the position of nodes
 using these forces to obtain the intended force-directed layout.
@@ -289,7 +289,7 @@ are often used interchangeably, although the word graph might refer to the
 mathematical structure of vertices and edges and the word network might refer to the
 real system being represented as a graph or to the graph obtained by means of representing a real system.
 Furthermore, the word graph can be used to refer to a \emph{graph of a function} (mathematics) or to an abstract datatype (computer science).
-This parallelism between network and graphs also apply to network visualization and graph visualization.
+This parallelism between network and graphs also applies to network visualization and graph visualization.
 One might add here the term \emph{graph drawing}, another synonym for the visualization of graphs, although the term
 seems to be more traditional in relation to the achievement of node-edge network diagrams.
 Evolutionary graph visualization or evolutionary network visualization are examples of variants of \emph{dynamic graph visualization}.
