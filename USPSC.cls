@@ -193,7 +193,7 @@
   \renewcommand{\anexosname}{Annex}
   \renewcommand{\apendicename}{APPENDIX}
   \renewcommand{\apendicesname}{Appendix}
-  \renewcommand{\orientadorname}{Supervisor:}
+  \renewcommand{\orientadorname}{Advisor:}
   \renewcommand{\coorientadorname}{Co-supervisor:}
   \renewcommand{\folhadeaprovacaoname}{Approval}
   \renewcommand{\resumoname}{Abstract} 
@@ -207,6 +207,7 @@
   \renewcommand{\subsectionautorefname}{subsection}
   \renewcommand{\subsubsectionautorefname}{subsubsection}
   \renewcommand{\paragraphautorefname}{subsubsubsection}
+  \renewcommand{\bibname}{references}
 }
 % ---
 
@@ -284,7 +285,11 @@
 % ---
 % ``Tamanho menor e uniforme'' ditada pela NBR 14724/2011 - 5.1
 % ---
-\newcommand{\ABNTEXfontereduzida}{\footnotesize}
+% \@setfontsize\footnotesize\@ixpt\@xipt
+\renewcommand{\footnotesize}{\fontsize{5}{5}} %Comando para diminuir a fonte das notas de rodapé
+\newcommand{\ABNTEXfontereduzida}{\footnotesize} % TTM
+% \newcommand{\ABNTEXfontereduzida}{\fontsize{9}{12}} % TTM
+% \newcommand{\ABNTEXfontereduzida}{\fontsize{15}{17}\selectfont}
 % ---
 
 % ---
@@ -1269,4 +1274,5 @@
      \imprimirfolhaderostonostar
 }
 \makeatother
+
 % ---
