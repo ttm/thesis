@@ -287,9 +287,9 @@
 % ---
 % \@setfontsize\footnotesize\@ixpt\@xipt
 % \renewcommand{\footnotesize}{\fontsize{5pt}{5pt}\selectfont} %Comando para diminuir a fonte das notas de rodapé
-% \newcommand{\ABNTEXfontereduzida}{\footnotesize} % TTM
+\newcommand{\ABNTEXfontereduzida}{\footnotesize} % TTM
 % \newcommand{\ABNTEXfontereduzida}{\fontsize{9}{12}} % TTM
-\newcommand{\ABNTEXfontereduzida}{\fontsize{15}{17}\selectfont}
+% \newcommand{\ABNTEXfontereduzida}{\fontsize{15}{17}\selectfont}
 % ---
 
 % ---
@@ -416,7 +416,7 @@
 \AtBeginDocument{%
   % comandos auxiliares para manipular os captions dentro do comando \IBGEtab.
   \newcommand{\configurecaptions}{\captionstyle[\raggedright]{}}
-  \newcommand{\configureseparator}{\captiondelim{: }}
+  \newcommand{\configureseparator}{\captiondelim{- }}
 
   % Define o comando \IBGEtab{}{}{} com caption e legenda da largura do conteúdo tabular, tabular*, etc
   % Parece funcionar com qualque pacote
@@ -478,7 +478,7 @@
       \renewcommand{\configurecaptions}{%
                   \captionsetup{justification=justified,%
                                 singlelinecheck=false}}
-      \renewcommand{\configureseparator}{\captionsetup{labelsep=colon}}
+      \renewcommand{\configureseparator}{\captionsetup{labelsep=endash}}
   }
 }
 
