@@ -286,10 +286,10 @@
 % ``Tamanho menor e uniforme'' ditada pela NBR 14724/2011 - 5.1
 % ---
 % \@setfontsize\footnotesize\@ixpt\@xipt
-\renewcommand{\footnotesize}{\fontsize{5}{5}} %Comando para diminuir a fonte das notas de rodapé
-\newcommand{\ABNTEXfontereduzida}{\footnotesize} % TTM
+% \renewcommand{\footnotesize}{\fontsize{5pt}{5pt}\selectfont} %Comando para diminuir a fonte das notas de rodapé
+% \newcommand{\ABNTEXfontereduzida}{\footnotesize} % TTM
 % \newcommand{\ABNTEXfontereduzida}{\fontsize{9}{12}} % TTM
-% \newcommand{\ABNTEXfontereduzida}{\fontsize{15}{17}\selectfont}
+\newcommand{\ABNTEXfontereduzida}{\fontsize{15}{17}\selectfont}
 % ---
 
 % ---
