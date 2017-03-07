@@ -17,7 +17,7 @@ Histograms in each of the time scales were computed as were circular average and
 \begin{table}
 \caption{The rescaled circular mean $\theta_\mu'$ and the circular dispersion $\delta(z)$, described in Section~\ref{sec:mtime}, for different timescales. This example table was constructed using all LAD messages, and the results are the same for other lists, as shown in the Supporting Information document of~\cite{stab}. The most uniform distribution of activity was found in seconds and minutes.Hours of the day exhibited the most concentrated activity (lowest $\delta(z)$), with mean between 2 p.m. and 3 p.m. ($\theta'=-9.61$). Weekdays, days of the month and months have mean near zero (i.e. near the beginning of the week, month and year) and high dispersion. Note that $\theta_u'$ has the dimensional unit of the corresponding time period while $\delta(z)$ is dimensionless.}
 \begin{center}
-\begin{tabular}{ |l|| c|c| }
+\begin{tabular}{ l|| c|c }
 \hline
 %scale & $\theta_\mu'$ & $S(z)$ & $Var(z)$ & $\delta(z)$ & $\frac{max(incidence)}{min(incidence)}$ & $ \mu_{\frac{max(incidence')}{min(incidence')}} $ & $ \sigma_{\frac{max(incidence')}{min(incidence')} } $ \\ \hline\hline
 %& $\theta_\mu'$ & $S(z)$ & $Var(z)$ & $\delta(z)$  \\ \hline\hline
@@ -50,9 +50,9 @@ Source: By the author.\
 \caption{Activity percentages along weekdays.
 Higher activity was observed during workweek days, with a decrease of activity on weekend days of at least one third and at most two thirds.}
 \begin{center}
-\begin{tabular}{ | l ||  c | c | c | c | c |c | c |}
+\begin{tabular}{ l ||  c | c | c | c | c |c | c}
 \hline
-& Mon & Tue & Wed & Thu & Fri & Sat & Sun  \\ \hline
+& Mon & Tue & Wed & Thu & Fri & Sat & Sun  \\ \hline\hline
 \input{tables/tabWeekdays}
 \end{tabular}
 \end{center}
@@ -142,9 +142,9 @@ Source: By the author.\
 The first column shows the percentage of messages sent by the most active participant. The column for the first quartile ($Q_1$) gives the minimum percentage of participants responsible for at least 25\% of total messages with the actual percentage in parentheses. Similarly, the column for the first three quartiles $Q_3$ gives the minimum percentage of participants responsible for 75\% of total messages.
 The last decile $D_{-1}$ column shows the maximum percentage of participants responsible for 10\% of messages.}
 \begin{center}
-\begin{tabular}{ | l ||  c | c | c | c | }
+\begin{tabular}{ l ||  c | c | c | c }
 \hline
-list & hub & $ Q_1 $ & $ Q_3 $ & $D_{-1}$ \\ \hline
+list & hub & $ Q_1 $ & $ Q_3 $ & $D_{-1}$ \\ \hline\hline
 \input{tables/userTab}
 \end{tabular}
 \end{center}
@@ -996,7 +996,8 @@ Table~\ref{tab:provenance}.
 \begin{center}
 \caption{Social platforms, original formats and further observations for
 the database.}\label{tab:provenance}
-\begin{tabular}{| l || p{3cm} | p{3cm} | c |}\hline
+	\def\arraystretch{1.2}
+\begin{tabular}{l || p{3cm} | p{3cm} | c}\hline
 \textbf{social platform} & \textbf{original format} & \textbf{further observations} & \textbf{toolbox} \\\hline\hline
 AA & MySQL and MongoDB databases; IRC text logs & donated by AA users & Participation~\cite{participation} \\\hline
 Cidade Democrática & MySQL database & donated by admins & Participation \\\hline
