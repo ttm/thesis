@@ -54,6 +54,7 @@ A short report on these indexes and their use is on~\cite{dialogaAlg}
 	In such web interface, which was accessed as a usual webpage through HTTP in a web browser, 
 	the user could specify an email list, start and end messages and a window size (number of messages taken together to obtain the network).
 	The interface then rendered graph visualizations and standard measures such as degree, strength, clustering coefficient, betweenness centrality, both as histograms and as mean and standard deviation.
+	In the node-link diagrams, measurements were mapped to height, width and color of nodes and to link characteristics.
 	The software source code is available in~\cite{autoRede} and an example image is Figure~\ref{fig:autoRede}.
 \begin{figure}[h!]
 \begin{center}
@@ -68,7 +69,40 @@ Source: By the author.\
 \end{figure}
 % email pelo app online
 
-	\subsection{Static Facebook networks visualization using Gephi}
+	\subsection{Static Facebook networks visualization using Gephi}\label{sec:gephi}
+	Mainly in the years of 2013 and 2014, Facebook users retrieved their friendship networks through Netvizz software~\cite{netvizz}
+	and donated them to our research.
+	I also retrieved friendship and interaction networks from Facebook groups I was a member, also using Netvizz.
+	These networks were used for information collection and diffusion (explained in Section~\ref{sec:colDif}),
+	taking measurements and visualization.
+	The visualizations were achieved almost exclusively through the Gephi software~\cite{gephi}
+	and is included in this appendix for being used a number of times by fellow researchers and artists.
+	The most useful layout algorithm was Force Atlas 2~\cite{fa2} and an example of these images is Figure~\ref{fig:gephi}.
+
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[scale=.25]{figs/Silicon}
+% 	\caption{An example network image rendered from the Silicon Valley (Facebook) group using Gephi and the Force Atlas 2 layout algorithm.
+% 	See Section~\ref{sec:gephi} for further information.}
+% \label{fig:gephi}
+% \begin{flushleft}\footnotesize
+% Source: By the author.\
+% \end{flushleft}
+% \end{center}
+% \end{figure}
+
+\begin{figure}[!tbp]
+	\centering
+	    \subfloat[\footnotesize Without participant names.]{\includegraphics[width=0.45\textwidth]{figs/Silicon.png}\label{fig:f1}}
+		\subfloat[\footnotesize With participant names.]{\includegraphics[width=0.45\textwidth]{figs/Silicon_nomes.png}\label{fig:f2}}
+	\caption{An example network image rendered from the Silicon Valley (Facebook) group using Gephi and the Force Atlas 2 layout algorithm.
+	See Section~\ref{sec:gephi} for further information.}\label{fig:gephi}
+\begin{flushleft}\footnotesize
+Source: By the author.\
+\end{flushleft}
+\end{figure}
+
+
 % fb pelo gephi
 	\subsection{Art by Pedro Paulo Rocha}
 \section{Mega networks}
@@ -92,7 +126,7 @@ Source: By the author.\
 \section{Ideal ideas: a physical modeling of the mind}
 \section{Webpages}
 % ARS, texto para pedro
-\section{Collection and diffusion of information in social networks}
+\section{Collection and diffusion of information in social networks}\label{sec:colDif}
 \subsection{Progressive network activation from peripherals to hubs}
 \subsection{Instantaneous network activation by betweenness and closeness centralities}
 \subsection{Massive tagging in Facebook and email crossposting}
