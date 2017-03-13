@@ -215,6 +215,18 @@ Source: By the author.\
 	We also discuss ways to control this tendency to inequality,
 	which is analogous to a decrease in entropy in a closed system induced by an external action.
 
+\subsection{Three equanimous aspects of scale-free networks}
+The model presented in last section exposes an equanimous aspect of power laws:
+the resources are uniformly distributed along the concentration of resources.
+In considering complex networks, there are two other aspects which are also equanimous:
+the components (vertices) participate in many networks and potentially has different concentrations
+of resources in them; the components have different amounts of resources as the networks evolve.
+This is particularly interesting as it is countercurrent regarding the present-day hubs boast
+in scale-free networks.
+Furthermore, we also sustain in Section~\ref{sec:impl} that the intermediary vertices are both more relevant for the
+network structure and are more likely to be authorities in human social networks.
+There is a sketch of an article dedicated to these issues in~\cite{eqFree}.
+
 \section{Systematic measurements related to the two-sample Kolmogorov-Smirnov test}
 The two-sample Kolmogorov-Smirnov test relate the number of samples and the Kolmogorov-Smirnov statistic
 to a confidence level in rejecting the null hypothesis (that the underlying distributions of the samples are the same).
@@ -575,9 +587,10 @@ and to advance conceptualizations related to researching human social structures
 Two of these were Brazilian conferences~\cite{50uni,IICri} related to philosophy and social psychology
 and the other was an online presentation~\cite{ccs15} on the Conference on Complex Systems CS-DC'15
 (Complex Systems Digital Campus ’15 – World e-Conference).
+I also presented some developments at two internal IFSC/USP conferences (SIFSC).
 For enhancing my familiarity with research in linguistics from the computational standpoint,
 I attended to all presentations on the EILIN 2013 (Winter School on Formal Linguistics)
-but did not present any work.
+but did not present any of our research.
 
 \subsection{Other non-academic events attended: LabicBR, I Technological Week of Ubatuba, Regulatory Landmark of Civil Society Organizations (MROS), Social Participation National Plan (PNPS) Forum}
 There were many non-academic meetings attended to in the course of this research,
@@ -648,15 +661,69 @@ I made substantial contributions for the public discussion regarding these Brazi
 endeavors.
 More specifically, I commented each of the items in the public discussion platform~\cite{participaPNPS},
 made some scripts~\cite{analisePNPS,pcPS} for analyzing the Decree and commitment declaration and the social networks considering these issues.
-% /home/r/backup/repos/analisePNPS/analisePNPS
-% /home/r/backup/repos/aprendizadoSemisupervisionado
-% /home/r/backup/repos/equanimousScalefree
-% /home/r/backup/repos/labmacambira-rcpln/participacaoSocial
-% /home/r/backup/repos/microcontos usados em difusão de informação
-% /home/r/backup/repos/ORe/python
-% /home/r/backup/repos/pingosom
-% /home/r/backup/repos/sciStyle
-% /home/r/backup/repos/sonhos
+There is also a document with further analysis of these documents and social participation instances in~\cite{lmPS}.
+
+\subsection{Graph-based semi-supervised learning}
+I made software implementations of two graph-based semi-supervised learning
+(i.e. supervised learning algorithms that make use of unlabeled data):
+``mean-cut'' and ``label propagation''.
+These were particularly important in 1) obtaining better classification results
+than with supervised learning algorithms while distinguishing between positive
+and negative sentiments in speech samples; 2) maturing my reasoning about graphs.
+These implementations are available in~\cite{ssl} with documentation.
+
+\subsection{Microtales}
+These are artistic small texts~\cite{microcontos}.
+Both poems and tales are incident.
+They are important for registering ideas and viewpoints
+and because I used the in some diffusion and collection of information experiments.
+
+\subsection{ORe: ontology of the research and data records}
+This is a rather experimental development aimed at keeping track
+of the research process.
+Most importantly, in~\cite{ore} are a hook for registering new entries
+very similar to what is done through AA, and a script and resulting RDF file
+with research notes.
+
+\subsection{Pingo game sound effects}
+Pingo is a Tamagotchi-like experimental game for adults
+developed by Edson de Oliveira Correa Jr. and Prof. Dr. Ricardo Fabbri.
+I made a sounds effects bank for the game which is available in~\cite{pingo}.
+
+\subsection{The scientific literary style}
+One of the greatest things I was able to achieve in this doctorate
+is the enhancement of my English writing.
+The book~\cite{chuLivro} was helpful, as were Coursera and edX courses,
+but the most valuable practices were writing with my advisor Prof. Dr. Oliveira
+and using English daily for reading, writing, watching videos and hearing audiobooks.
+I have the ambition of writing an article about the scientific literary style
+by exposing canons and trends and proposing extensions such as artistic uses
+of the scientific style and minimal and maximal size possibilities.
+A very preliminary sketch is on~\cite{sciStyle}.
+
+\subsection{Textual analysis of dreams for schizoanalysis and art}
+Fabiane M. Borges proposed to me the analysis of dreams through text mining
+with the goal of using the results in a schizoanalysis course.
+We obtained interesting results and poems which were used in
+the third module of the schizoanalysis course (held at Rio de Janeiro,
+Nuvem house, Oct/17/2015) and in a presentation at Berlin.
+Scripts and documentation are at~\cite{sonhos}.
+We intended to make further analysis by including more dreams.
+The texts were sent to me, but I was not able to dedicate time
+as needed and we agreed to do these analyzes in a book or
+as we understand fit in the future.
+
+\subsection{Toki Pona language incursions}
+In advancing with the studies of language for this research,
+I found the need to learn a conlang (i.e. a constructed language).
+Candidates were Esperanto, Lojban and Toki Pona.
+The last on these was chosen for being very minimalist,
+with only 14 phonemes and 120 words,
+and presenting a different standpoint to language usage
+(I am fluent in English and Portuguese and have intermediate skills in German).
+I present some contributions for the Toki Pona language in~\cite{tokiio}
+and some scripts for exploring the structure of the language and for
+a Vim syntax highlighting in~\cite{tokir}.
 % /home/r/backup/repos/tokipona
 % /home/r/backup/repos/tokisona.github.io
 % artigos
@@ -666,4 +733,5 @@ made some scripts~\cite{analisePNPS,pcPS} for analyzing the Decree and commitmen
 % Lattes:
 % /home/r/backup/repos/cartaML
 % /home/r/backup/repos/sifsc
+% livro ideias perigosas e submidialogia
 \end{apendicesenv}
