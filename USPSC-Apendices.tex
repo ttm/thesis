@@ -263,8 +263,12 @@ AA has been proposed, at its core, as a way of sustaining self-replicating hacke
 These claims are discussed in a real case-study of running a distributed free software hacker team called Lab Macambira.
 This work was important for maturing concepts related to social networks and thus contributed to the presented thesis.
 
-\section{Social participation (OWL) ontologies}
+\section{Social participation (OWL) ontologies}\label{sec:spont}
 As a way to integrate participatory mechanisms, some OWL ontologies were developed within our research.
+All the ontologies presented in the next sections have graph figures in the documentation for easing the use of
+the conceptualizations.
+In them, each node is a concept (OWL class) and the directed edges correspond either to a taxonomic relation
+(hypernymity, i.e. OWL class $\rightarrow$ superclass relation) or to another relation between concepts (i.e. OWL property).
 
 \subsection{OPS: the Social Participation (OWL) Ontology}
 Participatory democracy advances in virtually all governments and especially in South America which presents a mixed culture and social predisposition.
@@ -297,8 +301,9 @@ Source: By the author.\
 \end{flushleft}
 \end{center}
 \end{figure}
+
 \subsection{OCD: Cidade Democrática (OWL) Ontology}
-An ontology for the Cidade Democrática civil social participation platform was developed and is documented in~\cite{opa}.
+An ontology for the Cidade Democrática civil social participation platform was developed and is documented in~\cite{opa,ocd}.
 For this ontology we developed the data driven ontology synthesis method presented in Section~\ref{sec:ontSyn}
 and that was used for obtaining the second ontology described in Section~\ref{sec:opa}.
 
@@ -313,18 +318,28 @@ and by means of dedicated interviews.
 Social participation instances and mechanisms were systematized and general
 social participation conceptualizations given separately by the Brazilian Presidency
 and the IPEA (Institute for Applied Economic Research).
-Core documentation is in~\cite{opa}.
-% /home/r/backup/repos/vocabularioParticipacao TTM
+Core documentation is in~\cite{opa,vocabP}.
 
 \subsection{Ontology for the Magic Box (Caixa Mágica)}\label{sec:mb}
-% /home/r/backup/repos/caixamagica
-% https://github.com/caixamagica/participacao
+The Magic Box was conceived in LabicBR as a way to enhance social participation
+in micro territories through WiFi.
+Core contributors are Ricardo Augusto Poppi Martins (Brazil), Marco Konopacki (Brazil),
+Mariel Zasso (Brazil), Renato Fabbri (Brazil), Erick Berssaín García Ventura (Mexico),
+Ana Karen Moreno Ramos (Mexico), Norma Ruiz (Mexico),
+Thomaz Anderson Barbosa da Silva (Brazil), Luis Astorquiza (Colombia) and Carlos Espinosa Llerena (Ecuador).
+I formalized in OWL the ontological conceptualization of the Magic Box and keep it available at~\cite{caixamagica}.
 
 \section{Triplification routines of relational data into RDF}
-% AA, Participa, OCD, Caixa Mágica
+All the ontolgies reported in Section~\ref{sec:spont} have \emph{triplification}
+routines which translate data to RDF.
+The only exception os OBS which does not directly relate to data in any platform.
 
 \section{Ontology of this work}
-% /home/r/backup/repos/OT TTM
+The Ontology of the Work (OT from Portuguese ``Ontologia do Trabalho'')
+is a conceptualization formalized in OWL of the knowledge involved in this thesis.
+It was used in the qualification of the doctorate and is available at~\cite{OT}.
+The ontology is quite useful for grasping the purpose and knowledge fields related to
+the research but is too large for including here a meaningful image.
 
 \section{Genesis of this work: complex social networks analysis by emails}
 The first written systematization of our findings among networks derived from email lists
@@ -332,12 +347,11 @@ is~\cite{comp1}.
 It was important for a several reasons: we confirmed the scale-free outline of the connectivity distribution
 in these networks;
 we first observed the asymmetry of edges;
-the article invoked disrupting discussion in email lists and private messaging.
+the article invoked disrupting discussion in email lists and private messaging, specially at the Metareciclagem email list.
 This work received collaborations of Vilson Vieira da Silva Junior, Lucas da Silva Oliveira
 and Prof. Dr. Ricardo Fabbri
 and was presented in the XVI Meeting for Computational Modeling.
-% in metareciclagem
-% presented by ricardo fabbri
+
 \section{United Nations Development Program consulting}\label{sec:undp}
 In the year of 2014 this research was endorsed by the United Nations Development program
 with a consulting contract (2013/00056, project BRA/12/018).
