@@ -357,7 +357,7 @@ the research but is too large for including here a meaningful image.
 This is a rather experimental development aimed at keeping track
 of the research process.
 Most importantly, in~\cite{ore} are a hook for registering new entries
-very similar to what is done through AA, and a script and resulting RDF file
+very similar to what is done through AA (see Section~\ref{sec:aa}), and a script and resulting RDF file
 with research notes.
 
 \section{Genesis of this research: complex social networks analysis by emails}
@@ -420,7 +420,7 @@ the presidential board of information technology DITEC (``Diretoria de Tecnologi
 I made substantial contributions for the public discussion regarding these Brazilian social participation
 endeavors.
 More specifically, I commented each of the items in the public discussion platform~\cite{participaPNPS},
-made some scripts~\cite{analisePNPS,pcPS} for analyzing the Decree and commitment declaration and the social networks considering these issues.
+and made some scripts~\cite{analisePNPS,pcPS} for analyzing the Decree and commitment declaration and the social networks considering these issues.
 There is also a document with further analysis of these documents and social participation instances in~\cite{lmPS}.
 
 \section{Meetings at the Ministry of Education (MEC)}
@@ -434,21 +434,6 @@ Brazilian social participation cloud and a better organization of our data.
 We had our efforts directed towards strengthening the online trends of CONAE (National Education Conferences).
 I learned and contributed with the authorities and specialists present at the meetings,
 specially Ricardo Poppi, Arlindo Cavalcanti Queiroz and José Ivan Mayer de Aquino.
-
-\section{Academic events attended: critical theory, complex systems and a text mining workshop}\label{ap:anphy}
-There were three academic conferences
-which were most important for presenting the background and preliminary results to the scientific community
-and to advance conceptualizations related to researching human social structures.
-Two of these were Brazilian conferences~\cite{50uni,IICri} related to philosophy and social psychology
-and the other was an online presentation~\cite{ccs15} on the Conference on Complex Systems CS-DC'15
-(Complex Systems Digital Campus ’15 – World e-Conference).
-Of some relevance was attending the Seminar on Open Knowledge in the University
-(Seminário sobre o Conhecimento Aberto na Universidade) at UFPA
-in which I held data mining workshop and took part in a discussion table about open academic knowledge.
-I also presented some developments at two internal IFSC/USP conferences (SIFSC).
-For enhancing my familiarity with research in linguistics from the computational standpoint,
-I attended to all presentations on the EILIN 2013 (Winter School on Formal Linguistics)
-but did not present any of our research.
 
 \section{Other non-academic events attended: LabicBR, I Technological Week of Ubatuba, Regulatory Landmark of Civil Society Organizations (MROS), Social Participation National Plan (PNPS) Forum}
 There were many non-academic meetings attended to in the course of this research,
@@ -473,6 +458,20 @@ All attendances should be in my Lattes curriculum page~\cite{myLattes} in near f
 I need them formalized for academic purposes, specially when finishing this doctorate.
 In all these contributions, my traveling and subsistence expenses were paid by the organizers who invited me.
 
+\section{Academic events attended: critical theory, complex systems and a text mining workshop}\label{ap:anphy}
+There were three academic conferences
+which were most important for presenting the background and preliminary results to the scientific community
+and to advance conceptualizations related to researching human social structures.
+Two of these were Brazilian conferences~\cite{50uni,IICri} of the Nexos research network related to philosophy and social psychology
+and the other was an online presentation~\cite{ccs15} on the Conference on Complex Systems CS-DC'15
+(Complex Systems Digital Campus ’15 – World e-Conference).
+Of some relevance was attending to the Seminar on Open Knowledge in the University
+(Seminário sobre o Conhecimento Aberto na Universidade) at UFPA
+in which I held a data mining workshop and took part in a discussion table about open academic knowledge.
+I also presented some developments at two internal IFSC/USP conferences (SIFSC).
+For enhancing my familiarity with research in linguistics from the computational standpoint,
+I attended to all presentations on the EILIN 2013 (Winter School on Formal Linguistics)
+but did not present any of our research.
 
 \section{Govern art}\label{sec:govArt}
 Many of the developments presented in this thesis were accompanied by the construction of online gadgets
@@ -671,7 +670,7 @@ Therefore, we understood useful to make a very short introduction to NLTK
 exemplifying the most frequent uses such as tokenization, stemming, lemmatization and
 part-of-speech tagging in both English and Portuguese.
 We also provided ideas for researching social networks which followed directly from
-these natural language-related tasks.
+these basic tasks.
 The document is at~\cite{trabNLTK}.
 
 
@@ -679,21 +678,21 @@ The document is at~\cite{trabNLTK}.
 These meetings were headed by Prof. Dr. Michel Hospital (DEE/UFSCar)
 with the purpose of maturing audiovisual research.
 The most important of these were: a meeting at DEE/UFSCar for discussing research with Prof. Dr. Emerson;
-a meeting at the Sérgio Marcarenhas auditorium from IFSC/USP with researchers from DEE and the Psychology department
-for presenting research ongoing where I presented about audio and music, Vilson Vieira presented about imaging processing
-and Prof. Dr. Michel Hospital presented about Ovo;
-a workshop at Apr/13/2015 about audio and music I held at an IFSC/USP computer laboratory.
+a meeting at the Sérgio Mascarenhas auditorium (IFSC/USP) with researchers from DEE and the UFSCar Psychology department
+for exposing research ongoings where I presented about audio and music, Vilson Vieira presented about imaging processing
+and Prof. Dr. Michel Hospital presented about OvO;
+a workshop in Apr/13/2015 about audio and music I held at an IFSC/USP computer laboratory.
 A proposal of Prof. Dr. Hospital for which we dedicated some attention was the
 mapping of visuals for sound for accessibility.
-Some scripts and documentation is found in~\cite{ovo} and links therein.
+Some scripts and documentation are found in~\cite{ovo} and links therein.
 
 \section{Complex networks \emph{gradus ad Parnassum}}
-\emph{Gradus ad Parnassum} is a type of document that contains gradual progress for grasping a subject.
+\emph{Gradus ad Parnassum} is a type of document that contains a gradual progress for grasping a subject.
 We sough about a \emph{gradus} for complex networks for some years and the outline is:
 basic notions and network models such as presented in Section~\ref{ch:int};
 notes in network stability and linguistic differentiation as presented in this thesis, but in simpler form;
 methods and tools for harnessing the networks of the participant, which includes what is presented in Section~\ref{sec:colDif};
-reports of the results this framework.
+a report of using this framework.
 Although the document might be of academic interest,
 Geraldo Magela de Castro Rocha agreed on doing an artistic publication by independent means
 with the purpose of spreading the knowledge in the general civil society.
@@ -701,49 +700,51 @@ A very incipient sketch of the document is at~\cite{gradus}
 with a small script relating mythology and networks.
 
 \section{Graph-based semi-supervised learning}
-I made software implementations of two graph-based semi-supervised learning
+I made software implementations of two graph-based semi-supervised learning algorithms
 (i.e. supervised learning algorithms that make use of unlabeled data):
 ``mean-cut'' and ``label propagation''.
 These were particularly important in 1) obtaining better classification results
-than with supervised learning algorithms while distinguishing between positive
-and negative sentiments in speech samples; 2) maturing my reasoning about graphs.
+than with supervised learning algorithms for distinguishing between positive
+and negative sentiments in speech samples; 2) maturing my reasoning about graphs
+and learning algorithms, specially grasping the power semi-supervised algorithms.
 These implementations are available in~\cite{ssl} with documentation.
 
 \section{Microtales}
 These are artistic small texts~\cite{microcontos}.
 Both poems and tales are incident.
 They are important for registering ideas and viewpoints
-and because I used the in some diffusion and collection of information experiments.
+and because I used them in some diffusion and collection of information experiments
+(see Section~\ref{sec:colDif}).
 
 \section{Pingo game sound effects}
 Pingo is a Tamagotchi-like experimental game for adults
-developed by Edson de Oliveira Correa Jr. and Prof. Dr. Ricardo Fabbri.
-I made a sounds effects bank for the game which is available in~\cite{pingo}.
+developed by Edson de Oliveira Correa Jr. and Prof. Dr. Ricardo Fabbri (IPRJ/UERJ).
+I made a sound effects bank for the game which is available in~\cite{pingo}.
 It was the only oportunity I had to dwelve into gamification in this research.
 Two of the most powerful approaches to making social participation and
-these complex networks, text mining and linked data more interessant for the
+these complex networks, text mining and linked data more interesting for the
 user is gamification and audiovizualization of data.
 
 \section{Textual analysis of dreams for schizoanalysis and art}
-Fabiane M. Borges proposed to me the analysis of dreams through text mining
+The psychologist Dr. Fabiane M. Borges proposed to me the analysis of dreams through text mining
 with the goal of using the results in a schizoanalysis course.
 We obtained interesting results and poems which were used in
 the third module of the schizoanalysis course (held at Rio de Janeiro,
-Nuvem house, Oct/17/2015) and in a presentation at Berlin.
+Nuvem house, Oct/17/2015).
 Scripts and documentation are at~\cite{sonhos}.
 We intended to make further analysis by including more dreams.
-The texts were sent to me, but I was not able to dedicate time
+The texts describing the dreams were sent to me, but I was not able to dedicate time
 as needed and we agreed to do these analyzes in a book or
 as we understand fit in the future.
 
 \section{Toki Pona language incursions}
 In advancing with the studies of language for this research,
 I found the need to learn a conlang (i.e. a constructed language).
-Candidates were Esperanto, Lojban and Toki Pona.
-The last on these was chosen for being very minimalist,
+Candidate languages were Esperanto, Lojban and Toki Pona.
+The last of these was chosen for being very minimalist,
 with only 14 phonemes and 120 words,
 and presenting a different standpoint to language usage
-(I am fluent in English and Portuguese and have intermediate skills in German).
+(I am fluent in English and Portuguese and have basic skills in German).
 I present some contributions for the Toki Pona language in~\cite{tokiio}
 and some scripts for exploring the structure of the language and for
 a Vim syntax highlighting in~\cite{tokir}.
@@ -751,7 +752,7 @@ a Vim syntax highlighting in~\cite{tokir}.
 % vivace and freakcoding
 
 \section{Vivace: a collective livecoding interface}\label{sec:vivace}
-Livecoding is a creative technique and performing form in which the
+Livecoding is a creative and performing technique in which the
 presenters write source code in real time which controls audiovisuals.
 Often a livecoding session is done by projecting the code being written in
 large screens (such as by the usage of a datashow) as a way to yield
@@ -769,22 +770,23 @@ and the source code is at~\cite{vivacecode} with further documentation.
 
 \subsection{Freakcoding: the origin of the first livecoding subgenre}
 By rehearsing with Vivace we started to develop an aesthetic.
-When Caleb Mascarenhas Luporini introduced videos with monsters and
-we used sounds from many sources the Freakcoding genre emerged.
+When Caleb Mascarenhas Luporini introduced videos with monsters,
+and we used sounds from many sources,
+the Freakcoding genre emerged.
 It is the first livecoding subgenre we have reports about.
 We presented Freakcoding in some events including an edition
 of AVAV (``AudioVisual Ao Vivo'') at São Paulo.
 The \emph{Freakcoding Manifesto} is online and received
 an independent publication~\cite{freakManifesto}.
 
-\subsection{The largest livecoding performance we have knowledge about}
+\subsection{The largest livecoding performance we know about}
 This was the start of our developments in livecoding.
-Many labMacambira.sf.net was at the stage while both my and Vieira computer screens
-were projected in the fifth Festival Contato, at 2011 in São Carlos.
-I was using Vim, Vieira using Emacs and we both were using the ChucK
+Many labMacambira.sf.net was at the stage while both mine and Vieira's computer screens
+were projected in the fifth Festival Contato, in 2011 at São Carlos.
+I was using Vim, Vieira was using Emacs and we both were using the ChucK
 livecoding language.
 Gilson Beck was at the sound diffusion table.
-As far as we knew, it was the livecoding session with the larger audience
+As far as we know, it was the livecoding session with the larger audience
 that ever took place at the time.
 It is relevant for the research in this thesis because it was
 a social experiment to present art by projecting code and sound
@@ -794,7 +796,7 @@ and a social experiment to perform the livecoding with so many performers.
 One of the greatest things I was able to achieve in this doctorate
 is the enhancement of my English writing.
 The book~\cite{chuLivro} was helpful, as were Coursera and edX courses,
-but the most valuable practices were writing with my advisor Prof. Dr. Oliveira
+but the most valuable practice was writing with my advisor Prof. Dr. Oliveira
 and using English daily for reading, writing, watching videos and hearing audiobooks.
 I have the ambition of writing an article about the scientific literary style
 by exposing canons and trends and proposing extensions such as artistic uses
@@ -802,7 +804,7 @@ of the scientific style and minimal and maximal size possibilities.
 A very preliminary sketch is on~\cite{sciStyle}.
 
 \section{Relevant precursory texts: free media letter, Submidialogy and Counterculture}
-From the knowledge I acquired from being a member of the judging committee for the second
+From the knowledge I acquired by being a member of the judging committee for the second
 free media award of the Brazilian Culture Ministry (which distributed about 4 million reais)
 I wrote the free media letter~\cite{cartaML} with a needed systematization of what free media is.
 Separately, I had texts published in the Counterculture~\cite{ccd} and Peixe Morto/Submidialogy~\cite{subMid} independent books.
@@ -814,7 +816,7 @@ and information diffusion and collection processes.
 % As there were many resources and endeavors related to this thesis,
 % both to the main body of the text and to this appendix.
 The main article from which this thesis derived is~\cite{stab},
-where we present the stability (or invariance) we found in human social networks.
+where we present the stability (or invariance) we found in human social interaction networks.
 The second most important work we present is~\cite{rcText}, because it is where we
 first presented the linguistic differences related to the hubs, intermediary and hubs
 Erd\"os sectors.
