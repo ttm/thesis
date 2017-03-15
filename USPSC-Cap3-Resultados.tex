@@ -461,7 +461,7 @@ The analysis of the measurements we obtained
 is not trivial because of the number of different measures
 and because differences in measures are not obviously relevant.
 Furthermore, there is too much variation
-which results in worthless the usual global measurements such as mean and variance.
+which renders worthless the usual global measurements such as mean and variance.
 In order to obtain consistent results, we considered \emph{weak evidence of difference} in sectors in a network
 if maximum measure is at least 10\% greater than minimum measure,
 i.e. $\frac{maximum\;measure}{minumum\;measure}>1.1$.
@@ -1033,7 +1033,7 @@ the database.}\label{tab:provenance}
 AA & MySQL and MongoDB databases; IRC text logs & donated by AA users & Participation~\cite{participation} \\\hline
 Cidade Democrática & MySQL database & donated by admins & Participation \\\hline
 Email & mbox & obtained through Gmane public database & Gmane~\cite{gmane} \\\hline
-Facebook & GDF, GML and TAB & obtained through Netvizz~\cite{netvizz} & Social~\cite{social} \\\hline
+Facebook & GDF, GML and TAB & obtained through Netvizz~\cite{netvizz} & Social~\cite{fbtwData} \\\hline
 IRC & plain text log & obtained through Supybot logging & Social \\\hline
 ParticipaBR & PostgreSQL database & donated by admins & Participation \\\hline
 Twitter & JSON & obtained through Twitter streaming API & Social \\\hline
@@ -1057,13 +1057,14 @@ All the analysis routines used for this thesis are in these publicly accessible 
 It is a core purpose of the framework to provide routines for rendering
 audiovisualizations of the data.
 Social structures are rendered into music, images and video animations
-through the Percolation toolbox~\cite{percolation} in association with
+through the Percolation toolbox~\cite{gmanePack} in association with
 the Music and Visuals toolboxes~\cite{music,visuals}.
 
 \subsubsection{Migration from deprecated toolboxes}
 Routines mentioned in Sections~\ref{ana} and~\ref{media} are being migrated from deprecated
 toolboxes~\cite{gmaneLegacy,percolationLegacy} into newly designed
-toolboxes~\cite{percolation,visuals}.
+toolboxes~\cite{gmaneLegacy,percolationLegacy} into newly designed
+toolboxes~\cite{gmanePack,visuals}.
 
 \subsection{Diagrams of the data and auxiliary tables}
 The database exploration can be assisted through diagrams which shows
