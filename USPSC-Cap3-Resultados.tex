@@ -913,6 +913,32 @@ Other hypotheses,
 such as discrepancies in the authority and the degree of a vertex,
 are numerous but need further research to be validated.
 
+\subsection{Mapping of network features to musical audio}\label{sec:veraud}
+The later implementations of Versinus included sound
+which was in sync with the animation.
+These audio tracks were a enrichment to the visualizations
+but were not fundamental for our understanding of the network structures
+mainly because the measurements to which the sounds related were better
+grasped by the visual clues.
+The main implementation of these mappings of topology to musical sounds
+can be summarized as follows:
+\begin{itemize}
+	\item The degree of the four most connected agents (considering the network with all the messages used for the animation) was used.
+	\item Three audio signals (``voices'' in music jargon) were made: one with a bandwidth restricted brown noise and two with defined pitch.
+	\item The measures from the two most connected agents were mapped to the bandwidth and central frequency of the brown noise.
+	\item The measures from the third and fourth most connected agents were mapped to the pitch of the pitch defined voices.
+	\item The sound characteristics were updated in durations that were multiples of a pulse, resulting in a well-marked rhythm.
+	\item The voices with defined pitch could be set to have more than one note with the same pitch before updating the pitch.
+\end{itemize}
+
+This procedure resulted in the ``Four Hubs Dance''~\cite{animacoes}.
+It might be noteworthy that data exploration through sounds is still very incipient
+in the scientific literature and that this musical mapping of dynamic networks features
+is potentially singular.
+The dissertation~\cite{mad} is handy in understanding the synthesis of these highly precise mappings
+and for enhancements.
+
+
 \subsection{Refinement of Versinus}\label{sec:verref}
 Versinus was convenient for obtaining insights about how to enhance its layout and use.
 It was immediate to think of a tool for using Versinus
