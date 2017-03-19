@@ -5,6 +5,7 @@ interaction networks: statistical analysis and linked data"
 The final document is tese-rfabbri.pdf
 For obtaining it from the source files, run:
   $ pdflatex USPSC-modelo-IFSC-DFA.tex
-  $ pdftk A=USPSC-modelo-IFSC-DFA.pdf B=referencias.pdf cat A1-104 B A119-end output tese-rfabbri.pdf
+  $ pdftk A=USPSC-modelo-IFSC-DFA.pdf B=referencias_.pdf cat A1-104 B A119-end output tese-rfabbri.pdf
 
-The ./referencias.pdf document with the bibliography is obtained from ./notes/Referencias\ Renato\ Fabbri_.docx
+The ./referencias_.pdf document with the bibliography is obtained from ./notes/Referencias\ Renato\ Fabbri_.docx
+(might need to add margins 3cm left on odd pages, 3cm right on even pages, and the page numbering)
