@@ -1,0 +1,19 @@
+*) Reler toda a tese, arrumando as referências, rótulos, direcionamento e linguajar.
+
+*) Explicitar que foram descartadas as redes cujo texto não era detectado como inglês
+e as que não apresentaram as 3 seções de Erdos. Somente analisadas redes com 2k msgs, consistente com 1k msgs e outros tamanhos.
+De 20 redes analisadas, 2 foram descartadas (confirmar).
+
+*) Visitar monografia de qualificação para complementar tese
+	- OBS e VBS
+	- Experimentos de percolação social e a física antropológica
+	- Criação da nuvem brasileira de dados participativos
+	- Relida no material todo para incorpar a tese e refrescar a memória
+*) abastar introdução:
+	ver tese que o chu mandou
+*) Descrever difusões de informação (nos apêndices?)
+*) incorporar aos apêndices sobre os códigos, dados, e documentos extra (artigos, relatórios, apresentações em conferências, sites). Talvez acrescentar sobre os MOOCs de interesse direto (redes complexas e social, estatística, processamento de texto, dados ligados/metadados)
+*) Adicionar participações nas conferências ao Lattes
+
+*) graph and network:
+http://efoundations.typepad.com/efoundations/2008/01/graphs-networks.html
