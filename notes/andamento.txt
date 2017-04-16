@@ -1,3 +1,9 @@
+*) Mudar computacional para computational na ficha catalográfica
+*) Fazer os links de bibliografia ao menos ir para a página das referências
+
+
+----------------
+
 *) Reler toda a tese, arrumando as referências, rótulos, direcionamento e linguajar.
 
 *) Explicitar que foram descartadas as redes cujo texto não era detectado como inglês
