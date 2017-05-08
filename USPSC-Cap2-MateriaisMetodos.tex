@@ -87,7 +87,7 @@ the number of likes.
 \subsubsection{Twitter data}
 Tweets were gathered through the Twitter streaming public API.
 Each snapshot is unified by a distinct hashtag.
-Edges are canonically yielded by retweets but replies and user mentions
+Edges are canonically yield by retweets but replies and user mentions
 are also kept in the database.
 
 \subsubsection{IRC data}
@@ -110,7 +110,7 @@ friendship and interaction criteria.
 
 \subsubsection{Cidade Democr\'atica data}
 Cidade Democr\'atica is a Brazilian civil society social participation portal.
-Data gathered is complex with many types of instances and no intuitive criteria
+Data gathered is complex with many types of instances and no obvious criteria
 for deriving networks, such as friendships or replies.
 
 \subsubsection{AA data}
@@ -124,7 +124,7 @@ The data and scripts used to derive the results, figures and tables are publicly
 Data annotated from Facebook and Twitter are in a public repository~\cite{fbtwData}.
 Data from ParticipaBR was used from the linked data/semantic web RDF triples~\cite{opa}, available in~\cite{datahub}.
 Computer scripts are delivered through public domain Python PyPI packages and open Git repositories~\cite{gmanePack}.
-This open approach to both data and scripts reinforces the scientific aspect of the contribution~\cite{openSci} and mitigates ethical and moral issues involved in researching systems constituted of human individuals~\cite{anPhy,antPhy2}.
+This open approach to both data and scripts reinforces the scientific aspect of the contribution~\cite{openSci} and mitigates ethical and moral issues involved in researching systems constituted of human individuals~\cite{anPhy,anPhy2}.
 
 \section{Methods}\label{sec:carac}
 %The networks were characterized with: 1) statistics of activity along time, in scales from seconds to years; 2) dispersion of basic topological metrics; 3) sectioning of the networks in hubs, intermediary and periphery; 4) iterative visualization, sonification and data inspection.
@@ -190,7 +190,7 @@ Source: By the author.\
 \subsection{Topological metrics}\label{measures}
 
 The topology of the networks was characterized 
-from a small selection of the most basic 
+by a small selection of the most basic 
 and fundamental measurements for each vertex~\cite{newmanBook},
 as introduced in Section~\ref{se:intMea}.
 The betweenness centrality index was computed for weighted digraphs as specified in~\cite{faster}.
@@ -279,7 +279,7 @@ Equation~\ref{criterio} can now be written in the form:
 \end{equation}
 
 If the strength $s$ is used for comparison of the real network against the Erd\"os-R\'enyi model,
-$P$ remains the same, but $P(\kappa_i)$ with $\kappa_i=\frac{s_i}{\overline{w}}$ should be used, where $\overline{w}=2\frac{z}{\sum_is_i}$ is the average weight of an edge and $s_i$ is the strength of vertex $i$. For in and out degrees ($k^{in}$, $k^{out}$), the real network should be compared against
+$P$ remains the same, but $P(\kappa_i)$ with $\kappa_i=\frac{s_i}{\overline{w}}$ should be used, where $\overline{w}=\frac{\sum_is_i}{2z}$ is the average weight of an edge and $s_i$ is the strength of vertex $i$. For in and out degrees ($k^{in}$, $k^{out}$), the real network should be compared against
 \begin{equation}
 \hat{P}(k^{way})=\binom{N-1}{k^{way}}p_e^k(1-p_e)^{N-1-k^{way}},
 \end{equation}
@@ -436,7 +436,7 @@ to write about it.
 In visualizing a network, the method consists of creating an animation
 of a fixed-size message sliding window (e.g. 400 messages) and 
 partitioning the network in two fixed-layout segments:
-a sinusoid for the most connected vertices (hubs and intermediary)
+a sinusoid period for the most connected vertices (hubs and intermediary)
 and a straight line for the less connected (peripheral).
 A vertex holds the same position throughout the animation. Also,
 visual cues of properties - such as color, height and width,
@@ -529,7 +529,7 @@ The topological and textual metrics were related by:
 
 An adaptation of the Kolmogorov-Smirnov test was used to observe differences in textual content, as follows.
 Let $F_{1,n}$ and $F_{2,n'}$ be two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample.
-The two-sample Kolmogorov-Smirnov test rejects the null hypothesis if:
+The two-sample Kolmogorov-Smirnov test rejects the null hypothesis (that the samples are drawn from the same underlying distribution) if:
 \begin{equation}\label{eq:ks}
 D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
 \end{equation}
@@ -564,7 +564,7 @@ and for deriving hypotheses
 about how different are the underlying mechanisms of generation of texts.
 We made systematic measurements of the $c'$ statistic in~\cite{kolmSmir}
 which illustrate that $c'$ and $D_{n,n'}$ are useful in considering the
-similarity or difference in the distributions underlying sets of samples.
+similarity or difference in the distributions underlying sets of observations.
 A note of caution should be given here: what is a difference in distributions
 might vary with context.
 A $D_{n,n'}$ of only $0.0001$ will yield a very large $c'$ if $n$ and $n'$ are large enough.

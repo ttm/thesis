@@ -15,7 +15,7 @@ Histograms in each of the time scales were computed as were circular average and
 
 
 \begin{table}
-\caption{The rescaled circular mean $\theta_\mu'$ and the circular dispersion $\delta(z)$, described in Section~\ref{sec:mtime}, for different timescales. This example table was constructed using all LAD messages, and the results are the same for other lists, as shown in the Supporting Information document of~\cite{stab}. The most uniform distribution of activity was found in seconds and minutes.Hours of the day exhibited the most concentrated activity (lowest $\delta(z)$), with mean between 2 p.m. and 3 p.m. ($\theta'=-9.61$). Weekdays, days of the month and months have mean near zero (i.e. near the beginning of the week, month and year) and high dispersion. Note that $\theta_u'$ has the dimensional unit of the corresponding time period while $\delta(z)$ is dimensionless.}
+\caption{The rescaled circular mean $\theta_\mu'$ and the circular dispersion $\delta(z)$, described in Section~\ref{sec:mtime}, for different timescales. This example table was constructed using all LAD messages, and the results are the same for other lists, as shown in the Supporting Information document of~\cite{stab}. The most uniform distribution of activity was found in seconds and minutes. Hours of the day exhibited the most concentrated activity (lowest $\delta(z)$), with mean between 2 p.m. and 3 p.m. ($\theta'=-9.61$). Weekdays, days of the month and months have mean near zero (i.e. near the beginning of the week, month and year) and high dispersion. Note that $\theta_u'$ has the dimensional unit of the corresponding time period while $\delta(z)$ is dimensionless.}
 \begin{center}
 \begin{tabular}{ l|| c|c }
 \hline
@@ -63,7 +63,7 @@ Source: By the author.\
 \end{table}
 
 In the scales of seconds and minutes, activity is uniform,
-with the messages being slightly more evenly distributed in all lists than in simulations with the uniform distribution\footnote{Numpy version 1.8.2, ``random.randint'' function, was used for simulations, algorithms in \url{https://github.com/ttm/percolation}.}.
+with the messages being slightly more evenly distributed in all lists than in simulations with the uniform distribution\footnote{Numpy version 1.8.2, ``random.randint'' function was used for simulations, algorithms in \url{https://github.com/ttm/percolation}.}.
 In the networks, $\frac{min(incidence)}{max(incidence)} \in (0.784,.794)$ while simulations reach these values but have on average more discrepant higher and lower peaks, i.e. if $\xi=\frac{min(incidence')}{max(incidence')}$ than $\mu_\xi=0.7741 \text{ and } \sigma_\xi=0.02619$.
 Therefore, the incidence of messages at each second of a minute and at each minute of an hour was considered uniform.
 In these cases, the circular dispersion is maximized and the mean has little meaning as indicated in Table~\ref{tab:circ}.
@@ -88,7 +88,7 @@ Source: By the author.\
 \end{table}
 
 \begin{table}
-\caption{Activity percentages on months along the year.Activity is usually concentrated in Jun-Aug and/or in Dec-Mar, potentially due to academic calendars, vacations and end-of-year holidays. This table corresponds to activity in LAU. Similar results are shown for other lists in the Supporting Information document of~\cite{stab}.}
+\caption{Activity percentages on months along the year. Activity is usually concentrated in Jun-Aug and/or in Dec-Mar, potentially due to academic calendars, vacations and end-of-year holidays. This table corresponds to activity in LAU. Similar results are shown for other lists in the Supporting Information document of~\cite{stab}.}
 \footnotesize
 \input{tables/tabMonthsLAU}
 \label{tab:min22}
@@ -826,7 +826,7 @@ These results are shown in Table~\ref{tab:wnrh}.
 \subsection{Correlation of topological and textual metrics}\label{subsec:cor}
 
 Overall, the correlation between textual and topological metrics was small. 
-An exception strength which was very often negatively correlated to the mean and variance of the number
+An exception is strength which was very often negatively correlated to the mean and variance of the number
 of punctuations (and sometimes with the number of known words or stopwords) with values below -0.4 in the hubs sector, but a few positive and high values (above 0.5) were also found.
 % verificar e quantificar TTM
 Interestingly, the number of punctuations per sentence was most often correlated to the number of stopwords
@@ -959,7 +959,7 @@ Also, visual and auditory signals for specific occurrences can be interesting
 (e.g. when a new vertex appears, when one vanishes, when an ordering of vertices changes).
 Measurements of each vertex can be shown with a vertical displacement,
 to enable multiple measurements, to avoid the need to blink the numbers and to keep network visualization free from occlusion.
-Working with Versinus has also suggested other kinds of layout for vertices, 
+Working with Versinus has also suggested other kinds of layouts for vertices, 
 especially geometric figures and iterative force-based methods for positioning vertices in a fixed layout.
 The traditional matrix representation of the graphs has been gazed upon as support to Versinus 
 as has been some recent approaches to network visualization~\cite{Viz1}.
