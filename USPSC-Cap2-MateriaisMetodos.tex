@@ -415,7 +415,7 @@ according to the magnitude of associated eigenvalue and $k$ is incorporated into
 the notation (e.g. PC2 for metrics of $\mu_{V'}[j,2]$).
 
 
-\subsection{Evolution and audiovisualization of the networks}\label{sec:viz}
+\subsection{Evolution of the networks}\label{sec:viz}
 The evolution of the networks was observed within 
 sequences of snapshots. In each sequence, a fixed number of messages,
 i.e. the window size $ws$, was used for all snapshots.
@@ -495,6 +495,7 @@ Such metrics are:
 \item Number of tokens, frequency of punctuations among tokens, frequency of known words, frequency of words that have Wordnet synsets, frequency of tokens that are stopwords.
 \item Mean and standard deviation for word, token sentence and message sizes.
 \item Fraction of morphosyntactic classes, such as adverbs, adjectives, nouns and other POS (Part-Of-Speech) tags.
+	We implemented a Brill POS tagger, because of the massive amount of textual data that we had to analyze (the Brill tagger is very fast). We used the ``universal'' tagset described in~\cite{petrov} and trained the tagger with both Brown and Treebank corpus divided in 80\% for training and 20\% for evaluation (in which the tagger achieved $\approx 95\%$ of accuracy).
 \item Fraction of words in each Wordnet~\cite{wordnet} top-most hypernyms,
 such as abstraction and physical entities for nouns or act for verbs.
 \item Mean and standard deviation of the number of Wordnet synset relations, such as holonyms and meronyms, domains, lemmas and verb groups.
