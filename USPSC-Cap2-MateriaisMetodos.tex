@@ -13,8 +13,10 @@ the Gmane email archive, which consists of more than $20,000$
 email lists (discussion groups) and more than $130\times 10^6$ messages~\cite{Gmanewikipedia}. These lists cover a variety of topics, mostly technology-related. The archive can be described as a corpus along with message metadata, including sent time, place, sender name, and sender email address.
 The usage of the Gmane database in scientific research is reported in studies of isolated lists and of lexical innovations~\cite{Gmane2,bird}. 
 
-We observed various email lists and selected five of them together with data from Twitter, Facebook and Participabr for a thorough analysis,
-from which general properties can be inferred. These lists are as follows:
+We observed various email lists and data from Twitter, Facebook and Participabr.
+For a thorough analysis, we selected five of the email lists
+from which general properties can be inferred.
+These lists are as follows:
 
 \begin{itemize}
 \item Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in Gmane.}, with participants from different countries with artistic and technological interests. English is the prevailing language. Abbreviated as LAU from now on.
@@ -64,6 +66,9 @@ Data was gathered from:
 \item donation by system administrators (AA, ParticipaBR, Cidade Democr\'atica).
 \end{itemize}
 
+The data was collected within the anthropological physics framework~\cite{anPhy}
+to mitigate the issues entailed by a quantitative research of human constituted systems.
+
 This section introduces the underlying data in a very concise fashion.
 Further information is available in the article~\cite{losd}.
 
@@ -73,7 +78,7 @@ A snapshot is herein a set of data gathered together,
 at a contiguous time span.
 For example: the first 20 thousand email messages of an email list
 comprises a snapshot; the tweets from the MAMA music event are a
-snapshot; the friendship, interaction and posts structures of a facebook
+snapshot; the friendship, interaction and posts structures of a Facebook
 group, prospected at the same time, are a snapshot.
 
 \subsubsection{Facebook data}
@@ -495,7 +500,10 @@ Such metrics are:
 \item Number of tokens, frequency of punctuations among tokens, frequency of known words, frequency of words that have Wordnet synsets, frequency of tokens that are stopwords.
 \item Mean and standard deviation for word, token sentence and message sizes.
 \item Fraction of morphosyntactic classes, such as adverbs, adjectives, nouns and other POS (Part-Of-Speech) tags.
-	We implemented a Brill POS tagger, because of the massive amount of textual data that we had to analyze (the Brill tagger is very fast). We used the ``universal'' tagset described in~\cite{petrov} and trained the tagger with both (full) Brown and (5\% as included in NLTK~\cite{trabNLTK}) Treebank corpus divided in 80\% for training and 20\% for evaluation (in which the tagger achieved $94.95\%$ of accuracy).
+	We implemented a Brill POS tagger because of the massive amount of textual data that we had to analyze (the Brill tagger is very fast).
+	We used the ``universal'' tagset described in~\cite{petrov} (developed to account for many languages) and trained the tagger with both Brown and Treebank corpus\footnote{We
+		used the full Brown corpus while only 5\% of the Penn Treebank (as included in NLTK~\cite{trabNLTK}).}
+	divided into 80/20\% of sentences for training and evaluation. The tagger achieved $94.95\%$ of accuracy.
 \item Fraction of words in each Wordnet~\cite{wordnet} top-most hypernyms,
 such as abstraction and physical entities for nouns or act for verbs.
 \item Mean and standard deviation of the number of Wordnet synset relations, such as holonyms and meronyms, domains, lemmas and verb groups.
