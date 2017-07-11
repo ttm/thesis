@@ -1,0 +1,10 @@
+*.swp
+*.aux
+*.bbl
+*.blg
+*.idx
+*.lof
+*.lot
+*.log
+*.toc
+*.odt#
