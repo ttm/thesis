@@ -1,3 +1,12 @@
+42
+90
+105
+109
+110
+132
+
+
+
 *) Mudar computacional para computational na ficha catalográfica
 *) Fazer os links de bibliografia ao menos ir para a página das referências
 
