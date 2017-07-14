@@ -85,6 +85,21 @@ brazil				% o último idioma é o principal do documento
 % ---
 % Pacotes básicos - Fundamentais 
 % ---
+
+% \DeclareUrlCommand\url{\def\UrlLeft{<}\def\UrlRight{>}%
+% \DeclareUrlCommand\url{
+% \renewcommand\UrlFont{\color{blue}}
+% \renewcommand\UrlLeft{}
+% \renewcommand\UrlRight{}
+% }
+% \def\url@#1{\hyper@linkurl{\ULurl@@{#1}}{#1}}
+% \DeclareRobustCommand*\url{\hyper@normalise\url@}
+% \urlstyle{tt}}
+% \def\UrlLeft#1\UrlRight{%
+% 	\special{html:<a href="#1">}#1\special{html:</a>}}
+% \def\UrlLeft#1\UrlRight{%
+% \special{html:<a href="#1">}#1\special{html:</a>}}
+
 \usepackage{amsmath}
 \usepackage{placeins}
 \renewcommand{\bf}{\bfseries}
@@ -266,8 +281,10 @@ brazil				% o último idioma é o principal do documento
 	citecolor=blue,        		% color of links to bibliography
 	filecolor=magenta,      		% color of file links
 	urlcolor=blue,
+	allbordercolors=black,
 	bookmarksdepth=4
 }
+\newcommand{\uurl}[1]{\href{#1}{\color{black}<\url{#1}>}}
 \makeatother
 % --- 
 % --- 
@@ -310,6 +327,7 @@ brazil				% o último idioma é o principal do documento
 \newcommand{\textttt}[1] {\texttt{\footnotesize#1}} % TTM
 \newcommand{\h} {\hphantom ~ }
 
+% \renewcommand{\url}[1]{\url{#1}}
 
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
@@ -769,7 +787,7 @@ which made possible the developments presented in this thesis.
 \bibitem{barabasiTopologicalEv}
 	ALBERT, R.; BARABÁSI, A.-L. Topology of evolving networks: local events and universality. \textbf{Physical Review Letters}, v. 85, n. 24, p. 5234, 2000.
 
-\bibitem{GMANE2}
+\bibitem{Gmane2}
 	MAREK-SPARTZ, K.; CHESLEY, P.; SANDE, H. \textbf{Construction of the gmane corpus for examining the diffusion of lexical innovations}. 2012. Available from: \url{https://pdfs.semanticscholar.org/03c0/8a95695e39595267f786a1040cd002bfea1d.pdf?_ga=1.212330838.358458694.1488839238}. Accessible  at: 23 Jan. 2016.
 
 \bibitem{stab}
@@ -986,7 +1004,7 @@ which made possible the developments presented in this thesis.
 	FABBRI, R. \textbf{Software for online making email interaction network images, gml files and measurements}. 2013. Available from: \url{https://sourceforge.net/p/labmacambira/fimDoMundo/ci/master/tree/python/autoRede/}. Accessible at: 15 Mar. 2017.
 
 \bibitem{gephi}
-	BASTIAN, M. et al. \textbf{Gephi}: an open source software for exploring and manipulating networks. 2009. Available from: <https://gephi.org/publications/gephi-bastian-feb09.pdf>. Accessible at 23 Jan. 2016.
+	BASTIAN, M. et al. \textbf{Gephi}: an open source software for exploring and manipulating networks. 2009. Available from: \url{https://gephi.org/publications/gephi-bastian-feb09.pdf}. Accessible at 23 Jan. 2016.
 
 \bibitem{fa2}
 	JACOMY, M. et al. Force atlas2, a continuous graph layout algorithm for handy network visualization designed for the gephi software. \textbf{PloS One}, v. 9, n. 6, p. e98679, 2014.
